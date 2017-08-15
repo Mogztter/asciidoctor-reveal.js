@@ -1,0 +1,9 @@
+= Audio tests
+
+== Default
+
+audio::ocean_waves.mp3[]
+
+== Autoplay and loop
+
+audio::ocean_waves.mp3[options="autoplay,loop"]

@@ -40,7 +40,6 @@
   },
   "homepage": "https://github.com/asciidoctor/asciidoctor-reveal.js",
   "dependencies": {
-    "asciidoctor-template.js": "1.5.5-3",
     "reveal.js": "3.3.0"
   },
   "devDependencies": {

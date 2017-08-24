@@ -3,18 +3,18 @@ Opal.modules["asciidoctor-revealjs/converter"] = function(Opal) {
   function $rb_minus(lhs, rhs) {
     return (typeof(lhs) === 'number' && typeof(rhs) === 'number') ? lhs - rhs : lhs['$-'](rhs);
   }
-  function $rb_plus(lhs, rhs) {
-    return (typeof(lhs) === 'number' && typeof(rhs) === 'number') ? lhs + rhs : lhs['$+'](rhs);
-  }
   function $rb_times(lhs, rhs) {
     return (typeof(lhs) === 'number' && typeof(rhs) === 'number') ? lhs * rhs : lhs['$*'](rhs);
+  }
+  function $rb_plus(lhs, rhs) {
+    return (typeof(lhs) === 'number' && typeof(rhs) === 'number') ? lhs + rhs : lhs['$+'](rhs);
   }
   function $rb_ge(lhs, rhs) {
     return (typeof(lhs) === 'number' && typeof(rhs) === 'number') ? lhs >= rhs : lhs['$>='](rhs);
   }
   var self = Opal.top, $nesting = [], nil = Opal.nil, $breaker = Opal.breaker, $slice = Opal.slice, $module = Opal.module, $klass = Opal.klass, $truthy = Opal.truthy, $send = Opal.send, $hash2 = Opal.hash2;
 
-  Opal.add_stubs(['$==', '$nil?', '$option?', '$include?', '$join', '$map', '$split', '$!=', '$to_s', '$each', '$constants', '$const_set', '$const_get', '$register_for', '$basebackend', '$outfilesuffix', '$filetype', '$node_name', '$empty?', '$send', '$extend', '$instance_eval', '$set_local_variables', '$converter', '$binding', '$has_role?', '$<<', '$freeze', '$content', '$[]=', '$-', '$attr', '$role', '$===', '$flatten', '$map!', '$to_proc', '$reject!', '$[]', '$reject', '$!', '$attr?', '$icon_uri', '$title?', '$title', '$captioned_title', '$media_uri', '$each_with_index', '$items', '$+', '$text', '$text?', '$blocks?', '$chomp', '$last', '$level', '$id', '$style', '$roles', '$compact', '$image_uri', '$list_marker_keyword', '$doctype', '$puts', '$context', '$to_sym', '$strip', '$sub_specialcharacters', '$start_with?', '$end_with?', '$zero?', '$select', '$html_tag', '$colspan', '$rowspan', '$to_i', '$embedded?', '$outline', '$*', '$doctitle', '$normalize_web_path', '$>=', '$coderay_stylesheet_data', '$instance', '$pygments_stylesheet_data', '$docinfo', '$notitle', '$has_header?', '$subtitle?', '$slice_text', '$header', '$subtitle', '$find_by', '$length', '$pop', '$author', '$to_boolean', '$footnotes?', '$footnotes', '$index', '$tr_s', '$fetch', '$references', '$size', '$first', '$role?', '$gsub', '$blocks', '$convert', '$local_variable_set']);
+  Opal.add_stubs(['$==', '$nil?', '$option?', '$include?', '$join', '$map', '$split', '$!=', '$to_s', '$each', '$constants', '$const_set', '$const_get', '$register_for', '$basebackend', '$outfilesuffix', '$filetype', '$node_name', '$empty?', '$send', '$extend', '$instance_eval', '$set_local_variables', '$converter', '$binding', '$has_role?', '$<<', '$freeze', '$content', '$[]=', '$-', '$attr', '$role', '$===', '$flatten', '$map!', '$to_proc', '$reject!', '$[]', '$*', '$reject', '$!', '$attr?', '$icon_uri', '$title?', '$title', '$captioned_title', '$media_uri', '$each_with_index', '$items', '$+', '$text', '$text?', '$blocks?', '$chomp', '$last', '$level', '$id', '$style', '$roles', '$compact', '$image_uri', '$list_marker_keyword', '$doctype', '$puts', '$context', '$to_sym', '$strip', '$sub_specialcharacters', '$start_with?', '$end_with?', '$zero?', '$select', '$html_tag', '$colspan', '$rowspan', '$to_i', '$embedded?', '$outline', '$doctitle', '$normalize_web_path', '$>=', '$coderay_stylesheet_data', '$instance', '$pygments_stylesheet_data', '$docinfo', '$notitle', '$has_header?', '$subtitle?', '$slice_text', '$header', '$subtitle', '$find_by', '$length', '$pop', '$author', '$to_boolean', '$footnotes?', '$footnotes', '$index', '$tr_s', '$fetch', '$references', '$size', '$first', '$role?', '$gsub', '$blocks', '$convert', '$local_variable_set']);
   
   (function($base, $parent_nesting) {
     var $Asciidoctor, self = $Asciidoctor = $module($base, 'Asciidoctor');
@@ -130,7 +130,7 @@ if (const$ == null) const$ = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         if ($truthy(($truthy($a = self['$has_role?']("aside")) ? $a : self['$has_role?']("speaker")))) {
           
           _buf['$<<']("<aside class=\"notes\">".$freeze());
@@ -139,14 +139,14 @@ if (const$ == null) const$ = nil;
           } else {
           
           _buf['$<<']("<div".$freeze());
-          _temple_html_attributeremover1 = "";
+          _temple_html_attributeremover1 = [];
           _temple_html_attributemerger1 = [];
           
           $writer = [0, "admonitionblock"];
           $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
           $writer[$rb_minus($writer["length"], 1)];;
           
-          $writer = [1, ""];
+          $writer = [1, []];
           $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
           $writer[$rb_minus($writer["length"], 1)];;
           _slim_codeattributes1 = [self.$attr("name"), self.$role()];
@@ -159,9 +159,12 @@ if (const$ == null) const$ = nil;
             } else {
             _temple_html_attributemerger1['$[]'](1)['$<<'](_slim_codeattributes1.$to_s())
           };
-          _temple_html_attributemerger1['$[]'](1);
+          
+          $writer = [1, $rb_times(_temple_html_attributemerger1['$[]'](1), "")];
+          $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
+          $writer[$rb_minus($writer["length"], 1)];;
           _temple_html_attributeremover1['$<<']($send(_temple_html_attributemerger1, 'reject', [], "empty?".$to_proc()).$join(" ").$to_s());
-          _temple_html_attributeremover1;
+          _temple_html_attributeremover1 = $rb_times(_temple_html_attributeremover1, "");
           if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
             
             _buf['$<<'](" class=\"".$freeze());
@@ -182,7 +185,7 @@ if (const$ == null) const$ = nil;
             
             icon_mapping = Opal.const_get_relative($nesting, 'Hash')['$[]']("caution", "fire", "important", "exclamation-circle", "note", "info-circle", "tip", "lightbulb-o", "warning", "warning");
             _buf['$<<']("<i".$freeze());
-            _temple_html_attributeremover2 = "";
+            _temple_html_attributeremover2 = [];
             _slim_codeattributes3 = "" + "fa fa-" + (icon_mapping['$[]'](self.$attr("name")));
             if ($truthy(Opal.const_get_relative($nesting, 'Array')['$==='](_slim_codeattributes3))) {
               
@@ -193,7 +196,7 @@ if (const$ == null) const$ = nil;
               } else {
               _temple_html_attributeremover2['$<<'](_slim_codeattributes3.$to_s())
             };
-            _temple_html_attributeremover2;
+            _temple_html_attributeremover2 = $rb_times(_temple_html_attributeremover2, "");
             if ($truthy(_temple_html_attributeremover2['$empty?']()['$!']())) {
               
               _buf['$<<'](" class=\"".$freeze());
@@ -249,7 +252,7 @@ if (const$ == null) const$ = nil;
           _buf['$<<'](self.$content().$to_s());
           _buf['$<<']("</td></tr></table></div>".$freeze());
         };
-        return _buf;}, TMP_7.$$s = self, TMP_7.$$arity = 0, TMP_7));
+        return (_buf = $rb_times(_buf, ""));}, TMP_7.$$s = self, TMP_7.$$arity = 0, TMP_7));
     }, TMP_Converter_admonition_8.$$arity = -2);
     
     Opal.defn(self, '$audio', TMP_Converter_audio_10 = function $$audio(node, opts) {
@@ -269,16 +272,16 @@ if (const$ == null) const$ = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         _buf['$<<']("<div".$freeze());
-        _temple_html_attributeremover1 = "";
+        _temple_html_attributeremover1 = [];
         _temple_html_attributemerger1 = [];
         
         $writer = [0, "audioblock"];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         
-        $writer = [1, ""];
+        $writer = [1, []];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         _slim_codeattributes1 = [self.style, self.$role()];
@@ -291,9 +294,12 @@ if (const$ == null) const$ = nil;
           } else {
           _temple_html_attributemerger1['$[]'](1)['$<<'](_slim_codeattributes1.$to_s())
         };
-        _temple_html_attributemerger1['$[]'](1);
+        
+        $writer = [1, $rb_times(_temple_html_attributemerger1['$[]'](1), "")];
+        $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
+        $writer[$rb_minus($writer["length"], 1)];;
         _temple_html_attributeremover1['$<<']($send(_temple_html_attributemerger1, 'reject', [], "empty?".$to_proc()).$join(" ").$to_s());
-        _temple_html_attributeremover1;
+        _temple_html_attributeremover1 = $rb_times(_temple_html_attributeremover1, "");
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -357,7 +363,7 @@ if (const$ == null) const$ = nil;
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<'](">Your browser does not support the audio tag.</audio></div></div>".$freeze());
-        return _buf;}, TMP_9.$$s = self, TMP_9.$$arity = 0, TMP_9));
+        return (_buf = $rb_times(_buf, ""));}, TMP_9.$$s = self, TMP_9.$$arity = 0, TMP_9));
     }, TMP_Converter_audio_10.$$arity = -2);
     
     Opal.defn(self, '$colist', TMP_Converter_colist_14 = function $$colist(node, opts) {
@@ -378,16 +384,16 @@ if (const$ == null) const$ = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         _buf['$<<']("<div".$freeze());
-        _temple_html_attributeremover1 = "";
+        _temple_html_attributeremover1 = [];
         _temple_html_attributemerger1 = [];
         
         $writer = [0, "colist"];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         
-        $writer = [1, ""];
+        $writer = [1, []];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         _slim_codeattributes1 = [self.style, self.$role()];
@@ -400,9 +406,12 @@ if (const$ == null) const$ = nil;
           } else {
           _temple_html_attributemerger1['$[]'](1)['$<<'](_slim_codeattributes1.$to_s())
         };
-        _temple_html_attributemerger1['$[]'](1);
+        
+        $writer = [1, $rb_times(_temple_html_attributemerger1['$[]'](1), "")];
+        $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
+        $writer[$rb_minus($writer["length"], 1)];;
         _temple_html_attributeremover1['$<<']($send(_temple_html_attributemerger1, 'reject', [], "empty?".$to_proc()).$join(" ").$to_s());
-        _temple_html_attributeremover1;
+        _temple_html_attributeremover1 = $rb_times(_temple_html_attributeremover1, "");
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -490,7 +499,7 @@ if (item == null) item = nil;
           _buf['$<<']("</ol>".$freeze());
         };
         _buf['$<<']("</div>".$freeze());
-        return _buf;}, TMP_11.$$s = self, TMP_11.$$arity = 0, TMP_11));
+        return (_buf = $rb_times(_buf, ""));}, TMP_11.$$s = self, TMP_11.$$arity = 0, TMP_11));
     }, TMP_Converter_colist_14.$$arity = -2);
     
     Opal.defn(self, '$dlist', TMP_Converter_dlist_22 = function $$dlist(node, opts) {
@@ -510,18 +519,18 @@ if (item == null) item = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         $case = self.style;
         if ("qanda"['$===']($case)) {
         _buf['$<<']("<div".$freeze());
-        _temple_html_attributeremover1 = "";
+        _temple_html_attributeremover1 = [];
         _temple_html_attributemerger1 = [];
         
         $writer = [0, "qlist"];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         
-        $writer = [1, ""];
+        $writer = [1, []];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         _slim_codeattributes1 = ["qanda", self.$role()];
@@ -534,9 +543,12 @@ if (item == null) item = nil;
           } else {
           _temple_html_attributemerger1['$[]'](1)['$<<'](_slim_codeattributes1.$to_s())
         };
-        _temple_html_attributemerger1['$[]'](1);
+        
+        $writer = [1, $rb_times(_temple_html_attributemerger1['$[]'](1), "")];
+        $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
+        $writer[$rb_minus($writer["length"], 1)];;
         _temple_html_attributeremover1['$<<']($send(_temple_html_attributemerger1, 'reject', [], "empty?".$to_proc()).$join(" ").$to_s());
-        _temple_html_attributeremover1;
+        _temple_html_attributeremover1 = $rb_times(_temple_html_attributeremover1, "");
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -584,14 +596,14 @@ if (question == null) question = nil;
         _buf['$<<']("</ol></div>".$freeze());}
         else if ("horizontal"['$===']($case)) {
         _buf['$<<']("<div".$freeze());
-        _temple_html_attributeremover2 = "";
+        _temple_html_attributeremover2 = [];
         _temple_html_attributemerger2 = [];
         
         $writer = [0, "hdlist"];
         $send(_temple_html_attributemerger2, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         
-        $writer = [1, ""];
+        $writer = [1, []];
         $send(_temple_html_attributemerger2, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         _slim_codeattributes3 = self.$role();
@@ -604,9 +616,12 @@ if (question == null) question = nil;
           } else {
           _temple_html_attributemerger2['$[]'](1)['$<<'](_slim_codeattributes3.$to_s())
         };
-        _temple_html_attributemerger2['$[]'](1);
+        
+        $writer = [1, $rb_times(_temple_html_attributemerger2['$[]'](1), "")];
+        $send(_temple_html_attributemerger2, '[]=', Opal.to_a($writer));
+        $writer[$rb_minus($writer["length"], 1)];;
         _temple_html_attributeremover2['$<<']($send(_temple_html_attributemerger2, 'reject', [], "empty?".$to_proc()).$join(" ").$to_s());
-        _temple_html_attributeremover2;
+        _temple_html_attributeremover2 = $rb_times(_temple_html_attributeremover2, "");
         if ($truthy(_temple_html_attributeremover2['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -666,7 +681,7 @@ if (question == null) question = nil;
 if (terms == null) terms = nil;if (dd == null) dd = nil;
         
           _buf['$<<']("<tr><td".$freeze());
-          _temple_html_attributeremover3 = "";
+          _temple_html_attributeremover3 = [];
           _slim_codeattributes7 = ["hdlist1", (function() {if ($truthy(self['$option?']("strong"))) {
             return "strong"
             } else {
@@ -681,7 +696,7 @@ if (terms == null) terms = nil;if (dd == null) dd = nil;
             } else {
             _temple_html_attributeremover3['$<<'](_slim_codeattributes7.$to_s())
           };
-          _temple_html_attributeremover3;
+          _temple_html_attributeremover3 = $rb_times(_temple_html_attributeremover3, "");
           if ($truthy(_temple_html_attributeremover3['$empty?']()['$!']())) {
             
             _buf['$<<'](" class=\"".$freeze());
@@ -715,14 +730,14 @@ if (dt == null) dt = nil;
         _buf['$<<']("</table></div>".$freeze());}
         else {
         _buf['$<<']("<div".$freeze());
-        _temple_html_attributeremover4 = "";
+        _temple_html_attributeremover4 = [];
         _temple_html_attributemerger3 = [];
         
         $writer = [0, "dlist"];
         $send(_temple_html_attributemerger3, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         
-        $writer = [1, ""];
+        $writer = [1, []];
         $send(_temple_html_attributemerger3, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         _slim_codeattributes8 = [self.style, self.$role()];
@@ -735,9 +750,12 @@ if (dt == null) dt = nil;
           } else {
           _temple_html_attributemerger3['$[]'](1)['$<<'](_slim_codeattributes8.$to_s())
         };
-        _temple_html_attributemerger3['$[]'](1);
+        
+        $writer = [1, $rb_times(_temple_html_attributemerger3['$[]'](1), "")];
+        $send(_temple_html_attributemerger3, '[]=', Opal.to_a($writer));
+        $writer[$rb_minus($writer["length"], 1)];;
         _temple_html_attributeremover4['$<<']($send(_temple_html_attributemerger3, 'reject', [], "empty?".$to_proc()).$join(" ").$to_s());
-        _temple_html_attributeremover4;
+        _temple_html_attributeremover4 = $rb_times(_temple_html_attributeremover4, "");
         if ($truthy(_temple_html_attributeremover4['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -768,7 +786,7 @@ if (terms == null) terms = nil;if (dd == null) dd = nil;
 if (dt == null) dt = nil;
           
             _buf['$<<']("<dt".$freeze());
-            _temple_html_attributeremover5 = "";
+            _temple_html_attributeremover5 = [];
             _slim_codeattributes10 = (function() {if ($truthy(self.style)) {
               return nil
               } else {
@@ -783,7 +801,7 @@ if (dt == null) dt = nil;
               } else {
               _temple_html_attributeremover5['$<<'](_slim_codeattributes10.$to_s())
             };
-            _temple_html_attributeremover5;
+            _temple_html_attributeremover5 = $rb_times(_temple_html_attributeremover5, "");
             if ($truthy(_temple_html_attributeremover5['$empty?']()['$!']())) {
               
               _buf['$<<'](" class=\"".$freeze());
@@ -807,7 +825,7 @@ if (dt == null) dt = nil;
             return _buf['$<<']("</dd>".$freeze());
           };}, TMP_20.$$s = self, TMP_20.$$arity = 2, TMP_20));
         _buf['$<<']("</dl></div>".$freeze());};
-        return _buf;}, TMP_15.$$s = self, TMP_15.$$arity = 0, TMP_15));
+        return (_buf = $rb_times(_buf, ""));}, TMP_15.$$s = self, TMP_15.$$arity = 0, TMP_15));
     }, TMP_Converter_dlist_22.$$arity = -2);
     
     Opal.defn(self, '$example', TMP_Converter_example_24 = function $$example(node, opts) {
@@ -826,16 +844,16 @@ if (dt == null) dt = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         _buf['$<<']("<div".$freeze());
-        _temple_html_attributeremover1 = "";
+        _temple_html_attributeremover1 = [];
         _temple_html_attributemerger1 = [];
         
         $writer = [0, "exampleblock"];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         
-        $writer = [1, ""];
+        $writer = [1, []];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         _slim_codeattributes1 = self.$role();
@@ -848,9 +866,12 @@ if (dt == null) dt = nil;
           } else {
           _temple_html_attributemerger1['$[]'](1)['$<<'](_slim_codeattributes1.$to_s())
         };
-        _temple_html_attributemerger1['$[]'](1);
+        
+        $writer = [1, $rb_times(_temple_html_attributemerger1['$[]'](1), "")];
+        $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
+        $writer[$rb_minus($writer["length"], 1)];;
         _temple_html_attributeremover1['$<<']($send(_temple_html_attributemerger1, 'reject', [], "empty?".$to_proc()).$join(" ").$to_s());
-        _temple_html_attributeremover1;
+        _temple_html_attributeremover1 = $rb_times(_temple_html_attributeremover1, "");
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -875,7 +896,7 @@ if (dt == null) dt = nil;
         _buf['$<<']("<div class=\"content\">".$freeze());
         _buf['$<<'](self.$content().$to_s());
         _buf['$<<']("</div></div>".$freeze());
-        return _buf;}, TMP_23.$$s = self, TMP_23.$$arity = 0, TMP_23));
+        return (_buf = $rb_times(_buf, ""));}, TMP_23.$$s = self, TMP_23.$$arity = 0, TMP_23));
     }, TMP_Converter_example_24.$$arity = -2);
     
     Opal.defn(self, '$floating_title', TMP_Converter_floating_title_26 = function $$floating_title(node, opts) {
@@ -893,7 +914,7 @@ if (dt == null) dt = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         _slim_htag_filter1 = $rb_plus(self.$level(), 1).$to_s();
         _buf['$<<']("<h".$freeze());
         _buf['$<<'](_slim_htag_filter1.$to_s());
@@ -907,7 +928,7 @@ if (dt == null) dt = nil;
             _buf['$<<'](_slim_codeattributes1.$to_s());
             _buf['$<<']("\"".$freeze());
           }};
-        _temple_html_attributeremover1 = "";
+        _temple_html_attributeremover1 = [];
         _slim_codeattributes2 = [self.$style(), self.$role()];
         if ($truthy(Opal.const_get_relative($nesting, 'Array')['$==='](_slim_codeattributes2))) {
           
@@ -918,7 +939,7 @@ if (dt == null) dt = nil;
           } else {
           _temple_html_attributeremover1['$<<'](_slim_codeattributes2.$to_s())
         };
-        _temple_html_attributeremover1;
+        _temple_html_attributeremover1 = $rb_times(_temple_html_attributeremover1, "");
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -929,7 +950,7 @@ if (dt == null) dt = nil;
         _buf['$<<']("</h".$freeze());
         _buf['$<<'](_slim_htag_filter1.$to_s());
         _buf['$<<'](">".$freeze());
-        return _buf;}, TMP_25.$$s = self, TMP_25.$$arity = 0, TMP_25));
+        return (_buf = $rb_times(_buf, ""));}, TMP_25.$$s = self, TMP_25.$$arity = 0, TMP_25));
     }, TMP_Converter_floating_title_26.$$arity = -2);
     
     Opal.defn(self, '$image', TMP_Converter_image_28 = function $$image(node, opts) {
@@ -948,7 +969,7 @@ if (dt == null) dt = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         width = (function() {if ($truthy(self['$attr?']("width"))) {
           
           return self.$attr("width");
@@ -967,14 +988,14 @@ if (dt == null) dt = nil;
           } else {
           
           _buf['$<<']("<div".$freeze());
-          _temple_html_attributeremover1 = "";
+          _temple_html_attributeremover1 = [];
           _temple_html_attributemerger1 = [];
           
           $writer = [0, "imageblock"];
           $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
           $writer[$rb_minus($writer["length"], 1)];;
           
-          $writer = [1, ""];
+          $writer = [1, []];
           $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
           $writer[$rb_minus($writer["length"], 1)];;
           _slim_codeattributes1 = self.$roles();
@@ -987,9 +1008,12 @@ if (dt == null) dt = nil;
             } else {
             _temple_html_attributemerger1['$[]'](1)['$<<'](_slim_codeattributes1.$to_s())
           };
-          _temple_html_attributemerger1['$[]'](1);
+          
+          $writer = [1, $rb_times(_temple_html_attributemerger1['$[]'](1), "")];
+          $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
+          $writer[$rb_minus($writer["length"], 1)];;
           _temple_html_attributeremover1['$<<']($send(_temple_html_attributemerger1, 'reject', [], "empty?".$to_proc()).$join(" ").$to_s());
-          _temple_html_attributeremover1;
+          _temple_html_attributeremover1 = $rb_times(_temple_html_attributeremover1, "");
           if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
             
             _buf['$<<'](" class=\"".$freeze());
@@ -1159,7 +1183,7 @@ if (dt == null) dt = nil;
             _buf['$<<'](self.$captioned_title().$to_s());
             _buf['$<<']("</div>".$freeze());};
         };
-        return _buf;}, TMP_27.$$s = self, TMP_27.$$arity = 0, TMP_27));
+        return (_buf = $rb_times(_buf, ""));}, TMP_27.$$s = self, TMP_27.$$arity = 0, TMP_27));
     }, TMP_Converter_image_28.$$arity = -2);
     
     Opal.defn(self, '$listing', TMP_Converter_listing_30 = function $$listing(node, opts) {
@@ -1180,16 +1204,16 @@ if (dt == null) dt = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         _buf['$<<']("<div".$freeze());
-        _temple_html_attributeremover1 = "";
+        _temple_html_attributeremover1 = [];
         _temple_html_attributemerger1 = [];
         
         $writer = [0, "listingblock"];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         
-        $writer = [1, ""];
+        $writer = [1, []];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         _slim_codeattributes1 = self.$role();
@@ -1202,9 +1226,12 @@ if (dt == null) dt = nil;
           } else {
           _temple_html_attributemerger1['$[]'](1)['$<<'](_slim_codeattributes1.$to_s())
         };
-        _temple_html_attributemerger1['$[]'](1);
+        
+        $writer = [1, $rb_times(_temple_html_attributemerger1['$[]'](1), "")];
+        $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
+        $writer[$rb_minus($writer["length"], 1)];;
         _temple_html_attributeremover1['$<<']($send(_temple_html_attributemerger1, 'reject', [], "empty?".$to_proc()).$join(" ").$to_s());
-        _temple_html_attributeremover1;
+        _temple_html_attributeremover1 = $rb_times(_temple_html_attributeremover1, "");
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -1257,7 +1284,7 @@ if (dt == null) dt = nil;
           if ($truthy(nowrap)) {
             pre_class['$<<']("nowrap")};
           _buf['$<<']("<pre".$freeze());
-          _temple_html_attributeremover2 = "";
+          _temple_html_attributeremover2 = [];
           _slim_codeattributes3 = pre_class;
           if ($truthy(Opal.const_get_relative($nesting, 'Array')['$==='](_slim_codeattributes3))) {
             
@@ -1268,7 +1295,7 @@ if (dt == null) dt = nil;
             } else {
             _temple_html_attributeremover2['$<<'](_slim_codeattributes3.$to_s())
           };
-          _temple_html_attributeremover2;
+          _temple_html_attributeremover2 = $rb_times(_temple_html_attributeremover2, "");
           if ($truthy(_temple_html_attributeremover2['$empty?']()['$!']())) {
             
             _buf['$<<'](" class=\"".$freeze());
@@ -1285,7 +1312,7 @@ if (dt == null) dt = nil;
               _buf['$<<']("\"".$freeze());
             }};
           _buf['$<<']("><code".$freeze());
-          _temple_html_attributeremover3 = "";
+          _temple_html_attributeremover3 = [];
           _slim_codeattributes5 = code_class;
           if ($truthy(Opal.const_get_relative($nesting, 'Array')['$==='](_slim_codeattributes5))) {
             
@@ -1296,7 +1323,7 @@ if (dt == null) dt = nil;
             } else {
             _temple_html_attributeremover3['$<<'](_slim_codeattributes5.$to_s())
           };
-          _temple_html_attributeremover3;
+          _temple_html_attributeremover3 = $rb_times(_temple_html_attributeremover3, "");
           if ($truthy(_temple_html_attributeremover3['$empty?']()['$!']())) {
             
             _buf['$<<'](" class=\"".$freeze());
@@ -1308,7 +1335,7 @@ if (dt == null) dt = nil;
           } else {
           
           _buf['$<<']("<pre".$freeze());
-          _temple_html_attributeremover4 = "";
+          _temple_html_attributeremover4 = [];
           _slim_codeattributes6 = (function() {if ($truthy(nowrap)) {
             return "nowrap"
             } else {
@@ -1323,7 +1350,7 @@ if (dt == null) dt = nil;
             } else {
             _temple_html_attributeremover4['$<<'](_slim_codeattributes6.$to_s())
           };
-          _temple_html_attributeremover4;
+          _temple_html_attributeremover4 = $rb_times(_temple_html_attributeremover4, "");
           if ($truthy(_temple_html_attributeremover4['$empty?']()['$!']())) {
             
             _buf['$<<'](" class=\"".$freeze());
@@ -1334,7 +1361,7 @@ if (dt == null) dt = nil;
           _buf['$<<']("</pre>".$freeze());
         };
         _buf['$<<']("</div></div>".$freeze());
-        return _buf;}, TMP_29.$$s = self, TMP_29.$$arity = 0, TMP_29));
+        return (_buf = $rb_times(_buf, ""));}, TMP_29.$$s = self, TMP_29.$$arity = 0, TMP_29));
     }, TMP_Converter_listing_30.$$arity = -2);
     
     Opal.defn(self, '$literal', TMP_Converter_literal_32 = function $$literal(node, opts) {
@@ -1354,16 +1381,16 @@ if (dt == null) dt = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         _buf['$<<']("<div".$freeze());
-        _temple_html_attributeremover1 = "";
+        _temple_html_attributeremover1 = [];
         _temple_html_attributemerger1 = [];
         
         $writer = [0, "literalblock"];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         
-        $writer = [1, ""];
+        $writer = [1, []];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         _slim_codeattributes1 = self.$role();
@@ -1376,9 +1403,12 @@ if (dt == null) dt = nil;
           } else {
           _temple_html_attributemerger1['$[]'](1)['$<<'](_slim_codeattributes1.$to_s())
         };
-        _temple_html_attributemerger1['$[]'](1);
+        
+        $writer = [1, $rb_times(_temple_html_attributemerger1['$[]'](1), "")];
+        $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
+        $writer[$rb_minus($writer["length"], 1)];;
         _temple_html_attributeremover1['$<<']($send(_temple_html_attributemerger1, 'reject', [], "empty?".$to_proc()).$join(" ").$to_s());
-        _temple_html_attributeremover1;
+        _temple_html_attributeremover1 = $rb_times(_temple_html_attributeremover1, "");
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -1401,7 +1431,7 @@ if (dt == null) dt = nil;
           _buf['$<<'](self.$title().$to_s());
           _buf['$<<']("</div>".$freeze());};
         _buf['$<<']("<div class=\"content\"><pre".$freeze());
-        _temple_html_attributeremover2 = "";
+        _temple_html_attributeremover2 = [];
         _slim_codeattributes3 = (function() {if ($truthy(($truthy($a = self.document['$attr?']("prewrap")['$!']()) ? $a : self['$option?']("nowrap")))) {
           return "nowrap"
           } else {
@@ -1416,7 +1446,7 @@ if (dt == null) dt = nil;
           } else {
           _temple_html_attributeremover2['$<<'](_slim_codeattributes3.$to_s())
         };
-        _temple_html_attributeremover2;
+        _temple_html_attributeremover2 = $rb_times(_temple_html_attributeremover2, "");
         if ($truthy(_temple_html_attributeremover2['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -1425,7 +1455,7 @@ if (dt == null) dt = nil;
         _buf['$<<'](">".$freeze());
         _buf['$<<'](self.$content().$to_s());
         _buf['$<<']("</pre></div></div>".$freeze());
-        return _buf;}, TMP_31.$$s = self, TMP_31.$$arity = 0, TMP_31));
+        return (_buf = $rb_times(_buf, ""));}, TMP_31.$$s = self, TMP_31.$$arity = 0, TMP_31));
     }, TMP_Converter_literal_32.$$arity = -2);
     
     Opal.defn(self, '$olist', TMP_Converter_olist_35 = function $$olist(node, opts) {
@@ -1445,16 +1475,16 @@ if (dt == null) dt = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         _buf['$<<']("<div".$freeze());
-        _temple_html_attributeremover1 = "";
+        _temple_html_attributeremover1 = [];
         _temple_html_attributemerger1 = [];
         
         $writer = [0, "olist"];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         
-        $writer = [1, ""];
+        $writer = [1, []];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         _slim_codeattributes1 = [self.style, self.$role()];
@@ -1467,9 +1497,12 @@ if (dt == null) dt = nil;
           } else {
           _temple_html_attributemerger1['$[]'](1)['$<<'](_slim_codeattributes1.$to_s())
         };
-        _temple_html_attributemerger1['$[]'](1);
+        
+        $writer = [1, $rb_times(_temple_html_attributemerger1['$[]'](1), "")];
+        $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
+        $writer[$rb_minus($writer["length"], 1)];;
         _temple_html_attributeremover1['$<<']($send(_temple_html_attributemerger1, 'reject', [], "empty?".$to_proc()).$join(" ").$to_s());
-        _temple_html_attributeremover1;
+        _temple_html_attributeremover1 = $rb_times(_temple_html_attributeremover1, "");
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -1492,7 +1525,7 @@ if (dt == null) dt = nil;
           _buf['$<<'](self.$title().$to_s());
           _buf['$<<']("</div>".$freeze());};
         _buf['$<<']("<ol".$freeze());
-        _temple_html_attributeremover2 = "";
+        _temple_html_attributeremover2 = [];
         _slim_codeattributes3 = self.style;
         if ($truthy(Opal.const_get_relative($nesting, 'Array')['$==='](_slim_codeattributes3))) {
           
@@ -1503,7 +1536,7 @@ if (dt == null) dt = nil;
           } else {
           _temple_html_attributeremover2['$<<'](_slim_codeattributes3.$to_s())
         };
-        _temple_html_attributeremover2;
+        _temple_html_attributeremover2 = $rb_times(_temple_html_attributeremover2, "");
         if ($truthy(_temple_html_attributeremover2['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -1534,7 +1567,7 @@ if (dt == null) dt = nil;
 if (item == null) item = nil;
         
           _buf['$<<']("<li".$freeze());
-          _temple_html_attributeremover3 = "";
+          _temple_html_attributeremover3 = [];
           _slim_codeattributes6 = (function() {if ($truthy(($truthy($a = self['$option?']("step")) ? $a : self['$has_role?']("step")))) {
             return "fragment"
             } else {
@@ -1549,7 +1582,7 @@ if (item == null) item = nil;
             } else {
             _temple_html_attributeremover3['$<<'](_slim_codeattributes6.$to_s())
           };
-          _temple_html_attributeremover3;
+          _temple_html_attributeremover3 = $rb_times(_temple_html_attributeremover3, "");
           if ($truthy(_temple_html_attributeremover3['$empty?']()['$!']())) {
             
             _buf['$<<'](" class=\"".$freeze());
@@ -1562,7 +1595,7 @@ if (item == null) item = nil;
             _buf['$<<'](item.$content().$to_s())};
           return _buf['$<<']("</li>".$freeze());}, TMP_34.$$s = self, TMP_34.$$arity = 1, TMP_34));
         _buf['$<<']("</ol></div>".$freeze());
-        return _buf;}, TMP_33.$$s = self, TMP_33.$$arity = 0, TMP_33));
+        return (_buf = $rb_times(_buf, ""));}, TMP_33.$$s = self, TMP_33.$$arity = 0, TMP_33));
     }, TMP_Converter_olist_35.$$arity = -2);
     
     Opal.defn(self, '$open', TMP_Converter_open_37 = function $$open(node, opts) {
@@ -1585,14 +1618,14 @@ if (item == null) item = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         if (self.style['$==']("abstract")) {
           if ($truthy((($a = self.parent['$=='](self.document)) ? self.document.$doctype()['$==']("book") : self.parent['$=='](self.document)))) {
             self.$puts("asciidoctor: WARNING: abstract block cannot be used in a document without a title when doctype is book. Excluding block content.")
             } else {
             
             _buf['$<<']("<div".$freeze());
-            _temple_html_attributeremover1 = "";
+            _temple_html_attributeremover1 = [];
             _temple_html_attributemerger1 = [];
             
             $writer = [0, "quoteblock"];
@@ -1603,7 +1636,7 @@ if (item == null) item = nil;
             $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
             $writer[$rb_minus($writer["length"], 1)];;
             
-            $writer = [2, ""];
+            $writer = [2, []];
             $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
             $writer[$rb_minus($writer["length"], 1)];;
             _slim_codeattributes1 = self.$role();
@@ -1616,9 +1649,12 @@ if (item == null) item = nil;
               } else {
               _temple_html_attributemerger1['$[]'](2)['$<<'](_slim_codeattributes1.$to_s())
             };
-            _temple_html_attributemerger1['$[]'](2);
+            
+            $writer = [2, $rb_times(_temple_html_attributemerger1['$[]'](2), "")];
+            $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
+            $writer[$rb_minus($writer["length"], 1)];;
             _temple_html_attributeremover1['$<<']($send(_temple_html_attributemerger1, 'reject', [], "empty?".$to_proc()).$join(" ").$to_s());
-            _temple_html_attributeremover1;
+            _temple_html_attributeremover1 = $rb_times(_temple_html_attributeremover1, "");
             if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
               
               _buf['$<<'](" class=\"".$freeze());
@@ -1649,14 +1685,14 @@ if (item == null) item = nil;
           } else {
           
           _buf['$<<']("<div".$freeze());
-          _temple_html_attributeremover2 = "";
+          _temple_html_attributeremover2 = [];
           _temple_html_attributemerger2 = [];
           
           $writer = [0, "openblock"];
           $send(_temple_html_attributemerger2, '[]=', Opal.to_a($writer));
           $writer[$rb_minus($writer["length"], 1)];;
           
-          $writer = [1, ""];
+          $writer = [1, []];
           $send(_temple_html_attributemerger2, '[]=', Opal.to_a($writer));
           $writer[$rb_minus($writer["length"], 1)];;
           _slim_codeattributes3 = [(function() {if ($truthy(self.style['$!=']("open"))) {
@@ -1673,9 +1709,12 @@ if (item == null) item = nil;
             } else {
             _temple_html_attributemerger2['$[]'](1)['$<<'](_slim_codeattributes3.$to_s())
           };
-          _temple_html_attributemerger2['$[]'](1);
+          
+          $writer = [1, $rb_times(_temple_html_attributemerger2['$[]'](1), "")];
+          $send(_temple_html_attributemerger2, '[]=', Opal.to_a($writer));
+          $writer[$rb_minus($writer["length"], 1)];;
           _temple_html_attributeremover2['$<<']($send(_temple_html_attributemerger2, 'reject', [], "empty?".$to_proc()).$join(" ").$to_s());
-          _temple_html_attributeremover2;
+          _temple_html_attributeremover2 = $rb_times(_temple_html_attributeremover2, "");
           if ($truthy(_temple_html_attributeremover2['$empty?']()['$!']())) {
             
             _buf['$<<'](" class=\"".$freeze());
@@ -1701,7 +1740,7 @@ if (item == null) item = nil;
           _buf['$<<'](self.$content().$to_s());
           _buf['$<<']("</div></div>".$freeze());
         };
-        return _buf;}, TMP_36.$$s = self, TMP_36.$$arity = 0, TMP_36));
+        return (_buf = $rb_times(_buf, ""));}, TMP_36.$$s = self, TMP_36.$$arity = 0, TMP_36));
     }, TMP_Converter_open_37.$$arity = -2);
     
     Opal.defn(self, '$page_break', TMP_Converter_page_break_39 = function $$page_break(node, opts) {
@@ -1719,9 +1758,9 @@ if (item == null) item = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         _buf['$<<']("<div style=\"page-break-after: always;\"></div>".$freeze());
-        return _buf;}, TMP_38.$$s = self, TMP_38.$$arity = 0, TMP_38));
+        return (_buf = $rb_times(_buf, ""));}, TMP_38.$$s = self, TMP_38.$$arity = 0, TMP_38));
     }, TMP_Converter_page_break_39.$$arity = -2);
     
     Opal.defn(self, '$paragraph', TMP_Converter_paragraph_41 = function $$paragraph(node, opts) {
@@ -1740,16 +1779,16 @@ if (item == null) item = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         _buf['$<<']("<div".$freeze());
-        _temple_html_attributeremover1 = "";
+        _temple_html_attributeremover1 = [];
         _temple_html_attributemerger1 = [];
         
         $writer = [0, "paragraph"];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         
-        $writer = [1, ""];
+        $writer = [1, []];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         _slim_codeattributes1 = self.$role();
@@ -1762,9 +1801,12 @@ if (item == null) item = nil;
           } else {
           _temple_html_attributemerger1['$[]'](1)['$<<'](_slim_codeattributes1.$to_s())
         };
-        _temple_html_attributemerger1['$[]'](1);
+        
+        $writer = [1, $rb_times(_temple_html_attributemerger1['$[]'](1), "")];
+        $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
+        $writer[$rb_minus($writer["length"], 1)];;
         _temple_html_attributeremover1['$<<']($send(_temple_html_attributemerger1, 'reject', [], "empty?".$to_proc()).$join(" ").$to_s());
-        _temple_html_attributeremover1;
+        _temple_html_attributeremover1 = $rb_times(_temple_html_attributeremover1, "");
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -1798,7 +1840,7 @@ if (item == null) item = nil;
           _buf['$<<']("</p>".$freeze());
         };
         _buf['$<<']("</div>".$freeze());
-        return _buf;}, TMP_40.$$s = self, TMP_40.$$arity = 0, TMP_40));
+        return (_buf = $rb_times(_buf, ""));}, TMP_40.$$s = self, TMP_40.$$arity = 0, TMP_40));
     }, TMP_Converter_paragraph_41.$$arity = -2);
     
     Opal.defn(self, '$pass', TMP_Converter_pass_43 = function $$pass(node, opts) {
@@ -1816,9 +1858,9 @@ if (item == null) item = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         _buf['$<<'](self.$content().$to_s());
-        return _buf;}, TMP_42.$$s = self, TMP_42.$$arity = 0, TMP_42));
+        return (_buf = $rb_times(_buf, ""));}, TMP_42.$$s = self, TMP_42.$$arity = 0, TMP_42));
     }, TMP_Converter_pass_43.$$arity = -2);
     
     Opal.defn(self, '$preamble', TMP_Converter_preamble_45 = function $$preamble(node, opts) {
@@ -1836,8 +1878,8 @@ if (item == null) item = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
-        return _buf;}, TMP_44.$$s = self, TMP_44.$$arity = 0, TMP_44));
+        _buf = [];
+        return (_buf = $rb_times(_buf, ""));}, TMP_44.$$s = self, TMP_44.$$arity = 0, TMP_44));
     }, TMP_Converter_preamble_45.$$arity = -2);
     
     Opal.defn(self, '$quote', TMP_Converter_quote_47 = function $$quote(node, opts) {
@@ -1856,16 +1898,16 @@ if (item == null) item = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         _buf['$<<']("<div".$freeze());
-        _temple_html_attributeremover1 = "";
+        _temple_html_attributeremover1 = [];
         _temple_html_attributemerger1 = [];
         
         $writer = [0, "quoteblock"];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         
-        $writer = [1, ""];
+        $writer = [1, []];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         _slim_codeattributes1 = self.$role();
@@ -1878,9 +1920,12 @@ if (item == null) item = nil;
           } else {
           _temple_html_attributemerger1['$[]'](1)['$<<'](_slim_codeattributes1.$to_s())
         };
-        _temple_html_attributemerger1['$[]'](1);
+        
+        $writer = [1, $rb_times(_temple_html_attributemerger1['$[]'](1), "")];
+        $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
+        $writer[$rb_minus($writer["length"], 1)];;
         _temple_html_attributeremover1['$<<']($send(_temple_html_attributemerger1, 'reject', [], "empty?".$to_proc()).$join(" ").$to_s());
-        _temple_html_attributeremover1;
+        _temple_html_attributeremover1 = $rb_times(_temple_html_attributeremover1, "");
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -1933,7 +1978,7 @@ if (item == null) item = nil;
             _buf['$<<'](attribution.$to_s());};
           _buf['$<<']("</div>".$freeze());};
         _buf['$<<']("</div>".$freeze());
-        return _buf;}, TMP_46.$$s = self, TMP_46.$$arity = 0, TMP_46));
+        return (_buf = $rb_times(_buf, ""));}, TMP_46.$$s = self, TMP_46.$$arity = 0, TMP_46));
     }, TMP_Converter_quote_47.$$arity = -2);
     
     Opal.defn(self, '$ruler', TMP_Converter_ruler_49 = function $$ruler(node, opts) {
@@ -1951,9 +1996,9 @@ if (item == null) item = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         _buf['$<<']("<hr>".$freeze());
-        return _buf;}, TMP_48.$$s = self, TMP_48.$$arity = 0, TMP_48));
+        return (_buf = $rb_times(_buf, ""));}, TMP_48.$$s = self, TMP_48.$$arity = 0, TMP_48));
     }, TMP_Converter_ruler_49.$$arity = -2);
     
     Opal.defn(self, '$sidebar', TMP_Converter_sidebar_51 = function $$sidebar(node, opts) {
@@ -1972,16 +2017,16 @@ if (item == null) item = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         _buf['$<<']("<div".$freeze());
-        _temple_html_attributeremover1 = "";
+        _temple_html_attributeremover1 = [];
         _temple_html_attributemerger1 = [];
         
         $writer = [0, "sidebarblock"];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         
-        $writer = [1, ""];
+        $writer = [1, []];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         _slim_codeattributes1 = self.$role();
@@ -1994,9 +2039,12 @@ if (item == null) item = nil;
           } else {
           _temple_html_attributemerger1['$[]'](1)['$<<'](_slim_codeattributes1.$to_s())
         };
-        _temple_html_attributemerger1['$[]'](1);
+        
+        $writer = [1, $rb_times(_temple_html_attributemerger1['$[]'](1), "")];
+        $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
+        $writer[$rb_minus($writer["length"], 1)];;
         _temple_html_attributeremover1['$<<']($send(_temple_html_attributemerger1, 'reject', [], "empty?".$to_proc()).$join(" ").$to_s());
-        _temple_html_attributeremover1;
+        _temple_html_attributeremover1 = $rb_times(_temple_html_attributeremover1, "");
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -2020,7 +2068,7 @@ if (item == null) item = nil;
           _buf['$<<']("</div>".$freeze());};
         _buf['$<<'](self.$content().$to_s());
         _buf['$<<']("</div></div>".$freeze());
-        return _buf;}, TMP_50.$$s = self, TMP_50.$$arity = 0, TMP_50));
+        return (_buf = $rb_times(_buf, ""));}, TMP_50.$$s = self, TMP_50.$$arity = 0, TMP_50));
     }, TMP_Converter_sidebar_51.$$arity = -2);
     
     Opal.defn(self, '$stem', TMP_Converter_stem_53 = function $$stem(node, opts) {
@@ -2041,7 +2089,7 @@ if (item == null) item = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         $b = Opal.const_get_qualified(Opal.const_get_relative($nesting, 'Asciidoctor'), 'BLOCK_MATH_DELIMITERS')['$[]'](self.style.$to_sym()), $a = Opal.to_ary($b), (open = ($a[0] == null ? nil : $a[0])), (close = ($a[1] == null ? nil : $a[1])), $b;
         equation = self.$content().$strip();
         if ($truthy(($truthy($a = ($truthy($b = self.subs['$nil?']()) ? $b : self.subs['$empty?']())) ? self['$attr?']("subs")['$!']() : $a))) {
@@ -2051,14 +2099,14 @@ if (item == null) item = nil;
           equation = "" + (open) + (equation) + (close)
         };
         _buf['$<<']("<div".$freeze());
-        _temple_html_attributeremover1 = "";
+        _temple_html_attributeremover1 = [];
         _temple_html_attributemerger1 = [];
         
         $writer = [0, "stemblock"];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         
-        $writer = [1, ""];
+        $writer = [1, []];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         _slim_codeattributes1 = self.$role();
@@ -2071,9 +2119,12 @@ if (item == null) item = nil;
           } else {
           _temple_html_attributemerger1['$[]'](1)['$<<'](_slim_codeattributes1.$to_s())
         };
-        _temple_html_attributemerger1['$[]'](1);
+        
+        $writer = [1, $rb_times(_temple_html_attributemerger1['$[]'](1), "")];
+        $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
+        $writer[$rb_minus($writer["length"], 1)];;
         _temple_html_attributeremover1['$<<']($send(_temple_html_attributemerger1, 'reject', [], "empty?".$to_proc()).$join(" ").$to_s());
-        _temple_html_attributeremover1;
+        _temple_html_attributeremover1 = $rb_times(_temple_html_attributeremover1, "");
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -2098,7 +2149,7 @@ if (item == null) item = nil;
         _buf['$<<']("<div class=\"content\">".$freeze());
         _buf['$<<'](equation.$to_s());
         _buf['$<<']("</div></div>".$freeze());
-        return _buf;}, TMP_52.$$s = self, TMP_52.$$arity = 0, TMP_52));
+        return (_buf = $rb_times(_buf, ""));}, TMP_52.$$s = self, TMP_52.$$arity = 0, TMP_52));
     }, TMP_Converter_stem_53.$$arity = -2);
     
     Opal.defn(self, '$table', TMP_Converter_table_64 = function $$table(node, opts) {
@@ -2118,7 +2169,7 @@ if (item == null) item = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         _buf['$<<']("<table".$freeze());
         _slim_codeattributes1 = self.id;
         if ($truthy(_slim_codeattributes1)) {
@@ -2130,7 +2181,7 @@ if (item == null) item = nil;
             _buf['$<<'](_slim_codeattributes1.$to_s());
             _buf['$<<']("\"".$freeze());
           }};
-        _temple_html_attributeremover1 = "";
+        _temple_html_attributeremover1 = [];
         _slim_codeattributes2 = ["tableblock", "" + "frame-" + (self.$attr("frame", "all")), "" + "grid-" + (self.$attr("grid", "all")), self.$role()];
         if ($truthy(Opal.const_get_relative($nesting, 'Array')['$==='](_slim_codeattributes2))) {
           
@@ -2141,7 +2192,7 @@ if (item == null) item = nil;
           } else {
           _temple_html_attributeremover1['$<<'](_slim_codeattributes2.$to_s())
         };
-        _temple_html_attributeremover1;
+        _temple_html_attributeremover1 = $rb_times(_temple_html_attributeremover1, "");
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -2224,7 +2275,7 @@ if (cell == null) cell = nil;
                 }; return nil; })()})], (TMP_61 = function(){var self = TMP_61.$$s || this, TMP_62, TMP_63, _slim_controls2 = nil;
 
                 
-                  _slim_controls2 = "";
+                  _slim_controls2 = [];
                   if (tblsec['$==']("head")) {
                     _slim_controls2['$<<'](cell_content.$to_s())
                     } else {
@@ -2254,12 +2305,12 @@ if (text == null) text = nil;
                       _slim_controls2['$<<'](text.$to_s());
                       return _slim_controls2['$<<']("</p>".$freeze());}, TMP_63.$$s = self, TMP_63.$$arity = 1, TMP_63))}
                   };
-                  return _slim_controls2;}, TMP_61.$$s = self, TMP_61.$$arity = 0, TMP_61));
+                  return (_slim_controls2 = $rb_times(_slim_controls2, ""));}, TMP_61.$$s = self, TMP_61.$$arity = 0, TMP_61));
                 return _buf['$<<'](_slim_controls1.$to_s());}, TMP_60.$$s = self, TMP_60.$$arity = 1, TMP_60));
               return _buf['$<<']("</tr>".$freeze());}, TMP_59.$$s = self, TMP_59.$$arity = 1, TMP_59));}, TMP_58.$$s = self, TMP_58.$$arity = 1, TMP_58));
         };
         _buf['$<<']("</table>".$freeze());
-        return _buf;}, TMP_54.$$s = self, TMP_54.$$arity = 0, TMP_54));
+        return (_buf = $rb_times(_buf, ""));}, TMP_54.$$s = self, TMP_54.$$arity = 0, TMP_54));
     }, TMP_Converter_table_64.$$arity = -2);
     
     Opal.defn(self, '$thematic_break', TMP_Converter_thematic_break_66 = function $$thematic_break(node, opts) {
@@ -2277,9 +2328,9 @@ if (text == null) text = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         _buf['$<<']("<hr>".$freeze());
-        return _buf;}, TMP_65.$$s = self, TMP_65.$$arity = 0, TMP_65));
+        return (_buf = $rb_times(_buf, ""));}, TMP_65.$$s = self, TMP_65.$$arity = 0, TMP_65));
     }, TMP_Converter_thematic_break_66.$$arity = -2);
     
     Opal.defn(self, '$toc', TMP_Converter_toc_68 = function $$toc(node, opts) {
@@ -2299,7 +2350,7 @@ if (text == null) text = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         if ($truthy(self.document['$attr?']("toc"))) {
           
           toc_id = self.id;
@@ -2331,7 +2382,7 @@ if (text == null) text = nil;
               _buf['$<<'](_slim_codeattributes1.$to_s());
               _buf['$<<']("\"".$freeze());
             }};
-          _temple_html_attributeremover1 = "";
+          _temple_html_attributeremover1 = [];
           _slim_codeattributes2 = toc_role;
           if ($truthy(Opal.const_get_relative($nesting, 'Array')['$==='](_slim_codeattributes2))) {
             
@@ -2342,7 +2393,7 @@ if (text == null) text = nil;
             } else {
             _temple_html_attributeremover1['$<<'](_slim_codeattributes2.$to_s())
           };
-          _temple_html_attributeremover1;
+          _temple_html_attributeremover1 = $rb_times(_temple_html_attributeremover1, "");
           if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
             
             _buf['$<<'](" class=\"".$freeze());
@@ -2364,7 +2415,7 @@ if (text == null) text = nil;
           _buf['$<<']("</div>".$freeze());
           _buf['$<<'](Opal.const_get_qualified(Opal.const_get_qualified(Opal.const_get_relative($nesting, 'Asciidoctor'), 'HTML5'), 'DocumentTemplate').$outline(self.document, toc_levels).$to_s());
           _buf['$<<']("</div>".$freeze());};
-        return _buf;}, TMP_67.$$s = self, TMP_67.$$arity = 0, TMP_67));
+        return (_buf = $rb_times(_buf, ""));}, TMP_67.$$s = self, TMP_67.$$arity = 0, TMP_67));
     }, TMP_Converter_toc_68.$$arity = -2);
     
     Opal.defn(self, '$ulist', TMP_Converter_ulist_71 = function $$ulist(node, opts) {
@@ -2385,7 +2436,7 @@ if (text == null) text = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         if ($truthy((checklist = (function() {if ($truthy(self['$option?']("checklist"))) {
           return "checklist"
           } else {
@@ -2405,14 +2456,14 @@ if (text == null) text = nil;
             marker_unchecked = "<input type=\"checkbox\" data-item-complete=\"0\" disabled>";
           }};
         _buf['$<<']("<div".$freeze());
-        _temple_html_attributeremover1 = "";
+        _temple_html_attributeremover1 = [];
         _temple_html_attributemerger1 = [];
         
         $writer = [0, "ulist"];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         
-        $writer = [1, ""];
+        $writer = [1, []];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         _slim_codeattributes1 = [checklist, self.style, self.$role()];
@@ -2425,9 +2476,12 @@ if (text == null) text = nil;
           } else {
           _temple_html_attributemerger1['$[]'](1)['$<<'](_slim_codeattributes1.$to_s())
         };
-        _temple_html_attributemerger1['$[]'](1);
+        
+        $writer = [1, $rb_times(_temple_html_attributemerger1['$[]'](1), "")];
+        $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
+        $writer[$rb_minus($writer["length"], 1)];;
         _temple_html_attributeremover1['$<<']($send(_temple_html_attributemerger1, 'reject', [], "empty?".$to_proc()).$join(" ").$to_s());
-        _temple_html_attributeremover1;
+        _temple_html_attributeremover1 = $rb_times(_temple_html_attributeremover1, "");
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -2450,7 +2504,7 @@ if (text == null) text = nil;
           _buf['$<<'](self.$title().$to_s());
           _buf['$<<']("</div>".$freeze());};
         _buf['$<<']("<ul".$freeze());
-        _temple_html_attributeremover2 = "";
+        _temple_html_attributeremover2 = [];
         _slim_codeattributes3 = ($truthy($a = checklist) ? $a : self.style);
         if ($truthy(Opal.const_get_relative($nesting, 'Array')['$==='](_slim_codeattributes3))) {
           
@@ -2461,7 +2515,7 @@ if (text == null) text = nil;
           } else {
           _temple_html_attributeremover2['$<<'](_slim_codeattributes3.$to_s())
         };
-        _temple_html_attributeremover2;
+        _temple_html_attributeremover2 = $rb_times(_temple_html_attributeremover2, "");
         if ($truthy(_temple_html_attributeremover2['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -2472,7 +2526,7 @@ if (text == null) text = nil;
 if (item == null) item = nil;
         
           _buf['$<<']("<li".$freeze());
-          _temple_html_attributeremover3 = "";
+          _temple_html_attributeremover3 = [];
           _slim_codeattributes4 = (function() {if ($truthy(($truthy($b = self['$option?']("step")) ? $b : self['$has_role?']("step")))) {
             return "fragment"
             } else {
@@ -2487,7 +2541,7 @@ if (item == null) item = nil;
             } else {
             _temple_html_attributeremover3['$<<'](_slim_codeattributes4.$to_s())
           };
-          _temple_html_attributeremover3;
+          _temple_html_attributeremover3 = $rb_times(_temple_html_attributeremover3, "");
           if ($truthy(_temple_html_attributeremover3['$empty?']()['$!']())) {
             
             _buf['$<<'](" class=\"".$freeze());
@@ -2508,7 +2562,7 @@ if (item == null) item = nil;
             _buf['$<<'](item.$content().$to_s())};
           return _buf['$<<']("</li>".$freeze());}, TMP_70.$$s = self, TMP_70.$$arity = 1, TMP_70));
         _buf['$<<']("</ul></div>".$freeze());
-        return _buf;}, TMP_69.$$s = self, TMP_69.$$arity = 0, TMP_69));
+        return (_buf = $rb_times(_buf, ""));}, TMP_69.$$s = self, TMP_69.$$arity = 0, TMP_69));
     }, TMP_Converter_ulist_71.$$arity = -2);
     
     Opal.defn(self, '$verse', TMP_Converter_verse_73 = function $$verse(node, opts) {
@@ -2527,16 +2581,16 @@ if (item == null) item = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         _buf['$<<']("<div".$freeze());
-        _temple_html_attributeremover1 = "";
+        _temple_html_attributeremover1 = [];
         _temple_html_attributemerger1 = [];
         
         $writer = [0, "verseblock"];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         
-        $writer = [1, ""];
+        $writer = [1, []];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         _slim_codeattributes1 = self.$role();
@@ -2549,9 +2603,12 @@ if (item == null) item = nil;
           } else {
           _temple_html_attributemerger1['$[]'](1)['$<<'](_slim_codeattributes1.$to_s())
         };
-        _temple_html_attributemerger1['$[]'](1);
+        
+        $writer = [1, $rb_times(_temple_html_attributemerger1['$[]'](1), "")];
+        $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
+        $writer[$rb_minus($writer["length"], 1)];;
         _temple_html_attributeremover1['$<<']($send(_temple_html_attributemerger1, 'reject', [], "empty?".$to_proc()).$join(" ").$to_s());
-        _temple_html_attributeremover1;
+        _temple_html_attributeremover1 = $rb_times(_temple_html_attributeremover1, "");
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -2604,7 +2661,7 @@ if (item == null) item = nil;
             _buf['$<<'](attribution.$to_s());};
           _buf['$<<']("</div>".$freeze());};
         _buf['$<<']("</div>".$freeze());
-        return _buf;}, TMP_72.$$s = self, TMP_72.$$arity = 0, TMP_72));
+        return (_buf = $rb_times(_buf, ""));}, TMP_72.$$s = self, TMP_72.$$arity = 0, TMP_72));
     }, TMP_Converter_verse_73.$$arity = -2);
     
     Opal.defn(self, '$video', TMP_Converter_video_75 = function $$video(node, opts) {
@@ -2624,7 +2681,7 @@ if (item == null) item = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         no_stretch = ($truthy($a = self['$attr?']("width")) ? $a : self['$attr?']("height"));
         width = (function() {if ($truthy(self['$attr?']("width"))) {
           
@@ -2639,14 +2696,14 @@ if (item == null) item = nil;
           return "100%"
         }; return nil; })();
         _buf['$<<']("<div".$freeze());
-        _temple_html_attributeremover1 = "";
+        _temple_html_attributeremover1 = [];
         _temple_html_attributemerger1 = [];
         
         $writer = [0, "videoblock"];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         
-        $writer = [1, ""];
+        $writer = [1, []];
         $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
         $writer[$rb_minus($writer["length"], 1)];;
         _slim_codeattributes1 = [self.style, self.$role(), (function() {if ($truthy(no_stretch)) {
@@ -2663,9 +2720,12 @@ if (item == null) item = nil;
           } else {
           _temple_html_attributemerger1['$[]'](1)['$<<'](_slim_codeattributes1.$to_s())
         };
-        _temple_html_attributemerger1['$[]'](1);
+        
+        $writer = [1, $rb_times(_temple_html_attributemerger1['$[]'](1), "")];
+        $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
+        $writer[$rb_minus($writer["length"], 1)];;
         _temple_html_attributeremover1['$<<']($send(_temple_html_attributemerger1, 'reject', [], "empty?".$to_proc()).$join(" ").$to_s());
-        _temple_html_attributeremover1;
+        _temple_html_attributeremover1 = $rb_times(_temple_html_attributeremover1, "");
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -2934,7 +2994,7 @@ if (item == null) item = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         _buf['$<<']("<!DOCTYPE html><html".$freeze());
         _slim_codeattributes1 = (function() {if ($truthy(self['$attr?']("nolang"))) {
           return nil
@@ -3165,14 +3225,14 @@ if (key == null) key = nil;
             return nil
           }; return nil; })();
           _buf['$<<']("<section".$freeze());
-          _temple_html_attributeremover1 = "";
+          _temple_html_attributeremover1 = [];
           _temple_html_attributemerger1 = [];
           
           $writer = [0, "title"];
           $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
           $writer[$rb_minus($writer["length"], 1)];;
           
-          $writer = [1, ""];
+          $writer = [1, []];
           $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
           $writer[$rb_minus($writer["length"], 1)];;
           _slim_codeattributes11 = self.$role();
@@ -3185,9 +3245,12 @@ if (key == null) key = nil;
             } else {
             _temple_html_attributemerger1['$[]'](1)['$<<'](_slim_codeattributes11.$to_s())
           };
-          _temple_html_attributemerger1['$[]'](1);
+          
+          $writer = [1, $rb_times(_temple_html_attributemerger1['$[]'](1), "")];
+          $send(_temple_html_attributemerger1, '[]=', Opal.to_a($writer));
+          $writer[$rb_minus($writer["length"], 1)];;
           _temple_html_attributeremover1['$<<']($send(_temple_html_attributemerger1, 'reject', [], "empty?".$to_proc()).$join(" ").$to_s());
-          _temple_html_attributeremover1;
+          _temple_html_attributeremover1 = $rb_times(_temple_html_attributeremover1, "");
           if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
             
             _buf['$<<'](" class=\"".$freeze());
@@ -3440,7 +3503,7 @@ if (key == null) key = nil;
           _buf['$<<'](docinfo_content.$to_s())
         };
         _buf['$<<']("</body></html>".$freeze());
-        return _buf;}, TMP_76.$$s = self, TMP_76.$$arity = 0, TMP_76));
+        return (_buf = $rb_times(_buf, ""));}, TMP_76.$$s = self, TMP_76.$$arity = 0, TMP_76));
     }, TMP_Converter_document_78.$$arity = -2);
     
     Opal.defn(self, '$embedded', TMP_Converter_embedded_81 = function $$embedded(node, opts) {
@@ -3460,7 +3523,7 @@ if (key == null) key = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         if ($truthy(($truthy($a = self.$notitle()) ? $a : self['$has_header?']()['$!']()))) {
           } else {
           
@@ -3498,7 +3561,7 @@ if (fn == null) fn = nil;
             return _buf['$<<']("</div>".$freeze());}, TMP_80.$$s = self, TMP_80.$$arity = 1, TMP_80));
           _buf['$<<']("</div>".$freeze());
         };
-        return _buf;}, TMP_79.$$s = self, TMP_79.$$arity = 0, TMP_79));
+        return (_buf = $rb_times(_buf, ""));}, TMP_79.$$s = self, TMP_79.$$arity = 0, TMP_79));
     }, TMP_Converter_embedded_81.$$arity = -2);
     
     Opal.defn(self, '$inline_anchor', TMP_Converter_inline_anchor_83 = function $$inline_anchor(node, opts) {
@@ -3520,7 +3583,7 @@ if (fn == null) fn = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         $case = self.type;
         if ("xref"['$===']($case)) {
         refid = ($truthy($a = self.$attr("refid")) ? $a : self.target);
@@ -3578,7 +3641,7 @@ if (fn == null) fn = nil;
             _buf['$<<'](_slim_codeattributes4.$to_s());
             _buf['$<<']("\"".$freeze());
           }};
-        _temple_html_attributeremover1 = "";
+        _temple_html_attributeremover1 = [];
         _slim_codeattributes5 = self.$role();
         if ($truthy(Opal.const_get_relative($nesting, 'Array')['$==='](_slim_codeattributes5))) {
           
@@ -3589,7 +3652,7 @@ if (fn == null) fn = nil;
           } else {
           _temple_html_attributeremover1['$<<'](_slim_codeattributes5.$to_s())
         };
-        _temple_html_attributeremover1;
+        _temple_html_attributeremover1 = $rb_times(_temple_html_attributeremover1, "");
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -3608,7 +3671,7 @@ if (fn == null) fn = nil;
         _buf['$<<'](">".$freeze());
         _buf['$<<'](self.text.$to_s());
         _buf['$<<']("</a>".$freeze());};
-        return _buf;}, TMP_82.$$s = self, TMP_82.$$arity = 0, TMP_82));
+        return (_buf = $rb_times(_buf, ""));}, TMP_82.$$s = self, TMP_82.$$arity = 0, TMP_82));
     }, TMP_Converter_inline_anchor_83.$$arity = -2);
     
     Opal.defn(self, '$inline_break', TMP_Converter_inline_break_85 = function $$inline_break(node, opts) {
@@ -3627,10 +3690,10 @@ if (fn == null) fn = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         _buf['$<<'](self.text.$to_s());
         _buf['$<<']("<br>".$freeze());
-        return _buf;}, TMP_84.$$s = self, TMP_84.$$arity = 0, TMP_84));
+        return (_buf = $rb_times(_buf, ""));}, TMP_84.$$s = self, TMP_84.$$arity = 0, TMP_84));
     }, TMP_Converter_inline_break_85.$$arity = -2);
     
     Opal.defn(self, '$inline_button', TMP_Converter_inline_button_87 = function $$inline_button(node, opts) {
@@ -3649,11 +3712,11 @@ if (fn == null) fn = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         _buf['$<<']("<b class=\"button\">".$freeze());
         _buf['$<<'](self.text.$to_s());
         _buf['$<<']("</b>".$freeze());
-        return _buf;}, TMP_86.$$s = self, TMP_86.$$arity = 0, TMP_86));
+        return (_buf = $rb_times(_buf, ""));}, TMP_86.$$s = self, TMP_86.$$arity = 0, TMP_86));
     }, TMP_Converter_inline_button_87.$$arity = -2);
     
     Opal.defn(self, '$inline_callout', TMP_Converter_inline_callout_89 = function $$inline_callout(node, opts) {
@@ -3673,7 +3736,7 @@ if (fn == null) fn = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         if ($truthy(self.document['$attr?']("icons", "font"))) {
           
           _buf['$<<']("<i class=\"conum\"".$freeze());
@@ -3720,7 +3783,7 @@ if (fn == null) fn = nil;
           _buf['$<<'](((("" + "(") + (self.text)) + ")").$to_s());
           _buf['$<<']("</b>".$freeze());
         };
-        return _buf;}, TMP_88.$$s = self, TMP_88.$$arity = 0, TMP_88));
+        return (_buf = $rb_times(_buf, ""));}, TMP_88.$$s = self, TMP_88.$$arity = 0, TMP_88));
     }, TMP_Converter_inline_callout_89.$$arity = -2);
     
     Opal.defn(self, '$inline_footnote', TMP_Converter_inline_footnote_91 = function $$inline_footnote(node, opts) {
@@ -3740,7 +3803,7 @@ if (fn == null) fn = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         if (self.type['$==']("xref")) {
           
           _buf['$<<']("<span class=\"footnoteref\">[<a class=\"footnote\" href=\"#_footnote_".$freeze());
@@ -3773,7 +3836,7 @@ if (fn == null) fn = nil;
           _buf['$<<'](self.$attr("index").$to_s());
           _buf['$<<']("</a>]</span>".$freeze());
         };
-        return _buf;}, TMP_90.$$s = self, TMP_90.$$arity = 0, TMP_90));
+        return (_buf = $rb_times(_buf, ""));}, TMP_90.$$s = self, TMP_90.$$arity = 0, TMP_90));
     }, TMP_Converter_inline_footnote_91.$$arity = -2);
     
     Opal.defn(self, '$inline_image', TMP_Converter_inline_image_93 = function $$inline_image(node, opts) {
@@ -3794,9 +3857,9 @@ if (fn == null) fn = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         _buf['$<<']("<span".$freeze());
-        _temple_html_attributeremover1 = "";
+        _temple_html_attributeremover1 = [];
         _slim_codeattributes1 = [self.type, self.$role()];
         if ($truthy(Opal.const_get_relative($nesting, 'Array')['$==='](_slim_codeattributes1))) {
           
@@ -3807,7 +3870,7 @@ if (fn == null) fn = nil;
           } else {
           _temple_html_attributeremover1['$<<'](_slim_codeattributes1.$to_s())
         };
-        _temple_html_attributeremover1;
+        _temple_html_attributeremover1 = $rb_times(_temple_html_attributeremover1, "");
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -3861,7 +3924,7 @@ if (fn == null) fn = nil;
                 _buf['$<<']("\"".$freeze());
               }};
             _buf['$<<']("><i".$freeze());
-            _temple_html_attributeremover2 = "";
+            _temple_html_attributeremover2 = [];
             _slim_codeattributes5 = style_class;
             if ($truthy(Opal.const_get_relative($nesting, 'Array')['$==='](_slim_codeattributes5))) {
               
@@ -3872,7 +3935,7 @@ if (fn == null) fn = nil;
               } else {
               _temple_html_attributeremover2['$<<'](_slim_codeattributes5.$to_s())
             };
-            _temple_html_attributeremover2;
+            _temple_html_attributeremover2 = $rb_times(_temple_html_attributeremover2, "");
             if ($truthy(_temple_html_attributeremover2['$empty?']()['$!']())) {
               
               _buf['$<<'](" class=\"".$freeze());
@@ -3892,7 +3955,7 @@ if (fn == null) fn = nil;
             } else {
             
             _buf['$<<']("<i".$freeze());
-            _temple_html_attributeremover3 = "";
+            _temple_html_attributeremover3 = [];
             _slim_codeattributes7 = style_class;
             if ($truthy(Opal.const_get_relative($nesting, 'Array')['$==='](_slim_codeattributes7))) {
               
@@ -3903,7 +3966,7 @@ if (fn == null) fn = nil;
               } else {
               _temple_html_attributeremover3['$<<'](_slim_codeattributes7.$to_s())
             };
-            _temple_html_attributeremover3;
+            _temple_html_attributeremover3 = $rb_times(_temple_html_attributeremover3, "");
             if ($truthy(_temple_html_attributeremover3['$empty?']()['$!']())) {
               
               _buf['$<<'](" class=\"".$freeze());
@@ -4095,7 +4158,7 @@ if (fn == null) fn = nil;
           };
         };
         _buf['$<<']("</span>".$freeze());
-        return _buf;}, TMP_92.$$s = self, TMP_92.$$arity = 0, TMP_92));
+        return (_buf = $rb_times(_buf, ""));}, TMP_92.$$s = self, TMP_92.$$arity = 0, TMP_92));
     }, TMP_Converter_inline_image_93.$$arity = -2);
     
     Opal.defn(self, '$inline_indexterm', TMP_Converter_inline_indexterm_95 = function $$inline_indexterm(node, opts) {
@@ -4115,10 +4178,10 @@ if (fn == null) fn = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         if (self.type['$==']("visible")) {
           _buf['$<<'](self.text.$to_s())};
-        return _buf;}, TMP_94.$$s = self, TMP_94.$$arity = 0, TMP_94));
+        return (_buf = $rb_times(_buf, ""));}, TMP_94.$$s = self, TMP_94.$$arity = 0, TMP_94));
     }, TMP_Converter_inline_indexterm_95.$$arity = -2);
     
     Opal.defn(self, '$inline_kbd', TMP_Converter_inline_kbd_98 = function $$inline_kbd(node, opts) {
@@ -4136,7 +4199,7 @@ if (fn == null) fn = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         if ((keys = self.$attr("keys")).$size()['$=='](1)) {
           
           _buf['$<<']("<kbd>".$freeze());
@@ -4157,7 +4220,7 @@ if (key == null) key = nil;if (idx == null) idx = nil;
             return _buf['$<<']("</kbd>".$freeze());}, TMP_97.$$s = self, TMP_97.$$arity = 2, TMP_97));
           _buf['$<<']("</span>".$freeze());
         };
-        return _buf;}, TMP_96.$$s = self, TMP_96.$$arity = 0, TMP_96));
+        return (_buf = $rb_times(_buf, ""));}, TMP_96.$$s = self, TMP_96.$$arity = 0, TMP_96));
     }, TMP_Converter_inline_kbd_98.$$arity = -2);
     
     Opal.defn(self, '$inline_menu', TMP_Converter_inline_menu_101 = function $$inline_menu(node, opts) {
@@ -4175,7 +4238,7 @@ if (key == null) key = nil;if (idx == null) idx = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         menu = self.$attr("menu");
         menuitem = self.$attr("menuitem");
         if ($truthy((submenus = self.$attr("submenus"))['$empty?']()['$!']())) {
@@ -4202,7 +4265,7 @@ if (submenu == null) submenu = nil;
           _buf['$<<'](menu.$to_s());
           _buf['$<<']("</span>".$freeze());
         };
-        return _buf;}, TMP_99.$$s = self, TMP_99.$$arity = 0, TMP_99));
+        return (_buf = $rb_times(_buf, ""));}, TMP_99.$$s = self, TMP_99.$$arity = 0, TMP_99));
     }, TMP_Converter_inline_menu_101.$$arity = -2);
     
     Opal.defn(self, '$inline_quoted', TMP_Converter_inline_quoted_103 = function $$inline_quoted(node, opts) {
@@ -4223,7 +4286,7 @@ if (submenu == null) submenu = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         if ($truthy(self.id['$nil?']())) {
           } else {
           
@@ -4243,7 +4306,7 @@ if (submenu == null) submenu = nil;
         $case = self.type;
         if ("emphasis"['$===']($case)) {
         _buf['$<<']("<em".$freeze());
-        _temple_html_attributeremover1 = "";
+        _temple_html_attributeremover1 = [];
         _slim_codeattributes2 = self.$role();
         if ($truthy(Opal.const_get_relative($nesting, 'Array')['$==='](_slim_codeattributes2))) {
           
@@ -4254,7 +4317,7 @@ if (submenu == null) submenu = nil;
           } else {
           _temple_html_attributeremover1['$<<'](_slim_codeattributes2.$to_s())
         };
-        _temple_html_attributeremover1;
+        _temple_html_attributeremover1 = $rb_times(_temple_html_attributeremover1, "");
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -4265,7 +4328,7 @@ if (submenu == null) submenu = nil;
         _buf['$<<']("</em>".$freeze());}
         else if ("strong"['$===']($case)) {
         _buf['$<<']("<strong".$freeze());
-        _temple_html_attributeremover2 = "";
+        _temple_html_attributeremover2 = [];
         _slim_codeattributes3 = self.$role();
         if ($truthy(Opal.const_get_relative($nesting, 'Array')['$==='](_slim_codeattributes3))) {
           
@@ -4276,7 +4339,7 @@ if (submenu == null) submenu = nil;
           } else {
           _temple_html_attributeremover2['$<<'](_slim_codeattributes3.$to_s())
         };
-        _temple_html_attributeremover2;
+        _temple_html_attributeremover2 = $rb_times(_temple_html_attributeremover2, "");
         if ($truthy(_temple_html_attributeremover2['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -4287,7 +4350,7 @@ if (submenu == null) submenu = nil;
         _buf['$<<']("</strong>".$freeze());}
         else if ("monospaced"['$===']($case)) {
         _buf['$<<']("<code".$freeze());
-        _temple_html_attributeremover3 = "";
+        _temple_html_attributeremover3 = [];
         _slim_codeattributes4 = self.$role();
         if ($truthy(Opal.const_get_relative($nesting, 'Array')['$==='](_slim_codeattributes4))) {
           
@@ -4298,7 +4361,7 @@ if (submenu == null) submenu = nil;
           } else {
           _temple_html_attributeremover3['$<<'](_slim_codeattributes4.$to_s())
         };
-        _temple_html_attributeremover3;
+        _temple_html_attributeremover3 = $rb_times(_temple_html_attributeremover3, "");
         if ($truthy(_temple_html_attributeremover3['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -4309,7 +4372,7 @@ if (submenu == null) submenu = nil;
         _buf['$<<']("</code>".$freeze());}
         else if ("superscript"['$===']($case)) {
         _buf['$<<']("<sup".$freeze());
-        _temple_html_attributeremover4 = "";
+        _temple_html_attributeremover4 = [];
         _slim_codeattributes5 = self.$role();
         if ($truthy(Opal.const_get_relative($nesting, 'Array')['$==='](_slim_codeattributes5))) {
           
@@ -4320,7 +4383,7 @@ if (submenu == null) submenu = nil;
           } else {
           _temple_html_attributeremover4['$<<'](_slim_codeattributes5.$to_s())
         };
-        _temple_html_attributeremover4;
+        _temple_html_attributeremover4 = $rb_times(_temple_html_attributeremover4, "");
         if ($truthy(_temple_html_attributeremover4['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -4331,7 +4394,7 @@ if (submenu == null) submenu = nil;
         _buf['$<<']("</sup>".$freeze());}
         else if ("subscript"['$===']($case)) {
         _buf['$<<']("<sub".$freeze());
-        _temple_html_attributeremover5 = "";
+        _temple_html_attributeremover5 = [];
         _slim_codeattributes6 = self.$role();
         if ($truthy(Opal.const_get_relative($nesting, 'Array')['$==='](_slim_codeattributes6))) {
           
@@ -4342,7 +4405,7 @@ if (submenu == null) submenu = nil;
           } else {
           _temple_html_attributeremover5['$<<'](_slim_codeattributes6.$to_s())
         };
-        _temple_html_attributeremover5;
+        _temple_html_attributeremover5 = $rb_times(_temple_html_attributeremover5, "");
         if ($truthy(_temple_html_attributeremover5['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
@@ -4371,7 +4434,7 @@ if (submenu == null) submenu = nil;
           } else {
           return self.text
         }; return nil; })().$to_s())};
-        return _buf;}, TMP_102.$$s = self, TMP_102.$$arity = 0, TMP_102));
+        return (_buf = $rb_times(_buf, ""));}, TMP_102.$$s = self, TMP_102.$$arity = 0, TMP_102));
     }, TMP_Converter_inline_quoted_103.$$arity = -2);
     
     Opal.defn(self, '$section', TMP_Converter_section_110 = function $$section(node, opts) {
@@ -4390,7 +4453,7 @@ if (submenu == null) submenu = nil;
           } else {
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
-        _buf = "";
+        _buf = [];
         _id = self.$id().$gsub(/[^a-zA-Z0-9\-\_\:\.]/, "");
         titleless = (title = self.$title())['$==']("!");
         hide_title = ($truthy($a = ($truthy($b = titleless) ? $b : self['$option?']("notitle"))) ? $a : self['$option?']("conceal"));
@@ -4440,7 +4503,7 @@ if (image == null) image = nil;
               _buf['$<<'](_slim_codeattributes1.$to_s());
               _buf['$<<']("\"".$freeze());
             }};
-          _temple_html_attributeremover1 = "";
+          _temple_html_attributeremover1 = [];
           _slim_codeattributes2 = self.$roles();
           if ($truthy(Opal.const_get_relative($nesting, 'Array')['$==='](_slim_codeattributes2))) {
             
@@ -4451,7 +4514,7 @@ if (image == null) image = nil;
             } else {
             _temple_html_attributeremover1['$<<'](_slim_codeattributes2.$to_s())
           };
-          _temple_html_attributeremover1;
+          _temple_html_attributeremover1 = $rb_times(_temple_html_attributeremover1, "");
           if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
             
             _buf['$<<'](" class=\"".$freeze());
@@ -4621,7 +4684,7 @@ if (subsection == null) subsection = nil;
               _buf['$<<'](_slim_codeattributes15.$to_s());
               _buf['$<<']("\"".$freeze());
             }};
-          _temple_html_attributeremover2 = "";
+          _temple_html_attributeremover2 = [];
           _slim_codeattributes16 = self.$roles();
           if ($truthy(Opal.const_get_relative($nesting, 'Array')['$==='](_slim_codeattributes16))) {
             
@@ -4632,7 +4695,7 @@ if (subsection == null) subsection = nil;
             } else {
             _temple_html_attributeremover2['$<<'](_slim_codeattributes16.$to_s())
           };
-          _temple_html_attributeremover2;
+          _temple_html_attributeremover2 = $rb_times(_temple_html_attributeremover2, "");
           if ($truthy(_temple_html_attributeremover2['$empty?']()['$!']())) {
             
             _buf['$<<'](" class=\"".$freeze());
@@ -4769,7 +4832,7 @@ if (subsection == null) subsection = nil;
           _buf['$<<'](self.$content().$chomp().$to_s());
           _buf['$<<']("</section>".$freeze());
         };
-        return _buf;}, TMP_104.$$s = self, TMP_104.$$arity = 0, TMP_104));
+        return (_buf = $rb_times(_buf, ""));}, TMP_104.$$s = self, TMP_104.$$arity = 0, TMP_104));
     }, TMP_Converter_section_110.$$arity = -2);
     return (Opal.defn(self, '$set_local_variables', TMP_Converter_set_local_variables_112 = function $$set_local_variables(binding, vars) {
       var TMP_111, self = this;

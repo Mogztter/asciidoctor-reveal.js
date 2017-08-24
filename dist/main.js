@@ -134,7 +134,7 @@ if (const$ == null) const$ = nil;
         if ($truthy(($truthy($a = self['$has_role?']("aside")) ? $a : self['$has_role?']("speaker")))) {
           
           _buf['$<<']("<aside class=\"notes\">".$freeze());
-          _buf['$<<'](self.$content().$to_s());
+          _buf['$<<'](self.$content());
           _buf['$<<']("</aside>".$freeze());
           } else {
           
@@ -168,7 +168,7 @@ if (const$ == null) const$ = nil;
           if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
             
             _buf['$<<'](" class=\"".$freeze());
-            _buf['$<<'](_temple_html_attributeremover1.$to_s());
+            _buf['$<<'](_temple_html_attributeremover1);
             _buf['$<<']("\"".$freeze());};
           _slim_codeattributes2 = self.id;
           if ($truthy(_slim_codeattributes2)) {
@@ -177,7 +177,7 @@ if (const$ == null) const$ = nil;
               } else {
               
               _buf['$<<'](" id=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes2.$to_s());
+              _buf['$<<'](_slim_codeattributes2);
               _buf['$<<']("\"".$freeze());
             }};
           _buf['$<<']("><table><tr><td class=\"icon\">".$freeze());
@@ -200,7 +200,7 @@ if (const$ == null) const$ = nil;
             if ($truthy(_temple_html_attributeremover2['$empty?']()['$!']())) {
               
               _buf['$<<'](" class=\"".$freeze());
-              _buf['$<<'](_temple_html_attributeremover2.$to_s());
+              _buf['$<<'](_temple_html_attributeremover2);
               _buf['$<<']("\"".$freeze());};
             _slim_codeattributes4 = self.caption;
             if ($truthy(_slim_codeattributes4)) {
@@ -209,7 +209,7 @@ if (const$ == null) const$ = nil;
                 } else {
                 
                 _buf['$<<'](" title=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes4.$to_s());
+                _buf['$<<'](_slim_codeattributes4);
                 _buf['$<<']("\"".$freeze());
               }};
             _buf['$<<']("></i>".$freeze());
@@ -223,7 +223,7 @@ if (const$ == null) const$ = nil;
                 } else {
                 
                 _buf['$<<'](" src=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes5.$to_s());
+                _buf['$<<'](_slim_codeattributes5);
                 _buf['$<<']("\"".$freeze());
               }};
             _slim_codeattributes6 = self.caption;
@@ -233,26 +233,26 @@ if (const$ == null) const$ = nil;
                 } else {
                 
                 _buf['$<<'](" alt=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes6.$to_s());
+                _buf['$<<'](_slim_codeattributes6);
                 _buf['$<<']("\"".$freeze());
               }};
             _buf['$<<'](">".$freeze());
             } else {
             
             _buf['$<<']("<div class=\"title\">".$freeze());
-            _buf['$<<'](self.caption.$to_s());
+            _buf['$<<'](self.caption);
             _buf['$<<']("</div>".$freeze());
           };
           _buf['$<<']("</td><td class=\"content\">".$freeze());
           if ($truthy(self['$title?']())) {
             
             _buf['$<<']("<div class=\"title\">".$freeze());
-            _buf['$<<'](self.$title().$to_s());
+            _buf['$<<'](self.$title());
             _buf['$<<']("</div>".$freeze());};
-          _buf['$<<'](self.$content().$to_s());
+          _buf['$<<'](self.$content());
           _buf['$<<']("</td></tr></table></div>".$freeze());
         };
-        return (_buf = $rb_times(_buf, ""));}, TMP_7.$$s = self, TMP_7.$$arity = 0, TMP_7));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_7.$$s = self, TMP_7.$$arity = 0, TMP_7));
     }, TMP_Converter_admonition_8.$$arity = -2);
     
     Opal.defn(self, '$audio', TMP_Converter_audio_10 = function $$audio(node, opts) {
@@ -303,7 +303,7 @@ if (const$ == null) const$ = nil;
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover1.$to_s());
+          _buf['$<<'](_temple_html_attributeremover1);
           _buf['$<<']("\"".$freeze());};
         _slim_codeattributes2 = self.id;
         if ($truthy(_slim_codeattributes2)) {
@@ -312,14 +312,14 @@ if (const$ == null) const$ = nil;
             } else {
             
             _buf['$<<'](" id=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes2.$to_s());
+            _buf['$<<'](_slim_codeattributes2);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<'](">".$freeze());
         if ($truthy(self['$title?']())) {
           
           _buf['$<<']("<div class=\"title\">".$freeze());
-          _buf['$<<'](self.$captioned_title().$to_s());
+          _buf['$<<'](self.$captioned_title());
           _buf['$<<']("</div>".$freeze());};
         _buf['$<<']("<div class=\"content\"><audio".$freeze());
         _slim_codeattributes3 = self.$media_uri(self.$attr("target"));
@@ -329,7 +329,7 @@ if (const$ == null) const$ = nil;
             } else {
             
             _buf['$<<'](" src=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes3.$to_s());
+            _buf['$<<'](_slim_codeattributes3);
             _buf['$<<']("\"".$freeze());
           }};
         _slim_codeattributes4 = self['$option?']("autoplay");
@@ -339,7 +339,7 @@ if (const$ == null) const$ = nil;
             } else {
             
             _buf['$<<'](" autoplay=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes4.$to_s());
+            _buf['$<<'](_slim_codeattributes4);
             _buf['$<<']("\"".$freeze());
           }};
         _slim_codeattributes5 = self['$option?']("nocontrols")['$!']();
@@ -349,7 +349,7 @@ if (const$ == null) const$ = nil;
             } else {
             
             _buf['$<<'](" controls=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes5.$to_s());
+            _buf['$<<'](_slim_codeattributes5);
             _buf['$<<']("\"".$freeze());
           }};
         _slim_codeattributes6 = self['$option?']("loop");
@@ -359,11 +359,11 @@ if (const$ == null) const$ = nil;
             } else {
             
             _buf['$<<'](" loop=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes6.$to_s());
+            _buf['$<<'](_slim_codeattributes6);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<'](">Your browser does not support the audio tag.</audio></div></div>".$freeze());
-        return (_buf = $rb_times(_buf, ""));}, TMP_9.$$s = self, TMP_9.$$arity = 0, TMP_9));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_9.$$s = self, TMP_9.$$arity = 0, TMP_9));
     }, TMP_Converter_audio_10.$$arity = -2);
     
     Opal.defn(self, '$colist', TMP_Converter_colist_14 = function $$colist(node, opts) {
@@ -415,7 +415,7 @@ if (const$ == null) const$ = nil;
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover1.$to_s());
+          _buf['$<<'](_temple_html_attributeremover1);
           _buf['$<<']("\"".$freeze());};
         _slim_codeattributes2 = self.id;
         if ($truthy(_slim_codeattributes2)) {
@@ -424,14 +424,14 @@ if (const$ == null) const$ = nil;
             } else {
             
             _buf['$<<'](" id=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes2.$to_s());
+            _buf['$<<'](_slim_codeattributes2);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<'](">".$freeze());
         if ($truthy(self['$title?']())) {
           
           _buf['$<<']("<div class=\"title\">".$freeze());
-          _buf['$<<'](self.$title().$to_s());
+          _buf['$<<'](self.$title());
           _buf['$<<']("</div>".$freeze());};
         if ($truthy(self.document['$attr?']("icons"))) {
           
@@ -452,11 +452,11 @@ if (item == null) item = nil;if (i == null) i = nil;
                   } else {
                   
                   _buf['$<<'](" data-value=\"".$freeze());
-                  _buf['$<<'](_slim_codeattributes3.$to_s());
+                  _buf['$<<'](_slim_codeattributes3);
                   _buf['$<<']("\"".$freeze());
                 }};
               _buf['$<<']("></i><b>".$freeze());
-              _buf['$<<'](num.$to_s());
+              _buf['$<<'](num);
               _buf['$<<']("</b>".$freeze());
               } else {
               
@@ -468,7 +468,7 @@ if (item == null) item = nil;if (i == null) i = nil;
                   } else {
                   
                   _buf['$<<'](" src=\"".$freeze());
-                  _buf['$<<'](_slim_codeattributes4.$to_s());
+                  _buf['$<<'](_slim_codeattributes4);
                   _buf['$<<']("\"".$freeze());
                 }};
               _slim_codeattributes5 = num;
@@ -478,13 +478,13 @@ if (item == null) item = nil;if (i == null) i = nil;
                   } else {
                   
                   _buf['$<<'](" alt=\"".$freeze());
-                  _buf['$<<'](_slim_codeattributes5.$to_s());
+                  _buf['$<<'](_slim_codeattributes5);
                   _buf['$<<']("\"".$freeze());
                 }};
               _buf['$<<'](">".$freeze());
             };
             _buf['$<<']("</td><td>".$freeze());
-            _buf['$<<'](item.$text().$to_s());
+            _buf['$<<'](item.$text());
             return _buf['$<<']("</td></tr>".$freeze());}, TMP_12.$$s = self, TMP_12.$$arity = 2, TMP_12));
           _buf['$<<']("</table>".$freeze());
           } else {
@@ -494,12 +494,12 @@ if (item == null) item = nil;if (i == null) i = nil;
 if (item == null) item = nil;
           
             _buf['$<<']("<li><p>".$freeze());
-            _buf['$<<'](item.$text().$to_s());
+            _buf['$<<'](item.$text());
             return _buf['$<<']("</p></li>".$freeze());}, TMP_13.$$s = self, TMP_13.$$arity = 1, TMP_13));
           _buf['$<<']("</ol>".$freeze());
         };
         _buf['$<<']("</div>".$freeze());
-        return (_buf = $rb_times(_buf, ""));}, TMP_11.$$s = self, TMP_11.$$arity = 0, TMP_11));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_11.$$s = self, TMP_11.$$arity = 0, TMP_11));
     }, TMP_Converter_colist_14.$$arity = -2);
     
     Opal.defn(self, '$dlist', TMP_Converter_dlist_22 = function $$dlist(node, opts) {
@@ -552,7 +552,7 @@ if (item == null) item = nil;
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover1.$to_s());
+          _buf['$<<'](_temple_html_attributeremover1);
           _buf['$<<']("\"".$freeze());};
         _slim_codeattributes2 = self.id;
         if ($truthy(_slim_codeattributes2)) {
@@ -561,14 +561,14 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" id=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes2.$to_s());
+            _buf['$<<'](_slim_codeattributes2);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<'](">".$freeze());
         if ($truthy(self['$title?']())) {
           
           _buf['$<<']("<div class=\"title\">".$freeze());
-          _buf['$<<'](self.$title().$to_s());
+          _buf['$<<'](self.$title());
           _buf['$<<']("</div>".$freeze());};
         _buf['$<<']("<ol>".$freeze());
         $send(self.$items(), 'each', [], (TMP_16 = function(questions, answer){var self = TMP_16.$$s || this, TMP_17;
@@ -579,7 +579,7 @@ if (questions == null) questions = nil;if (answer == null) answer = nil;
 if (question == null) question = nil;
           
             _buf['$<<']("<p><em>".$freeze());
-            _buf['$<<'](question.$text().$to_s());
+            _buf['$<<'](question.$text());
             return _buf['$<<']("</em></p>".$freeze());}, TMP_17.$$s = self, TMP_17.$$arity = 1, TMP_17));
           if ($truthy(answer['$nil?']())) {
             } else {
@@ -587,10 +587,10 @@ if (question == null) question = nil;
             if ($truthy(answer['$text?']())) {
               
               _buf['$<<']("<p>".$freeze());
-              _buf['$<<'](answer.$text().$to_s());
+              _buf['$<<'](answer.$text());
               _buf['$<<']("</p>".$freeze());};
             if ($truthy(answer['$blocks?']())) {
-              _buf['$<<'](answer.$content().$to_s())};
+              _buf['$<<'](answer.$content())};
           };
           return _buf['$<<']("</li>".$freeze());}, TMP_16.$$s = self, TMP_16.$$arity = 2, TMP_16));
         _buf['$<<']("</ol></div>".$freeze());}
@@ -625,7 +625,7 @@ if (question == null) question = nil;
         if ($truthy(_temple_html_attributeremover2['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover2.$to_s());
+          _buf['$<<'](_temple_html_attributeremover2);
           _buf['$<<']("\"".$freeze());};
         _slim_codeattributes4 = self.id;
         if ($truthy(_slim_codeattributes4)) {
@@ -634,14 +634,14 @@ if (question == null) question = nil;
             } else {
             
             _buf['$<<'](" id=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes4.$to_s());
+            _buf['$<<'](_slim_codeattributes4);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<'](">".$freeze());
         if ($truthy(self['$title?']())) {
           
           _buf['$<<']("<div class=\"title\">".$freeze());
-          _buf['$<<'](self.$title().$to_s());
+          _buf['$<<'](self.$title());
           _buf['$<<']("</div>".$freeze());};
         _buf['$<<']("<table>".$freeze());
         if ($truthy(($truthy($a = self['$attr?']("labelwidth")) ? $a : self['$attr?']("itemwidth")))) {
@@ -658,7 +658,7 @@ if (question == null) question = nil;
               } else {
               
               _buf['$<<'](" style=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes5.$to_s());
+              _buf['$<<'](_slim_codeattributes5);
               _buf['$<<']("\"".$freeze());
             }};
           _buf['$<<']("><col".$freeze());
@@ -673,7 +673,7 @@ if (question == null) question = nil;
               } else {
               
               _buf['$<<'](" style=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes6.$to_s());
+              _buf['$<<'](_slim_codeattributes6);
               _buf['$<<']("\"".$freeze());
             }};
           _buf['$<<']("></colgroup>".$freeze());};
@@ -700,7 +700,7 @@ if (terms == null) terms = nil;if (dd == null) dd = nil;
           if ($truthy(_temple_html_attributeremover3['$empty?']()['$!']())) {
             
             _buf['$<<'](" class=\"".$freeze());
-            _buf['$<<'](_temple_html_attributeremover3.$to_s());
+            _buf['$<<'](_temple_html_attributeremover3);
             _buf['$<<']("\"".$freeze());};
           _buf['$<<'](">".$freeze());
           terms = [].concat(Opal.to_a(terms));
@@ -708,7 +708,7 @@ if (terms == null) terms = nil;if (dd == null) dd = nil;
           $send(terms, 'each', [], (TMP_19 = function(dt){var self = TMP_19.$$s || this;
 if (dt == null) dt = nil;
           
-            _buf['$<<'](dt.$text().$to_s());
+            _buf['$<<'](dt.$text());
             if ($truthy(dt['$!='](last_term))) {
               return _buf['$<<']("<br>".$freeze())
               } else {
@@ -721,10 +721,10 @@ if (dt == null) dt = nil;
             if ($truthy(dd['$text?']())) {
               
               _buf['$<<']("<p>".$freeze());
-              _buf['$<<'](dd.$text().$to_s());
+              _buf['$<<'](dd.$text());
               _buf['$<<']("</p>".$freeze());};
             if ($truthy(dd['$blocks?']())) {
-              _buf['$<<'](dd.$content().$to_s())};
+              _buf['$<<'](dd.$content())};
           };
           return _buf['$<<']("</td></tr>".$freeze());}, TMP_18.$$s = self, TMP_18.$$arity = 2, TMP_18));
         _buf['$<<']("</table></div>".$freeze());}
@@ -759,7 +759,7 @@ if (dt == null) dt = nil;
         if ($truthy(_temple_html_attributeremover4['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover4.$to_s());
+          _buf['$<<'](_temple_html_attributeremover4);
           _buf['$<<']("\"".$freeze());};
         _slim_codeattributes9 = self.id;
         if ($truthy(_slim_codeattributes9)) {
@@ -768,14 +768,14 @@ if (dt == null) dt = nil;
             } else {
             
             _buf['$<<'](" id=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes9.$to_s());
+            _buf['$<<'](_slim_codeattributes9);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<'](">".$freeze());
         if ($truthy(self['$title?']())) {
           
           _buf['$<<']("<div class=\"title\">".$freeze());
-          _buf['$<<'](self.$title().$to_s());
+          _buf['$<<'](self.$title());
           _buf['$<<']("</div>".$freeze());};
         _buf['$<<']("<dl>".$freeze());
         $send(self.$items(), 'each', [], (TMP_20 = function(terms, dd){var self = TMP_20.$$s || this, TMP_21;
@@ -805,10 +805,10 @@ if (dt == null) dt = nil;
             if ($truthy(_temple_html_attributeremover5['$empty?']()['$!']())) {
               
               _buf['$<<'](" class=\"".$freeze());
-              _buf['$<<'](_temple_html_attributeremover5.$to_s());
+              _buf['$<<'](_temple_html_attributeremover5);
               _buf['$<<']("\"".$freeze());};
             _buf['$<<'](">".$freeze());
-            _buf['$<<'](dt.$text().$to_s());
+            _buf['$<<'](dt.$text());
             return _buf['$<<']("</dt>".$freeze());}, TMP_21.$$s = self, TMP_21.$$arity = 1, TMP_21));
           if ($truthy(dd['$nil?']())) {
             return nil
@@ -818,14 +818,14 @@ if (dt == null) dt = nil;
             if ($truthy(dd['$text?']())) {
               
               _buf['$<<']("<p>".$freeze());
-              _buf['$<<'](dd.$text().$to_s());
+              _buf['$<<'](dd.$text());
               _buf['$<<']("</p>".$freeze());};
             if ($truthy(dd['$blocks?']())) {
-              _buf['$<<'](dd.$content().$to_s())};
+              _buf['$<<'](dd.$content())};
             return _buf['$<<']("</dd>".$freeze());
           };}, TMP_20.$$s = self, TMP_20.$$arity = 2, TMP_20));
         _buf['$<<']("</dl></div>".$freeze());};
-        return (_buf = $rb_times(_buf, ""));}, TMP_15.$$s = self, TMP_15.$$arity = 0, TMP_15));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_15.$$s = self, TMP_15.$$arity = 0, TMP_15));
     }, TMP_Converter_dlist_22.$$arity = -2);
     
     Opal.defn(self, '$example', TMP_Converter_example_24 = function $$example(node, opts) {
@@ -875,7 +875,7 @@ if (dt == null) dt = nil;
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover1.$to_s());
+          _buf['$<<'](_temple_html_attributeremover1);
           _buf['$<<']("\"".$freeze());};
         _slim_codeattributes2 = self.id;
         if ($truthy(_slim_codeattributes2)) {
@@ -884,19 +884,19 @@ if (dt == null) dt = nil;
             } else {
             
             _buf['$<<'](" id=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes2.$to_s());
+            _buf['$<<'](_slim_codeattributes2);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<'](">".$freeze());
         if ($truthy(self['$title?']())) {
           
           _buf['$<<']("<div class=\"title\">".$freeze());
-          _buf['$<<'](self.$captioned_title().$to_s());
+          _buf['$<<'](self.$captioned_title());
           _buf['$<<']("</div>".$freeze());};
         _buf['$<<']("<div class=\"content\">".$freeze());
-        _buf['$<<'](self.$content().$to_s());
+        _buf['$<<'](self.$content());
         _buf['$<<']("</div></div>".$freeze());
-        return (_buf = $rb_times(_buf, ""));}, TMP_23.$$s = self, TMP_23.$$arity = 0, TMP_23));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_23.$$s = self, TMP_23.$$arity = 0, TMP_23));
     }, TMP_Converter_example_24.$$arity = -2);
     
     Opal.defn(self, '$floating_title', TMP_Converter_floating_title_26 = function $$floating_title(node, opts) {
@@ -917,7 +917,7 @@ if (dt == null) dt = nil;
         _buf = [];
         _slim_htag_filter1 = $rb_plus(self.$level(), 1).$to_s();
         _buf['$<<']("<h".$freeze());
-        _buf['$<<'](_slim_htag_filter1.$to_s());
+        _buf['$<<'](_slim_htag_filter1);
         _slim_codeattributes1 = self.$id();
         if ($truthy(_slim_codeattributes1)) {
           if (_slim_codeattributes1['$=='](true)) {
@@ -925,7 +925,7 @@ if (dt == null) dt = nil;
             } else {
             
             _buf['$<<'](" id=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes1.$to_s());
+            _buf['$<<'](_slim_codeattributes1);
             _buf['$<<']("\"".$freeze());
           }};
         _temple_html_attributeremover1 = [];
@@ -943,14 +943,14 @@ if (dt == null) dt = nil;
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover1.$to_s());
+          _buf['$<<'](_temple_html_attributeremover1);
           _buf['$<<']("\"".$freeze());};
         _buf['$<<'](">".$freeze());
-        _buf['$<<'](self.$title().$to_s());
+        _buf['$<<'](self.$title());
         _buf['$<<']("</h".$freeze());
-        _buf['$<<'](_slim_htag_filter1.$to_s());
+        _buf['$<<'](_slim_htag_filter1);
         _buf['$<<'](">".$freeze());
-        return (_buf = $rb_times(_buf, ""));}, TMP_25.$$s = self, TMP_25.$$arity = 0, TMP_25));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_25.$$s = self, TMP_25.$$arity = 0, TMP_25));
     }, TMP_Converter_floating_title_26.$$arity = -2);
     
     Opal.defn(self, '$image', TMP_Converter_image_28 = function $$image(node, opts) {
@@ -1017,7 +1017,7 @@ if (dt == null) dt = nil;
           if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
             
             _buf['$<<'](" class=\"".$freeze());
-            _buf['$<<'](_temple_html_attributeremover1.$to_s());
+            _buf['$<<'](_temple_html_attributeremover1);
             _buf['$<<']("\"".$freeze());};
           _slim_codeattributes2 = self.id;
           if ($truthy(_slim_codeattributes2)) {
@@ -1026,7 +1026,7 @@ if (dt == null) dt = nil;
               } else {
               
               _buf['$<<'](" id=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes2.$to_s());
+              _buf['$<<'](_slim_codeattributes2);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes3 = [(function() {if ($truthy(self['$attr?']("align"))) {
@@ -1044,7 +1044,7 @@ if (dt == null) dt = nil;
               } else {
               
               _buf['$<<'](" style=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes3.$to_s());
+              _buf['$<<'](_slim_codeattributes3);
               _buf['$<<']("\"".$freeze());
             }};
           _buf['$<<'](">".$freeze());
@@ -1058,7 +1058,7 @@ if (dt == null) dt = nil;
                 } else {
                 
                 _buf['$<<'](" href=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes4.$to_s());
+                _buf['$<<'](_slim_codeattributes4);
                 _buf['$<<']("\"".$freeze());
               }};
             _buf['$<<']("><img".$freeze());
@@ -1069,7 +1069,7 @@ if (dt == null) dt = nil;
                 } else {
                 
                 _buf['$<<'](" src=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes5.$to_s());
+                _buf['$<<'](_slim_codeattributes5);
                 _buf['$<<']("\"".$freeze());
               }};
             _slim_codeattributes6 = self.$attr("alt");
@@ -1079,7 +1079,7 @@ if (dt == null) dt = nil;
                 } else {
                 
                 _buf['$<<'](" alt=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes6.$to_s());
+                _buf['$<<'](_slim_codeattributes6);
                 _buf['$<<']("\"".$freeze());
               }};
             _slim_codeattributes7 = width;
@@ -1089,7 +1089,7 @@ if (dt == null) dt = nil;
                 } else {
                 
                 _buf['$<<'](" width=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes7.$to_s());
+                _buf['$<<'](_slim_codeattributes7);
                 _buf['$<<']("\"".$freeze());
               }};
             _slim_codeattributes8 = height;
@@ -1099,7 +1099,7 @@ if (dt == null) dt = nil;
                 } else {
                 
                 _buf['$<<'](" height=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes8.$to_s());
+                _buf['$<<'](_slim_codeattributes8);
                 _buf['$<<']("\"".$freeze());
               }};
             _slim_codeattributes9 = (function() {if ($truthy(self['$attr?']("background"))) {
@@ -1113,7 +1113,7 @@ if (dt == null) dt = nil;
                 } else {
                 
                 _buf['$<<'](" style=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes9.$to_s());
+                _buf['$<<'](_slim_codeattributes9);
                 _buf['$<<']("\"".$freeze());
               }};
             _buf['$<<']("></a>".$freeze());
@@ -1127,7 +1127,7 @@ if (dt == null) dt = nil;
                 } else {
                 
                 _buf['$<<'](" src=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes10.$to_s());
+                _buf['$<<'](_slim_codeattributes10);
                 _buf['$<<']("\"".$freeze());
               }};
             _slim_codeattributes11 = self.$attr("alt");
@@ -1137,7 +1137,7 @@ if (dt == null) dt = nil;
                 } else {
                 
                 _buf['$<<'](" alt=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes11.$to_s());
+                _buf['$<<'](_slim_codeattributes11);
                 _buf['$<<']("\"".$freeze());
               }};
             _slim_codeattributes12 = width;
@@ -1147,7 +1147,7 @@ if (dt == null) dt = nil;
                 } else {
                 
                 _buf['$<<'](" width=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes12.$to_s());
+                _buf['$<<'](_slim_codeattributes12);
                 _buf['$<<']("\"".$freeze());
               }};
             _slim_codeattributes13 = height;
@@ -1157,7 +1157,7 @@ if (dt == null) dt = nil;
                 } else {
                 
                 _buf['$<<'](" height=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes13.$to_s());
+                _buf['$<<'](_slim_codeattributes13);
                 _buf['$<<']("\"".$freeze());
               }};
             _slim_codeattributes14 = (function() {if ($truthy(self['$attr?']("background"))) {
@@ -1171,7 +1171,7 @@ if (dt == null) dt = nil;
                 } else {
                 
                 _buf['$<<'](" style=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes14.$to_s());
+                _buf['$<<'](_slim_codeattributes14);
                 _buf['$<<']("\"".$freeze());
               }};
             _buf['$<<'](">".$freeze());
@@ -1180,10 +1180,10 @@ if (dt == null) dt = nil;
           if ($truthy(self['$title?']())) {
             
             _buf['$<<']("<div class=\"title\">".$freeze());
-            _buf['$<<'](self.$captioned_title().$to_s());
+            _buf['$<<'](self.$captioned_title());
             _buf['$<<']("</div>".$freeze());};
         };
-        return (_buf = $rb_times(_buf, ""));}, TMP_27.$$s = self, TMP_27.$$arity = 0, TMP_27));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_27.$$s = self, TMP_27.$$arity = 0, TMP_27));
     }, TMP_Converter_image_28.$$arity = -2);
     
     Opal.defn(self, '$listing', TMP_Converter_listing_30 = function $$listing(node, opts) {
@@ -1235,7 +1235,7 @@ if (dt == null) dt = nil;
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover1.$to_s());
+          _buf['$<<'](_temple_html_attributeremover1);
           _buf['$<<']("\"".$freeze());};
         _slim_codeattributes2 = self.id;
         if ($truthy(_slim_codeattributes2)) {
@@ -1244,14 +1244,14 @@ if (dt == null) dt = nil;
             } else {
             
             _buf['$<<'](" id=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes2.$to_s());
+            _buf['$<<'](_slim_codeattributes2);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<'](">".$freeze());
         if ($truthy(self['$title?']())) {
           
           _buf['$<<']("<div class=\"title\">".$freeze());
-          _buf['$<<'](self.$captioned_title().$to_s());
+          _buf['$<<'](self.$captioned_title());
           _buf['$<<']("</div>".$freeze());};
         _buf['$<<']("<div class=\"content\">".$freeze());
         nowrap = ($truthy($a = self.document['$attr?']("prewrap")['$!']()) ? $a : self['$option?']("nowrap"));
@@ -1299,7 +1299,7 @@ if (dt == null) dt = nil;
           if ($truthy(_temple_html_attributeremover2['$empty?']()['$!']())) {
             
             _buf['$<<'](" class=\"".$freeze());
-            _buf['$<<'](_temple_html_attributeremover2.$to_s());
+            _buf['$<<'](_temple_html_attributeremover2);
             _buf['$<<']("\"".$freeze());};
           _slim_codeattributes4 = pre_lang;
           if ($truthy(_slim_codeattributes4)) {
@@ -1308,7 +1308,7 @@ if (dt == null) dt = nil;
               } else {
               
               _buf['$<<'](" lang=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes4.$to_s());
+              _buf['$<<'](_slim_codeattributes4);
               _buf['$<<']("\"".$freeze());
             }};
           _buf['$<<']("><code".$freeze());
@@ -1327,10 +1327,10 @@ if (dt == null) dt = nil;
           if ($truthy(_temple_html_attributeremover3['$empty?']()['$!']())) {
             
             _buf['$<<'](" class=\"".$freeze());
-            _buf['$<<'](_temple_html_attributeremover3.$to_s());
+            _buf['$<<'](_temple_html_attributeremover3);
             _buf['$<<']("\"".$freeze());};
           _buf['$<<'](">".$freeze());
-          _buf['$<<'](self.$content().$to_s());
+          _buf['$<<'](self.$content());
           _buf['$<<']("</code></pre>".$freeze());
           } else {
           
@@ -1354,14 +1354,14 @@ if (dt == null) dt = nil;
           if ($truthy(_temple_html_attributeremover4['$empty?']()['$!']())) {
             
             _buf['$<<'](" class=\"".$freeze());
-            _buf['$<<'](_temple_html_attributeremover4.$to_s());
+            _buf['$<<'](_temple_html_attributeremover4);
             _buf['$<<']("\"".$freeze());};
           _buf['$<<'](">".$freeze());
-          _buf['$<<'](self.$content().$to_s());
+          _buf['$<<'](self.$content());
           _buf['$<<']("</pre>".$freeze());
         };
         _buf['$<<']("</div></div>".$freeze());
-        return (_buf = $rb_times(_buf, ""));}, TMP_29.$$s = self, TMP_29.$$arity = 0, TMP_29));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_29.$$s = self, TMP_29.$$arity = 0, TMP_29));
     }, TMP_Converter_listing_30.$$arity = -2);
     
     Opal.defn(self, '$literal', TMP_Converter_literal_32 = function $$literal(node, opts) {
@@ -1412,7 +1412,7 @@ if (dt == null) dt = nil;
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover1.$to_s());
+          _buf['$<<'](_temple_html_attributeremover1);
           _buf['$<<']("\"".$freeze());};
         _slim_codeattributes2 = self.id;
         if ($truthy(_slim_codeattributes2)) {
@@ -1421,14 +1421,14 @@ if (dt == null) dt = nil;
             } else {
             
             _buf['$<<'](" id=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes2.$to_s());
+            _buf['$<<'](_slim_codeattributes2);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<'](">".$freeze());
         if ($truthy(self['$title?']())) {
           
           _buf['$<<']("<div class=\"title\">".$freeze());
-          _buf['$<<'](self.$title().$to_s());
+          _buf['$<<'](self.$title());
           _buf['$<<']("</div>".$freeze());};
         _buf['$<<']("<div class=\"content\"><pre".$freeze());
         _temple_html_attributeremover2 = [];
@@ -1450,12 +1450,12 @@ if (dt == null) dt = nil;
         if ($truthy(_temple_html_attributeremover2['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover2.$to_s());
+          _buf['$<<'](_temple_html_attributeremover2);
           _buf['$<<']("\"".$freeze());};
         _buf['$<<'](">".$freeze());
-        _buf['$<<'](self.$content().$to_s());
+        _buf['$<<'](self.$content());
         _buf['$<<']("</pre></div></div>".$freeze());
-        return (_buf = $rb_times(_buf, ""));}, TMP_31.$$s = self, TMP_31.$$arity = 0, TMP_31));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_31.$$s = self, TMP_31.$$arity = 0, TMP_31));
     }, TMP_Converter_literal_32.$$arity = -2);
     
     Opal.defn(self, '$olist', TMP_Converter_olist_35 = function $$olist(node, opts) {
@@ -1506,7 +1506,7 @@ if (dt == null) dt = nil;
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover1.$to_s());
+          _buf['$<<'](_temple_html_attributeremover1);
           _buf['$<<']("\"".$freeze());};
         _slim_codeattributes2 = self.id;
         if ($truthy(_slim_codeattributes2)) {
@@ -1515,14 +1515,14 @@ if (dt == null) dt = nil;
             } else {
             
             _buf['$<<'](" id=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes2.$to_s());
+            _buf['$<<'](_slim_codeattributes2);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<'](">".$freeze());
         if ($truthy(self['$title?']())) {
           
           _buf['$<<']("<div class=\"title\">".$freeze());
-          _buf['$<<'](self.$title().$to_s());
+          _buf['$<<'](self.$title());
           _buf['$<<']("</div>".$freeze());};
         _buf['$<<']("<ol".$freeze());
         _temple_html_attributeremover2 = [];
@@ -1540,7 +1540,7 @@ if (dt == null) dt = nil;
         if ($truthy(_temple_html_attributeremover2['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover2.$to_s());
+          _buf['$<<'](_temple_html_attributeremover2);
           _buf['$<<']("\"".$freeze());};
         _slim_codeattributes4 = self.$attr("start");
         if ($truthy(_slim_codeattributes4)) {
@@ -1549,7 +1549,7 @@ if (dt == null) dt = nil;
             } else {
             
             _buf['$<<'](" start=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes4.$to_s());
+            _buf['$<<'](_slim_codeattributes4);
             _buf['$<<']("\"".$freeze());
           }};
         _slim_codeattributes5 = self.$list_marker_keyword();
@@ -1559,7 +1559,7 @@ if (dt == null) dt = nil;
             } else {
             
             _buf['$<<'](" type=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes5.$to_s());
+            _buf['$<<'](_slim_codeattributes5);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<'](">".$freeze());
@@ -1586,16 +1586,16 @@ if (item == null) item = nil;
           if ($truthy(_temple_html_attributeremover3['$empty?']()['$!']())) {
             
             _buf['$<<'](" class=\"".$freeze());
-            _buf['$<<'](_temple_html_attributeremover3.$to_s());
+            _buf['$<<'](_temple_html_attributeremover3);
             _buf['$<<']("\"".$freeze());};
           _buf['$<<']("><p>".$freeze());
-          _buf['$<<'](item.$text().$to_s());
+          _buf['$<<'](item.$text());
           _buf['$<<']("</p>".$freeze());
           if ($truthy(item['$blocks?']())) {
-            _buf['$<<'](item.$content().$to_s())};
+            _buf['$<<'](item.$content())};
           return _buf['$<<']("</li>".$freeze());}, TMP_34.$$s = self, TMP_34.$$arity = 1, TMP_34));
         _buf['$<<']("</ol></div>".$freeze());
-        return (_buf = $rb_times(_buf, ""));}, TMP_33.$$s = self, TMP_33.$$arity = 0, TMP_33));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_33.$$s = self, TMP_33.$$arity = 0, TMP_33));
     }, TMP_Converter_olist_35.$$arity = -2);
     
     Opal.defn(self, '$open', TMP_Converter_open_37 = function $$open(node, opts) {
@@ -1658,7 +1658,7 @@ if (item == null) item = nil;
             if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
               
               _buf['$<<'](" class=\"".$freeze());
-              _buf['$<<'](_temple_html_attributeremover1.$to_s());
+              _buf['$<<'](_temple_html_attributeremover1);
               _buf['$<<']("\"".$freeze());};
             _slim_codeattributes2 = self.id;
             if ($truthy(_slim_codeattributes2)) {
@@ -1667,17 +1667,17 @@ if (item == null) item = nil;
                 } else {
                 
                 _buf['$<<'](" id=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes2.$to_s());
+                _buf['$<<'](_slim_codeattributes2);
                 _buf['$<<']("\"".$freeze());
               }};
             _buf['$<<'](">".$freeze());
             if ($truthy(self['$title?']())) {
               
               _buf['$<<']("<div class=\"title\">".$freeze());
-              _buf['$<<'](self.$title().$to_s());
+              _buf['$<<'](self.$title());
               _buf['$<<']("</div>".$freeze());};
             _buf['$<<']("<blockquote>".$freeze());
-            _buf['$<<'](self.$content().$to_s());
+            _buf['$<<'](self.$content());
             _buf['$<<']("</blockquote></div>".$freeze());
           }
         } else if ($truthy((($a = self.style['$==']("partintro")) ? ($truthy($b = ($truthy($c = self.level['$!='](0)) ? $c : self.parent.$context()['$!=']("section"))) ? $b : self.document.$doctype()['$!=']("book")) : self.style['$==']("partintro")))) {
@@ -1718,7 +1718,7 @@ if (item == null) item = nil;
           if ($truthy(_temple_html_attributeremover2['$empty?']()['$!']())) {
             
             _buf['$<<'](" class=\"".$freeze());
-            _buf['$<<'](_temple_html_attributeremover2.$to_s());
+            _buf['$<<'](_temple_html_attributeremover2);
             _buf['$<<']("\"".$freeze());};
           _slim_codeattributes4 = self.id;
           if ($truthy(_slim_codeattributes4)) {
@@ -1727,20 +1727,20 @@ if (item == null) item = nil;
               } else {
               
               _buf['$<<'](" id=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes4.$to_s());
+              _buf['$<<'](_slim_codeattributes4);
               _buf['$<<']("\"".$freeze());
             }};
           _buf['$<<'](">".$freeze());
           if ($truthy(self['$title?']())) {
             
             _buf['$<<']("<div class=\"title\">".$freeze());
-            _buf['$<<'](self.$title().$to_s());
+            _buf['$<<'](self.$title());
             _buf['$<<']("</div>".$freeze());};
           _buf['$<<']("<div class=\"content\">".$freeze());
-          _buf['$<<'](self.$content().$to_s());
+          _buf['$<<'](self.$content());
           _buf['$<<']("</div></div>".$freeze());
         };
-        return (_buf = $rb_times(_buf, ""));}, TMP_36.$$s = self, TMP_36.$$arity = 0, TMP_36));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_36.$$s = self, TMP_36.$$arity = 0, TMP_36));
     }, TMP_Converter_open_37.$$arity = -2);
     
     Opal.defn(self, '$page_break', TMP_Converter_page_break_39 = function $$page_break(node, opts) {
@@ -1760,7 +1760,7 @@ if (item == null) item = nil;
         };
         _buf = [];
         _buf['$<<']("<div style=\"page-break-after: always;\"></div>".$freeze());
-        return (_buf = $rb_times(_buf, ""));}, TMP_38.$$s = self, TMP_38.$$arity = 0, TMP_38));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_38.$$s = self, TMP_38.$$arity = 0, TMP_38));
     }, TMP_Converter_page_break_39.$$arity = -2);
     
     Opal.defn(self, '$paragraph', TMP_Converter_paragraph_41 = function $$paragraph(node, opts) {
@@ -1810,7 +1810,7 @@ if (item == null) item = nil;
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover1.$to_s());
+          _buf['$<<'](_temple_html_attributeremover1);
           _buf['$<<']("\"".$freeze());};
         _slim_codeattributes2 = self.id;
         if ($truthy(_slim_codeattributes2)) {
@@ -1819,28 +1819,28 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" id=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes2.$to_s());
+            _buf['$<<'](_slim_codeattributes2);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<'](">".$freeze());
         if ($truthy(self['$title?']())) {
           
           _buf['$<<']("<div class=\"title\">".$freeze());
-          _buf['$<<'](self.$title().$to_s());
+          _buf['$<<'](self.$title());
           _buf['$<<']("</div>".$freeze());};
         if ($truthy(self['$has_role?']("small"))) {
           
           _buf['$<<']("<small>".$freeze());
-          _buf['$<<'](self.$content().$to_s());
+          _buf['$<<'](self.$content());
           _buf['$<<']("</small>".$freeze());
           } else {
           
           _buf['$<<']("<p>".$freeze());
-          _buf['$<<'](self.$content().$to_s());
+          _buf['$<<'](self.$content());
           _buf['$<<']("</p>".$freeze());
         };
         _buf['$<<']("</div>".$freeze());
-        return (_buf = $rb_times(_buf, ""));}, TMP_40.$$s = self, TMP_40.$$arity = 0, TMP_40));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_40.$$s = self, TMP_40.$$arity = 0, TMP_40));
     }, TMP_Converter_paragraph_41.$$arity = -2);
     
     Opal.defn(self, '$pass', TMP_Converter_pass_43 = function $$pass(node, opts) {
@@ -1859,8 +1859,8 @@ if (item == null) item = nil;
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
         _buf = [];
-        _buf['$<<'](self.$content().$to_s());
-        return (_buf = $rb_times(_buf, ""));}, TMP_42.$$s = self, TMP_42.$$arity = 0, TMP_42));
+        _buf['$<<'](self.$content());
+        return (_buf = _buf.$join("".$freeze()));}, TMP_42.$$s = self, TMP_42.$$arity = 0, TMP_42));
     }, TMP_Converter_pass_43.$$arity = -2);
     
     Opal.defn(self, '$preamble', TMP_Converter_preamble_45 = function $$preamble(node, opts) {
@@ -1879,7 +1879,7 @@ if (item == null) item = nil;
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
         _buf = [];
-        return (_buf = $rb_times(_buf, ""));}, TMP_44.$$s = self, TMP_44.$$arity = 0, TMP_44));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_44.$$s = self, TMP_44.$$arity = 0, TMP_44));
     }, TMP_Converter_preamble_45.$$arity = -2);
     
     Opal.defn(self, '$quote', TMP_Converter_quote_47 = function $$quote(node, opts) {
@@ -1929,7 +1929,7 @@ if (item == null) item = nil;
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover1.$to_s());
+          _buf['$<<'](_temple_html_attributeremover1);
           _buf['$<<']("\"".$freeze());};
         _slim_codeattributes2 = self.id;
         if ($truthy(_slim_codeattributes2)) {
@@ -1938,17 +1938,17 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" id=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes2.$to_s());
+            _buf['$<<'](_slim_codeattributes2);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<'](">".$freeze());
         if ($truthy(self['$title?']())) {
           
           _buf['$<<']("<div class=\"title\">".$freeze());
-          _buf['$<<'](self.$title().$to_s());
+          _buf['$<<'](self.$title());
           _buf['$<<']("</div>".$freeze());};
         _buf['$<<']("<blockquote>".$freeze());
-        _buf['$<<'](self.$content().$to_s());
+        _buf['$<<'](self.$content());
         _buf['$<<']("</blockquote>".$freeze());
         attribution = (function() {if ($truthy(self['$attr?']("attribution"))) {
           
@@ -1968,17 +1968,17 @@ if (item == null) item = nil;
           if ($truthy(citetitle)) {
             
             _buf['$<<']("<cite>".$freeze());
-            _buf['$<<'](citetitle.$to_s());
+            _buf['$<<'](citetitle);
             _buf['$<<']("</cite>".$freeze());};
           if ($truthy(attribution)) {
             
             if ($truthy(citetitle)) {
               _buf['$<<']("<br>".$freeze())};
             _buf['$<<']("&#8212; ".$freeze());
-            _buf['$<<'](attribution.$to_s());};
+            _buf['$<<'](attribution);};
           _buf['$<<']("</div>".$freeze());};
         _buf['$<<']("</div>".$freeze());
-        return (_buf = $rb_times(_buf, ""));}, TMP_46.$$s = self, TMP_46.$$arity = 0, TMP_46));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_46.$$s = self, TMP_46.$$arity = 0, TMP_46));
     }, TMP_Converter_quote_47.$$arity = -2);
     
     Opal.defn(self, '$ruler', TMP_Converter_ruler_49 = function $$ruler(node, opts) {
@@ -1998,7 +1998,7 @@ if (item == null) item = nil;
         };
         _buf = [];
         _buf['$<<']("<hr>".$freeze());
-        return (_buf = $rb_times(_buf, ""));}, TMP_48.$$s = self, TMP_48.$$arity = 0, TMP_48));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_48.$$s = self, TMP_48.$$arity = 0, TMP_48));
     }, TMP_Converter_ruler_49.$$arity = -2);
     
     Opal.defn(self, '$sidebar', TMP_Converter_sidebar_51 = function $$sidebar(node, opts) {
@@ -2048,7 +2048,7 @@ if (item == null) item = nil;
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover1.$to_s());
+          _buf['$<<'](_temple_html_attributeremover1);
           _buf['$<<']("\"".$freeze());};
         _slim_codeattributes2 = self.id;
         if ($truthy(_slim_codeattributes2)) {
@@ -2057,18 +2057,18 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" id=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes2.$to_s());
+            _buf['$<<'](_slim_codeattributes2);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<']("><div class=\"content\">".$freeze());
         if ($truthy(self['$title?']())) {
           
           _buf['$<<']("<div class=\"title\">".$freeze());
-          _buf['$<<'](self.$title().$to_s());
+          _buf['$<<'](self.$title());
           _buf['$<<']("</div>".$freeze());};
-        _buf['$<<'](self.$content().$to_s());
+        _buf['$<<'](self.$content());
         _buf['$<<']("</div></div>".$freeze());
-        return (_buf = $rb_times(_buf, ""));}, TMP_50.$$s = self, TMP_50.$$arity = 0, TMP_50));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_50.$$s = self, TMP_50.$$arity = 0, TMP_50));
     }, TMP_Converter_sidebar_51.$$arity = -2);
     
     Opal.defn(self, '$stem', TMP_Converter_stem_53 = function $$stem(node, opts) {
@@ -2128,7 +2128,7 @@ if (item == null) item = nil;
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover1.$to_s());
+          _buf['$<<'](_temple_html_attributeremover1);
           _buf['$<<']("\"".$freeze());};
         _slim_codeattributes2 = self.id;
         if ($truthy(_slim_codeattributes2)) {
@@ -2137,19 +2137,19 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" id=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes2.$to_s());
+            _buf['$<<'](_slim_codeattributes2);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<'](">".$freeze());
         if ($truthy(self['$title?']())) {
           
           _buf['$<<']("<div class=\"title\">".$freeze());
-          _buf['$<<'](self.$title().$to_s());
+          _buf['$<<'](self.$title());
           _buf['$<<']("</div>".$freeze());};
         _buf['$<<']("<div class=\"content\">".$freeze());
-        _buf['$<<'](equation.$to_s());
+        _buf['$<<'](equation);
         _buf['$<<']("</div></div>".$freeze());
-        return (_buf = $rb_times(_buf, ""));}, TMP_52.$$s = self, TMP_52.$$arity = 0, TMP_52));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_52.$$s = self, TMP_52.$$arity = 0, TMP_52));
     }, TMP_Converter_stem_53.$$arity = -2);
     
     Opal.defn(self, '$table', TMP_Converter_table_64 = function $$table(node, opts) {
@@ -2178,7 +2178,7 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" id=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes1.$to_s());
+            _buf['$<<'](_slim_codeattributes1);
             _buf['$<<']("\"".$freeze());
           }};
         _temple_html_attributeremover1 = [];
@@ -2196,7 +2196,7 @@ if (item == null) item = nil;
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover1.$to_s());
+          _buf['$<<'](_temple_html_attributeremover1);
           _buf['$<<']("\"".$freeze());};
         _slim_codeattributes3 = [(function() {if ($truthy(self['$option?']("autowidth"))) {
           return nil
@@ -2213,14 +2213,14 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" style=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes3.$to_s());
+            _buf['$<<'](_slim_codeattributes3);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<'](">".$freeze());
         if ($truthy(self['$title?']())) {
           
           _buf['$<<']("<caption class=\"title\">".$freeze());
-          _buf['$<<'](self.$captioned_title().$to_s());
+          _buf['$<<'](self.$captioned_title());
           _buf['$<<']("</caption>".$freeze());};
         if ($truthy(self.$attr("rowcount")['$zero?']())) {
           } else {
@@ -2235,7 +2235,7 @@ if (item == null) item = nil;
 if (col == null) col = nil;
             
               _buf['$<<']("<col style=\"width:".$freeze());
-              _buf['$<<'](col.$attr("colpcwidth").$to_s());
+              _buf['$<<'](col.$attr("colpcwidth"));
               return _buf['$<<']("%\">".$freeze());}, TMP_56.$$s = self, TMP_56.$$arity = 1, TMP_56))
           };
           _buf['$<<']("</colgroup>".$freeze());
@@ -2247,7 +2247,7 @@ if (tblsec == null) tblsec = nil;
 if (tblsec == null) tblsec = nil;
           
             _buf['$<<']("<t".$freeze());
-            _buf['$<<'](tblsec.$to_s());
+            _buf['$<<'](tblsec);
             _buf['$<<'](">".$freeze());
             return $send(self.rows['$[]'](tblsec), 'each', [], (TMP_59 = function(row){var self = TMP_59.$$s || this, TMP_60;
 if (row == null) row = nil;
@@ -2306,11 +2306,11 @@ if (text == null) text = nil;
                       return _slim_controls2['$<<']("</p>".$freeze());}, TMP_63.$$s = self, TMP_63.$$arity = 1, TMP_63))}
                   };
                   return (_slim_controls2 = $rb_times(_slim_controls2, ""));}, TMP_61.$$s = self, TMP_61.$$arity = 0, TMP_61));
-                return _buf['$<<'](_slim_controls1.$to_s());}, TMP_60.$$s = self, TMP_60.$$arity = 1, TMP_60));
+                return _buf['$<<'](_slim_controls1);}, TMP_60.$$s = self, TMP_60.$$arity = 1, TMP_60));
               return _buf['$<<']("</tr>".$freeze());}, TMP_59.$$s = self, TMP_59.$$arity = 1, TMP_59));}, TMP_58.$$s = self, TMP_58.$$arity = 1, TMP_58));
         };
         _buf['$<<']("</table>".$freeze());
-        return (_buf = $rb_times(_buf, ""));}, TMP_54.$$s = self, TMP_54.$$arity = 0, TMP_54));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_54.$$s = self, TMP_54.$$arity = 0, TMP_54));
     }, TMP_Converter_table_64.$$arity = -2);
     
     Opal.defn(self, '$thematic_break', TMP_Converter_thematic_break_66 = function $$thematic_break(node, opts) {
@@ -2330,7 +2330,7 @@ if (text == null) text = nil;
         };
         _buf = [];
         _buf['$<<']("<hr>".$freeze());
-        return (_buf = $rb_times(_buf, ""));}, TMP_65.$$s = self, TMP_65.$$arity = 0, TMP_65));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_65.$$s = self, TMP_65.$$arity = 0, TMP_65));
     }, TMP_Converter_thematic_break_66.$$arity = -2);
     
     Opal.defn(self, '$toc', TMP_Converter_toc_68 = function $$toc(node, opts) {
@@ -2379,7 +2379,7 @@ if (text == null) text = nil;
               } else {
               
               _buf['$<<'](" id=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes1.$to_s());
+              _buf['$<<'](_slim_codeattributes1);
               _buf['$<<']("\"".$freeze());
             }};
           _temple_html_attributeremover1 = [];
@@ -2397,7 +2397,7 @@ if (text == null) text = nil;
           if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
             
             _buf['$<<'](" class=\"".$freeze());
-            _buf['$<<'](_temple_html_attributeremover1.$to_s());
+            _buf['$<<'](_temple_html_attributeremover1);
             _buf['$<<']("\"".$freeze());};
           _buf['$<<']("><div class=\"title\"".$freeze());
           _slim_codeattributes3 = toc_title_id;
@@ -2407,15 +2407,15 @@ if (text == null) text = nil;
               } else {
               
               _buf['$<<'](" id=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes3.$to_s());
+              _buf['$<<'](_slim_codeattributes3);
               _buf['$<<']("\"".$freeze());
             }};
           _buf['$<<'](">".$freeze());
-          _buf['$<<'](toc_title.$to_s());
+          _buf['$<<'](toc_title);
           _buf['$<<']("</div>".$freeze());
-          _buf['$<<'](Opal.const_get_qualified(Opal.const_get_qualified(Opal.const_get_relative($nesting, 'Asciidoctor'), 'HTML5'), 'DocumentTemplate').$outline(self.document, toc_levels).$to_s());
+          _buf['$<<'](Opal.const_get_qualified(Opal.const_get_qualified(Opal.const_get_relative($nesting, 'Asciidoctor'), 'HTML5'), 'DocumentTemplate').$outline(self.document, toc_levels));
           _buf['$<<']("</div>".$freeze());};
-        return (_buf = $rb_times(_buf, ""));}, TMP_67.$$s = self, TMP_67.$$arity = 0, TMP_67));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_67.$$s = self, TMP_67.$$arity = 0, TMP_67));
     }, TMP_Converter_toc_68.$$arity = -2);
     
     Opal.defn(self, '$ulist', TMP_Converter_ulist_71 = function $$ulist(node, opts) {
@@ -2485,7 +2485,7 @@ if (text == null) text = nil;
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover1.$to_s());
+          _buf['$<<'](_temple_html_attributeremover1);
           _buf['$<<']("\"".$freeze());};
         _slim_codeattributes2 = self.id;
         if ($truthy(_slim_codeattributes2)) {
@@ -2494,14 +2494,14 @@ if (text == null) text = nil;
             } else {
             
             _buf['$<<'](" id=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes2.$to_s());
+            _buf['$<<'](_slim_codeattributes2);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<'](">".$freeze());
         if ($truthy(self['$title?']())) {
           
           _buf['$<<']("<div class=\"title\">".$freeze());
-          _buf['$<<'](self.$title().$to_s());
+          _buf['$<<'](self.$title());
           _buf['$<<']("</div>".$freeze());};
         _buf['$<<']("<ul".$freeze());
         _temple_html_attributeremover2 = [];
@@ -2519,7 +2519,7 @@ if (text == null) text = nil;
         if ($truthy(_temple_html_attributeremover2['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover2.$to_s());
+          _buf['$<<'](_temple_html_attributeremover2);
           _buf['$<<']("\"".$freeze());};
         _buf['$<<'](">".$freeze());
         $send(self.$items(), 'each', [], (TMP_70 = function(item){var self = TMP_70.$$s || this, $b, _temple_html_attributeremover3 = nil, _slim_codeattributes4 = nil;
@@ -2545,24 +2545,24 @@ if (item == null) item = nil;
           if ($truthy(_temple_html_attributeremover3['$empty?']()['$!']())) {
             
             _buf['$<<'](" class=\"".$freeze());
-            _buf['$<<'](_temple_html_attributeremover3.$to_s());
+            _buf['$<<'](_temple_html_attributeremover3);
             _buf['$<<']("\"".$freeze());};
           _buf['$<<']("><p>".$freeze());
           if ($truthy(($truthy($b = checklist) ? item['$attr?']("checkbox") : $b))) {
-            _buf['$<<']((("" + ((function() {if ($truthy(item['$attr?']("checked"))) {
+            _buf['$<<']("" + ((function() {if ($truthy(item['$attr?']("checked"))) {
               return marker_checked
               } else {
               return marker_unchecked
-            }; return nil; })())) + (item.$text())).$to_s())
+            }; return nil; })()) + (item.$text()))
             } else {
-            _buf['$<<'](item.$text().$to_s())
+            _buf['$<<'](item.$text())
           };
           _buf['$<<']("</p>".$freeze());
           if ($truthy(item['$blocks?']())) {
-            _buf['$<<'](item.$content().$to_s())};
+            _buf['$<<'](item.$content())};
           return _buf['$<<']("</li>".$freeze());}, TMP_70.$$s = self, TMP_70.$$arity = 1, TMP_70));
         _buf['$<<']("</ul></div>".$freeze());
-        return (_buf = $rb_times(_buf, ""));}, TMP_69.$$s = self, TMP_69.$$arity = 0, TMP_69));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_69.$$s = self, TMP_69.$$arity = 0, TMP_69));
     }, TMP_Converter_ulist_71.$$arity = -2);
     
     Opal.defn(self, '$verse', TMP_Converter_verse_73 = function $$verse(node, opts) {
@@ -2612,7 +2612,7 @@ if (item == null) item = nil;
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover1.$to_s());
+          _buf['$<<'](_temple_html_attributeremover1);
           _buf['$<<']("\"".$freeze());};
         _slim_codeattributes2 = self.id;
         if ($truthy(_slim_codeattributes2)) {
@@ -2621,17 +2621,17 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" id=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes2.$to_s());
+            _buf['$<<'](_slim_codeattributes2);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<'](">".$freeze());
         if ($truthy(self['$title?']())) {
           
           _buf['$<<']("<div class=\"title\">".$freeze());
-          _buf['$<<'](self.$title().$to_s());
+          _buf['$<<'](self.$title());
           _buf['$<<']("</div>".$freeze());};
         _buf['$<<']("<pre class=\"content\">".$freeze());
-        _buf['$<<'](self.$content().$to_s());
+        _buf['$<<'](self.$content());
         _buf['$<<']("</pre>".$freeze());
         attribution = (function() {if ($truthy(self['$attr?']("attribution"))) {
           
@@ -2651,17 +2651,17 @@ if (item == null) item = nil;
           if ($truthy(citetitle)) {
             
             _buf['$<<']("<cite>".$freeze());
-            _buf['$<<'](citetitle.$to_s());
+            _buf['$<<'](citetitle);
             _buf['$<<']("</cite>".$freeze());};
           if ($truthy(attribution)) {
             
             if ($truthy(citetitle)) {
               _buf['$<<']("<br>".$freeze())};
             _buf['$<<']("&#8212; ".$freeze());
-            _buf['$<<'](attribution.$to_s());};
+            _buf['$<<'](attribution);};
           _buf['$<<']("</div>".$freeze());};
         _buf['$<<']("</div>".$freeze());
-        return (_buf = $rb_times(_buf, ""));}, TMP_72.$$s = self, TMP_72.$$arity = 0, TMP_72));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_72.$$s = self, TMP_72.$$arity = 0, TMP_72));
     }, TMP_Converter_verse_73.$$arity = -2);
     
     Opal.defn(self, '$video', TMP_Converter_video_75 = function $$video(node, opts) {
@@ -2729,7 +2729,7 @@ if (item == null) item = nil;
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover1.$to_s());
+          _buf['$<<'](_temple_html_attributeremover1);
           _buf['$<<']("\"".$freeze());};
         _slim_codeattributes2 = self.id;
         if ($truthy(_slim_codeattributes2)) {
@@ -2738,14 +2738,14 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" id=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes2.$to_s());
+            _buf['$<<'](_slim_codeattributes2);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<'](">".$freeze());
         if ($truthy(self['$title?']())) {
           
           _buf['$<<']("<div class=\"title\">".$freeze());
-          _buf['$<<'](self.$captioned_title().$to_s());
+          _buf['$<<'](self.$captioned_title());
           _buf['$<<']("</div>".$freeze());};
         $case = self.$attr("poster");
         if ("vimeo"['$===']($case)) {
@@ -2773,7 +2773,7 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" width=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes3.$to_s());
+            _buf['$<<'](_slim_codeattributes3);
             _buf['$<<']("\"".$freeze());
           }};
         _slim_codeattributes4 = height;
@@ -2783,7 +2783,7 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" height=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes4.$to_s());
+            _buf['$<<'](_slim_codeattributes4);
             _buf['$<<']("\"".$freeze());
           }};
         _slim_codeattributes5 = src;
@@ -2793,7 +2793,7 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" src=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes5.$to_s());
+            _buf['$<<'](_slim_codeattributes5);
             _buf['$<<']("\"".$freeze());
           }};
         _slim_codeattributes6 = 0;
@@ -2803,7 +2803,7 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" frameborder=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes6.$to_s());
+            _buf['$<<'](_slim_codeattributes6);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<'](" webkitAllowFullScreen mozallowfullscreen allowFullScreen".$freeze());
@@ -2814,7 +2814,7 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" data-autoplay=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes7.$to_s());
+            _buf['$<<'](_slim_codeattributes7);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<']("></iframe>".$freeze());}
@@ -2841,7 +2841,7 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" width=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes8.$to_s());
+            _buf['$<<'](_slim_codeattributes8);
             _buf['$<<']("\"".$freeze());
           }};
         _slim_codeattributes9 = height;
@@ -2851,7 +2851,7 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" height=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes9.$to_s());
+            _buf['$<<'](_slim_codeattributes9);
             _buf['$<<']("\"".$freeze());
           }};
         _slim_codeattributes10 = src;
@@ -2861,7 +2861,7 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" src=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes10.$to_s());
+            _buf['$<<'](_slim_codeattributes10);
             _buf['$<<']("\"".$freeze());
           }};
         _slim_codeattributes11 = 0;
@@ -2871,7 +2871,7 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" frameborder=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes11.$to_s());
+            _buf['$<<'](_slim_codeattributes11);
             _buf['$<<']("\"".$freeze());
           }};
         _slim_codeattributes12 = self['$option?']("nofullscreen")['$!']();
@@ -2881,7 +2881,7 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" allowfullscreen=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes12.$to_s());
+            _buf['$<<'](_slim_codeattributes12);
             _buf['$<<']("\"".$freeze());
           }};
         _slim_codeattributes13 = self['$option?']("autoplay");
@@ -2891,7 +2891,7 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" data-autoplay=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes13.$to_s());
+            _buf['$<<'](_slim_codeattributes13);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<']("></iframe>".$freeze());}
@@ -2904,7 +2904,7 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" src=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes14.$to_s());
+            _buf['$<<'](_slim_codeattributes14);
             _buf['$<<']("\"".$freeze());
           }};
         _slim_codeattributes15 = width;
@@ -2914,7 +2914,7 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" width=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes15.$to_s());
+            _buf['$<<'](_slim_codeattributes15);
             _buf['$<<']("\"".$freeze());
           }};
         _slim_codeattributes16 = height;
@@ -2924,7 +2924,7 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" height=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes16.$to_s());
+            _buf['$<<'](_slim_codeattributes16);
             _buf['$<<']("\"".$freeze());
           }};
         _slim_codeattributes17 = (function() {if ($truthy(self.$attr("poster"))) {
@@ -2938,7 +2938,7 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" poster=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes17.$to_s());
+            _buf['$<<'](_slim_codeattributes17);
             _buf['$<<']("\"".$freeze());
           }};
         _slim_codeattributes18 = self['$option?']("autoplay");
@@ -2948,7 +2948,7 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" data-autoplay=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes18.$to_s());
+            _buf['$<<'](_slim_codeattributes18);
             _buf['$<<']("\"".$freeze());
           }};
         _slim_codeattributes19 = self['$option?']("nocontrols")['$!']();
@@ -2958,7 +2958,7 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" controls=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes19.$to_s());
+            _buf['$<<'](_slim_codeattributes19);
             _buf['$<<']("\"".$freeze());
           }};
         _slim_codeattributes20 = self['$option?']("loop");
@@ -2968,12 +2968,12 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" loop=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes20.$to_s());
+            _buf['$<<'](_slim_codeattributes20);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<'](">Your browser does not support the video tag.</video>".$freeze());};
         _buf['$<<']("</div>".$freeze());
-        return _buf;}, TMP_74.$$s = self, TMP_74.$$arity = 0, TMP_74));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_74.$$s = self, TMP_74.$$arity = 0, TMP_74));
     }, TMP_Converter_video_75.$$arity = -2);
     
     Opal.defn(self, '$document', TMP_Converter_document_78 = function $$document(node, opts) {
@@ -3007,7 +3007,7 @@ if (item == null) item = nil;
             } else {
             
             _buf['$<<'](" lang=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes1.$to_s());
+            _buf['$<<'](_slim_codeattributes1);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<']("><head><meta charset=\"utf-8\">".$freeze());
@@ -3029,7 +3029,7 @@ if (key == null) key = nil;
                 } else {
                 
                 _buf['$<<'](" name=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes2.$to_s());
+                _buf['$<<'](_slim_codeattributes2);
                 _buf['$<<']("\"".$freeze());
               }};
             _slim_codeattributes3 = self.$attr(key);
@@ -3039,7 +3039,7 @@ if (key == null) key = nil;
                 } else {
                 
                 _buf['$<<'](" content=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes3.$to_s());
+                _buf['$<<'](_slim_codeattributes3);
                 _buf['$<<']("\"".$freeze());
               }};
             return _buf['$<<'](">".$freeze());
@@ -3047,9 +3047,9 @@ if (key == null) key = nil;
             return nil
           }}, TMP_77.$$s = self, TMP_77.$$arity = 1, TMP_77));
         _buf['$<<']("<title>".$freeze());
-        _buf['$<<'](self.$doctitle($hash2(["sanitize", "use_fallback"], {"sanitize": true, "use_fallback": true})).$to_s());
+        _buf['$<<'](self.$doctitle($hash2(["sanitize", "use_fallback"], {"sanitize": true, "use_fallback": true})));
         _buf['$<<']("</title><meta content=\"yes\" name=\"apple-mobile-web-app-capable\"><meta content=\"black-translucent\" name=\"apple-mobile-web-app-status-bar-style\"><meta content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui\" name=\"viewport\"><link href=\"".$freeze());
-        _buf['$<<'](revealjsdir.$to_s());
+        _buf['$<<'](revealjsdir);
         _buf['$<<']("/css/reveal.css\" rel=\"stylesheet\">".$freeze());
         if ($truthy(self['$attr?']("revealjs_customtheme"))) {
           
@@ -3061,16 +3061,16 @@ if (key == null) key = nil;
               } else {
               
               _buf['$<<'](" href=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes4.$to_s());
+              _buf['$<<'](_slim_codeattributes4);
               _buf['$<<']("\"".$freeze());
             }};
           _buf['$<<'](" id=\"theme\">".$freeze());
           } else {
           
           _buf['$<<']("<link rel=\"stylesheet\" href=\"".$freeze());
-          _buf['$<<'](revealjsdir.$to_s());
+          _buf['$<<'](revealjsdir);
           _buf['$<<']("/css/theme/".$freeze());
-          _buf['$<<'](self.$attr("revealjs_theme", "black").$to_s());
+          _buf['$<<'](self.$attr("revealjs_theme", "black"));
           _buf['$<<'](".css\" id=\"theme\">".$freeze());
         };
         if ($truthy(self['$attr?']("icons", "font"))) {
@@ -3084,7 +3084,7 @@ if (key == null) key = nil;
                 } else {
                 
                 _buf['$<<'](" href=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes5.$to_s());
+                _buf['$<<'](_slim_codeattributes5);
                 _buf['$<<']("\"".$freeze());
               }};
             _buf['$<<'](">".$freeze());
@@ -3098,7 +3098,7 @@ if (key == null) key = nil;
                 } else {
                 
                 _buf['$<<'](" href=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes6.$to_s());
+                _buf['$<<'](_slim_codeattributes6);
                 _buf['$<<']("\"".$freeze());
               }};
             _buf['$<<'](">".$freeze());
@@ -3110,15 +3110,15 @@ if (key == null) key = nil;
             eqnums_val = "AMS"};
           eqnums_opt = "" + " equationNumbers: { autoNumber: \"" + (eqnums_val) + "\" } ";
           _buf['$<<']("<script type=\"text/x-mathjax-config\">MathJax.Hub.Config({\ntex2jax: {\n  inlineMath: [".$freeze());
-          _buf['$<<'](Opal.const_get_qualified(Opal.const_get_relative($nesting, 'Asciidoctor'), 'INLINE_MATH_DELIMITERS')['$[]']("latexmath").$to_s().$to_s());
+          _buf['$<<'](Opal.const_get_qualified(Opal.const_get_relative($nesting, 'Asciidoctor'), 'INLINE_MATH_DELIMITERS')['$[]']("latexmath").$to_s());
           _buf['$<<']("],\n  displayMath: [".$freeze());
-          _buf['$<<'](Opal.const_get_qualified(Opal.const_get_relative($nesting, 'Asciidoctor'), 'BLOCK_MATH_DELIMITERS')['$[]']("latexmath").$to_s().$to_s());
+          _buf['$<<'](Opal.const_get_qualified(Opal.const_get_relative($nesting, 'Asciidoctor'), 'BLOCK_MATH_DELIMITERS')['$[]']("latexmath").$to_s());
           _buf['$<<']("],\n  ignoreClass: \"nostem|nolatexmath\"\n},\nasciimath2jax: {\n  delimiters: [".$freeze());
-          _buf['$<<'](Opal.const_get_qualified(Opal.const_get_relative($nesting, 'Asciidoctor'), 'BLOCK_MATH_DELIMITERS')['$[]']("asciimath").$to_s().$to_s());
+          _buf['$<<'](Opal.const_get_qualified(Opal.const_get_relative($nesting, 'Asciidoctor'), 'BLOCK_MATH_DELIMITERS')['$[]']("asciimath").$to_s());
           _buf['$<<']("],\n  ignoreClass: \"nostem|noasciimath\"\n},\nTeX: {".$freeze());
-          _buf['$<<'](eqnums_opt.$to_s());
+          _buf['$<<'](eqnums_opt);
           _buf['$<<']("}\n});</script><script src=\"".$freeze());
-          _buf['$<<'](cdn_base.$to_s());
+          _buf['$<<'](cdn_base);
           _buf['$<<']("/mathjax/2.4.0/MathJax.js?config=TeX-MML-AM_HTMLorMML\"></script>".$freeze());};
         $case = self.$attr("source-highlighter");
         if ("coderay"['$===']($case)) {if (self.$attr("coderay-css", "class")['$==']("class")) {
@@ -3132,14 +3132,14 @@ if (key == null) key = nil;
                 } else {
                 
                 _buf['$<<'](" href=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes7.$to_s());
+                _buf['$<<'](_slim_codeattributes7);
                 _buf['$<<']("\"".$freeze());
               }};
             _buf['$<<'](">".$freeze());
             } else {
             
             _buf['$<<']("<style>".$freeze());
-            _buf['$<<'](Opal.const_get_qualified(Opal.const_get_relative($nesting, 'Asciidoctor'), 'Stylesheets').$instance().$coderay_stylesheet_data().$to_s());
+            _buf['$<<'](Opal.const_get_qualified(Opal.const_get_relative($nesting, 'Asciidoctor'), 'Stylesheets').$instance().$coderay_stylesheet_data());
             _buf['$<<']("</style>".$freeze());
           }}}
         else if ("pygments"['$===']($case)) {if (self.$attr("pygments-css", "class")['$==']("class")) {
@@ -3153,14 +3153,14 @@ if (key == null) key = nil;
                 } else {
                 
                 _buf['$<<'](" href=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes8.$to_s());
+                _buf['$<<'](_slim_codeattributes8);
                 _buf['$<<']("\"".$freeze());
               }};
             _buf['$<<'](">".$freeze());
             } else {
             
             _buf['$<<']("<style>".$freeze());
-            _buf['$<<'](Opal.const_get_qualified(Opal.const_get_relative($nesting, 'Asciidoctor'), 'Stylesheets').$instance().$pygments_stylesheet_data(self.$attr("pygments-style")).$to_s());
+            _buf['$<<'](Opal.const_get_qualified(Opal.const_get_relative($nesting, 'Asciidoctor'), 'Stylesheets').$instance().$pygments_stylesheet_data(self.$attr("pygments-style")));
             _buf['$<<']("</style>".$freeze());
           }}};
         if ($truthy(self['$attr?']("highlightjs-theme"))) {
@@ -3173,22 +3173,22 @@ if (key == null) key = nil;
               } else {
               
               _buf['$<<'](" href=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes9.$to_s());
+              _buf['$<<'](_slim_codeattributes9);
               _buf['$<<']("\"".$freeze());
             }};
           _buf['$<<'](" rel=\"stylesheet\">".$freeze());
           } else {
           
           _buf['$<<']("<link href=\"".$freeze());
-          _buf['$<<'](revealjsdir.$to_s());
+          _buf['$<<'](revealjsdir);
           _buf['$<<']("/lib/css/zenburn.css\" rel=\"stylesheet\">".$freeze());
         };
         _buf['$<<']("<script>document.write( '<link rel=\"stylesheet\" href=\"".$freeze());
-        _buf['$<<'](revealjsdir.$to_s());
+        _buf['$<<'](revealjsdir);
         _buf['$<<']("/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css\" type=\"text/css\" media=\"print\">' );</script>".$freeze());
         if ($truthy((docinfo_content = self.$docinfo("header", ".html"))['$empty?']())) {
           } else {
-          _buf['$<<'](docinfo_content.$to_s())
+          _buf['$<<'](docinfo_content)
         };
         if ($truthy(self['$attr?']("customcss"))) {
           
@@ -3204,7 +3204,7 @@ if (key == null) key = nil;
               } else {
               
               _buf['$<<'](" href=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes10.$to_s());
+              _buf['$<<'](_slim_codeattributes10);
               _buf['$<<']("\"".$freeze());
             }};
           _buf['$<<'](">".$freeze());};
@@ -3254,7 +3254,7 @@ if (key == null) key = nil;
           if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
             
             _buf['$<<'](" class=\"".$freeze());
-            _buf['$<<'](_temple_html_attributeremover1.$to_s());
+            _buf['$<<'](_temple_html_attributeremover1);
             _buf['$<<']("\"".$freeze());};
           _buf['$<<'](" data-state=\"title\"".$freeze());
           _slim_codeattributes12 = self.$attr("title-slide-transition");
@@ -3264,7 +3264,7 @@ if (key == null) key = nil;
               } else {
               
               _buf['$<<'](" data-transition=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes12.$to_s());
+              _buf['$<<'](_slim_codeattributes12);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes13 = self.$attr("title-slide-transition-speed");
@@ -3274,7 +3274,7 @@ if (key == null) key = nil;
               } else {
               
               _buf['$<<'](" data-transition-speed=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes13.$to_s());
+              _buf['$<<'](_slim_codeattributes13);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes14 = self.$attr("title-slide-background");
@@ -3284,7 +3284,7 @@ if (key == null) key = nil;
               } else {
               
               _buf['$<<'](" data-background=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes14.$to_s());
+              _buf['$<<'](_slim_codeattributes14);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes15 = self.$attr("title-slide-background-size");
@@ -3294,7 +3294,7 @@ if (key == null) key = nil;
               } else {
               
               _buf['$<<'](" data-background-size=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes15.$to_s());
+              _buf['$<<'](_slim_codeattributes15);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes16 = bg_image;
@@ -3304,7 +3304,7 @@ if (key == null) key = nil;
               } else {
               
               _buf['$<<'](" data-background-image=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes16.$to_s());
+              _buf['$<<'](_slim_codeattributes16);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes17 = bg_video;
@@ -3314,7 +3314,7 @@ if (key == null) key = nil;
               } else {
               
               _buf['$<<'](" data-background-video=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes17.$to_s());
+              _buf['$<<'](_slim_codeattributes17);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes18 = self.$attr("title-slide-background-video-loop");
@@ -3324,7 +3324,7 @@ if (key == null) key = nil;
               } else {
               
               _buf['$<<'](" data-background-video-loop=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes18.$to_s());
+              _buf['$<<'](_slim_codeattributes18);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes19 = self.$attr("title-slide-background-video-muted");
@@ -3334,7 +3334,7 @@ if (key == null) key = nil;
               } else {
               
               _buf['$<<'](" data-background-video-muted=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes19.$to_s());
+              _buf['$<<'](_slim_codeattributes19);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes20 = self.$attr("title-slide-background-iframe");
@@ -3344,7 +3344,7 @@ if (key == null) key = nil;
               } else {
               
               _buf['$<<'](" data-background-iframe=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes20.$to_s());
+              _buf['$<<'](_slim_codeattributes20);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes21 = self.$attr("title-slide-background-color");
@@ -3354,7 +3354,7 @@ if (key == null) key = nil;
               } else {
               
               _buf['$<<'](" data-background-color=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes21.$to_s());
+              _buf['$<<'](_slim_codeattributes21);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes22 = self.$attr("title-slide-background-repeat");
@@ -3364,7 +3364,7 @@ if (key == null) key = nil;
               } else {
               
               _buf['$<<'](" data-background-repeat=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes22.$to_s());
+              _buf['$<<'](_slim_codeattributes22);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes23 = self.$attr("title-slide-background-position");
@@ -3374,7 +3374,7 @@ if (key == null) key = nil;
               } else {
               
               _buf['$<<'](" data-background-position=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes23.$to_s());
+              _buf['$<<'](_slim_codeattributes23);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes24 = self.$attr("title-slide-background-transition");
@@ -3384,21 +3384,21 @@ if (key == null) key = nil;
               } else {
               
               _buf['$<<'](" data-background-transition=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes24.$to_s());
+              _buf['$<<'](_slim_codeattributes24);
               _buf['$<<']("\"".$freeze());
             }};
           _buf['$<<'](">".$freeze());
           if ($truthy((_title_obj = self.$doctitle($hash2(["partition", "use_fallback"], {"partition": true, "use_fallback": true})))['$subtitle?']())) {
             
             _buf['$<<']("<h1>".$freeze());
-            _buf['$<<'](self.$slice_text(_title_obj.$title(), (_slice = self.$header()['$option?']("slice"))).$to_s());
+            _buf['$<<'](self.$slice_text(_title_obj.$title(), (_slice = self.$header()['$option?']("slice"))));
             _buf['$<<']("</h1><h2>".$freeze());
-            _buf['$<<'](self.$slice_text(_title_obj.$subtitle(), _slice).$to_s());
+            _buf['$<<'](self.$slice_text(_title_obj.$subtitle(), _slice));
             _buf['$<<']("</h2>".$freeze());
             } else {
             
             _buf['$<<']("<h1>".$freeze());
-            _buf['$<<'](self.header.$title().$to_s());
+            _buf['$<<'](self.header.$title());
             _buf['$<<']("</h1>".$freeze());
           };
           preamble = self.document.$find_by($hash2(["context"], {"context": "preamble"}));
@@ -3406,104 +3406,104 @@ if (key == null) key = nil;
             } else {
             
             _buf['$<<']("<div class=\"preamble\">".$freeze());
-            _buf['$<<'](preamble.$pop().$content().$to_s());
+            _buf['$<<'](preamble.$pop().$content());
             _buf['$<<']("</div>".$freeze());
           };
           if ($truthy(self.$author()['$nil?']())) {
             } else {
             
             _buf['$<<']("<p class=\"author\"><small>".$freeze());
-            _buf['$<<'](self.$author().$to_s());
+            _buf['$<<'](self.$author());
             _buf['$<<']("</small></p>".$freeze());
           };
           _buf['$<<']("</section>".$freeze());
         };
-        _buf['$<<'](self.$content().$to_s());
+        _buf['$<<'](self.$content());
         _buf['$<<']("</div></div><script src=\"".$freeze());
-        _buf['$<<'](revealjsdir.$to_s());
+        _buf['$<<'](revealjsdir);
         _buf['$<<']("/lib/js/head.min.js\"></script><script src=\"".$freeze());
-        _buf['$<<'](revealjsdir.$to_s());
+        _buf['$<<'](revealjsdir);
         _buf['$<<']("/js/reveal.js\"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options\nReveal.initialize({\n  // Display controls in the bottom right corner\n  controls: ".$freeze());
-        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_controls", true)).$to_s());
+        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_controls", true)));
         _buf['$<<'](",\n  // Display a presentation progress bar\n  progress: ".$freeze());
-        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_progress", true)).$to_s());
+        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_progress", true)));
         _buf['$<<'](",\n  // Display the page number of the current slide\n  slideNumber: ".$freeze());
-        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_slidenumber", false)).$to_s());
+        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_slidenumber", false)));
         _buf['$<<'](",\n  // Push each slide change to the browser history\n  history: ".$freeze());
-        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_history", false)).$to_s());
+        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_history", false)));
         _buf['$<<'](",\n  // Enable keyboard shortcuts for navigation\n  keyboard: ".$freeze());
-        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_keyboard", true)).$to_s());
+        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_keyboard", true)));
         _buf['$<<'](",\n  // Enable the slide overview mode\n  overview: ".$freeze());
-        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_overview", true)).$to_s());
+        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_overview", true)));
         _buf['$<<'](",\n  // Vertical centering of slides\n  center: ".$freeze());
-        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_center", true)).$to_s());
+        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_center", true)));
         _buf['$<<'](",\n  // Enables touch navigation on devices with touch input\n  touch: ".$freeze());
-        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_touch", true)).$to_s());
+        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_touch", true)));
         _buf['$<<'](",\n  // Loop the presentation\n  loop: ".$freeze());
-        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_loop", false)).$to_s());
+        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_loop", false)));
         _buf['$<<'](",\n  // Change the presentation direction to be RTL\n  rtl: ".$freeze());
-        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_rtl", false)).$to_s());
+        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_rtl", false)));
         _buf['$<<'](",\n  // Turns fragments on and off globally\n  fragments: ".$freeze());
-        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_fragments", true)).$to_s());
+        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_fragments", true)));
         _buf['$<<'](",\n  // Flags if the presentation is running in an embedded mode,\n  // i.e. contained within a limited portion of the screen\n  embedded: ".$freeze());
-        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_embedded", false)).$to_s());
+        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_embedded", false)));
         _buf['$<<'](",\n  // Number of milliseconds between automatically proceeding to the\n  // next slide, disabled when set to 0, this value can be overwritten\n  // by using a data-autoslide attribute on your slides\n  autoSlide: ".$freeze());
-        _buf['$<<'](self.$attr("revealjs_autoslide", 0).$to_s());
+        _buf['$<<'](self.$attr("revealjs_autoslide", 0));
         _buf['$<<'](",\n  // Stop auto-sliding after user input\n  autoSlideStoppable: ".$freeze());
-        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_autoslidestoppable", true)).$to_s());
+        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_autoslidestoppable", true)));
         _buf['$<<'](",\n  // Enable slide navigation via mouse wheel\n  mouseWheel: ".$freeze());
-        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_mousewheel", false)).$to_s());
+        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_mousewheel", false)));
         _buf['$<<'](",\n  // Hides the address bar on mobile devices\n  hideAddressBar: ".$freeze());
-        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_hideaddressbar", true)).$to_s());
+        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_hideaddressbar", true)));
         _buf['$<<'](",\n  // Opens links in an iframe preview overlay\n  previewLinks: ".$freeze());
-        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_previewlinks", false)).$to_s());
+        _buf['$<<'](self.$to_boolean(self.$attr("revealjs_previewlinks", false)));
         _buf['$<<'](",\n  // Theme (e.g., beige, black, league, night, serif, simple, sky, solarized, white)\n  // NOTE setting the theme in the config no longer works in reveal.js 3.x\n  //theme: Reveal.getQueryHash().theme || '".$freeze());
-        _buf['$<<'](self.$attr("revealjs_theme", "black").$to_s());
+        _buf['$<<'](self.$attr("revealjs_theme", "black"));
         _buf['$<<']("',\n  // Transition style (e.g., none, fade, slide, convex, concave, zoom)\n  transition: Reveal.getQueryHash().transition || '".$freeze());
-        _buf['$<<'](self.$attr("revealjs_transition", "slide").$to_s());
+        _buf['$<<'](self.$attr("revealjs_transition", "slide"));
         _buf['$<<']("',\n  // Transition speed (e.g., default, fast, slow)\n  transitionSpeed: '".$freeze());
-        _buf['$<<'](self.$attr("revealjs_transitionspeed", "default").$to_s());
+        _buf['$<<'](self.$attr("revealjs_transitionspeed", "default"));
         _buf['$<<']("',\n  // Transition style for full page slide backgrounds (e.g., none, fade, slide, convex, concave, zoom)\n  backgroundTransition: '".$freeze());
-        _buf['$<<'](self.$attr("revealjs_backgroundtransition", "fade").$to_s());
+        _buf['$<<'](self.$attr("revealjs_backgroundtransition", "fade"));
         _buf['$<<']("',\n  // Number of slides away from the current that are visible\n  viewDistance: ".$freeze());
-        _buf['$<<'](self.$attr("revealjs_viewdistance", 3).$to_s());
+        _buf['$<<'](self.$attr("revealjs_viewdistance", 3));
         _buf['$<<'](",\n  // Parallax background image (e.g., \"'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'\")\n  parallaxBackgroundImage: '".$freeze());
-        _buf['$<<'](self.$attr("revealjs_parallaxbackgroundimage", "").$to_s());
+        _buf['$<<'](self.$attr("revealjs_parallaxbackgroundimage", ""));
         _buf['$<<']("',\n  // Parallax background size in CSS syntax (e.g., \"2100px 900px\")\n  parallaxBackgroundSize: '".$freeze());
-        _buf['$<<'](self.$attr("revealjs_parallaxbackgroundsize", "").$to_s());
+        _buf['$<<'](self.$attr("revealjs_parallaxbackgroundsize", ""));
         _buf['$<<']("',\n\n  // The \"normal\" size of the presentation, aspect ratio will be preserved\n  // when the presentation is scaled to fit different resolutions. Can be\n  // specified using percentage units.\n  width: ".$freeze());
-        _buf['$<<'](self.$attr("revealjs_width", 960).$to_s());
+        _buf['$<<'](self.$attr("revealjs_width", 960));
         _buf['$<<'](",\n  height: ".$freeze());
-        _buf['$<<'](self.$attr("revealjs_height", 700).$to_s());
+        _buf['$<<'](self.$attr("revealjs_height", 700));
         _buf['$<<'](",\n\n  // Factor of the display size that should remain empty around the content\n  margin: ".$freeze());
-        _buf['$<<'](self.$attr("revealjs_margin", 0.1).$to_s());
+        _buf['$<<'](self.$attr("revealjs_margin", 0.1));
         _buf['$<<'](",\n\n  // Bounds for smallest/largest possible scale to apply to content\n  minScale: ".$freeze());
-        _buf['$<<'](self.$attr("revealjs_minscale", 0.2).$to_s());
+        _buf['$<<'](self.$attr("revealjs_minscale", 0.2));
         _buf['$<<'](",\n  maxScale: ".$freeze());
-        _buf['$<<'](self.$attr("revealjs_maxscale", 1.5).$to_s());
+        _buf['$<<'](self.$attr("revealjs_maxscale", 1.5));
         _buf['$<<'](",\n\n  // Optional libraries used to extend on reveal.js\n  dependencies: [\n      { src: '".$freeze());
-        _buf['$<<'](revealjsdir.$to_s());
+        _buf['$<<'](revealjsdir);
         _buf['$<<']("/lib/js/classList.js', condition: function() { return !document.body.classList; } },\n      { src: '".$freeze());
-        _buf['$<<'](revealjsdir.$to_s());
+        _buf['$<<'](revealjsdir);
         _buf['$<<']("/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },\n      { src: '".$freeze());
-        _buf['$<<'](revealjsdir.$to_s());
+        _buf['$<<'](revealjsdir);
         _buf['$<<']("/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },\n      ".$freeze());
         _buf['$<<']((function() {if ($truthy(self['$attr?']("source-highlighter", "highlightjs"))) {
           return "" + "{ src: '" + (revealjsdir) + "/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },"
           } else {
           return nil
-        }; return nil; })().$to_s());
+        }; return nil; })());
         _buf['$<<']("\n      { src: '".$freeze());
-        _buf['$<<'](revealjsdir.$to_s());
+        _buf['$<<'](revealjsdir);
         _buf['$<<']("/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },\n      { src: '".$freeze());
-        _buf['$<<'](revealjsdir.$to_s());
+        _buf['$<<'](revealjsdir);
         _buf['$<<']("/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }\n  ]\n});</script>".$freeze());
         if ($truthy((docinfo_content = self.$docinfo("footer", ".html"))['$empty?']())) {
           } else {
-          _buf['$<<'](docinfo_content.$to_s())
+          _buf['$<<'](docinfo_content)
         };
         _buf['$<<']("</body></html>".$freeze());
-        return (_buf = $rb_times(_buf, ""));}, TMP_76.$$s = self, TMP_76.$$arity = 0, TMP_76));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_76.$$s = self, TMP_76.$$arity = 0, TMP_76));
     }, TMP_Converter_document_78.$$arity = -2);
     
     Opal.defn(self, '$embedded', TMP_Converter_embedded_81 = function $$embedded(node, opts) {
@@ -3535,14 +3535,14 @@ if (key == null) key = nil;
               } else {
               
               _buf['$<<'](" id=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes1.$to_s());
+              _buf['$<<'](_slim_codeattributes1);
               _buf['$<<']("\"".$freeze());
             }};
           _buf['$<<'](">".$freeze());
-          _buf['$<<'](self.header.$title().$to_s());
+          _buf['$<<'](self.header.$title());
           _buf['$<<']("</h1>".$freeze());
         };
-        _buf['$<<'](self.$content().$to_s());
+        _buf['$<<'](self.$content());
         if ($truthy(($truthy($a = self['$footnotes?']()['$!']()) ? $a : self['$attr?']("nofootnotes")))) {
           } else {
           
@@ -3551,17 +3551,17 @@ if (key == null) key = nil;
 if (fn == null) fn = nil;
           
             _buf['$<<']("<div class=\"footnote\" id=\"_footnote_".$freeze());
-            _buf['$<<'](fn.$index().$to_s());
+            _buf['$<<'](fn.$index());
             _buf['$<<']("\"><a href=\"#_footnoteref_".$freeze());
-            _buf['$<<'](fn.$index().$to_s());
+            _buf['$<<'](fn.$index());
             _buf['$<<']("\">".$freeze());
-            _buf['$<<'](fn.$index().$to_s());
+            _buf['$<<'](fn.$index());
             _buf['$<<']("</a>. ".$freeze());
-            _buf['$<<'](fn.$text().$to_s());
+            _buf['$<<'](fn.$text());
             return _buf['$<<']("</div>".$freeze());}, TMP_80.$$s = self, TMP_80.$$arity = 1, TMP_80));
           _buf['$<<']("</div>".$freeze());
         };
-        return (_buf = $rb_times(_buf, ""));}, TMP_79.$$s = self, TMP_79.$$arity = 0, TMP_79));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_79.$$s = self, TMP_79.$$arity = 0, TMP_79));
     }, TMP_Converter_embedded_81.$$arity = -2);
     
     Opal.defn(self, '$inline_anchor', TMP_Converter_inline_anchor_83 = function $$inline_anchor(node, opts) {
@@ -3595,11 +3595,11 @@ if (fn == null) fn = nil;
             } else {
             
             _buf['$<<'](" href=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes1.$to_s());
+            _buf['$<<'](_slim_codeattributes1);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<'](">".$freeze());
-        _buf['$<<'](($truthy($a = self.text) ? $a : self.document.$references()['$[]']("ids").$fetch(refid, "" + "[" + (refid) + "]")).$tr_s("\n", " ").$to_s());
+        _buf['$<<'](($truthy($a = self.text) ? $a : self.document.$references()['$[]']("ids").$fetch(refid, "" + "[" + (refid) + "]")).$tr_s("\n", " "));
         _buf['$<<']("</a>".$freeze());}
         else if ("ref"['$===']($case)) {
         _buf['$<<']("<a".$freeze());
@@ -3610,7 +3610,7 @@ if (fn == null) fn = nil;
             } else {
             
             _buf['$<<'](" id=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes2.$to_s());
+            _buf['$<<'](_slim_codeattributes2);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<']("></a>".$freeze());}
@@ -3623,11 +3623,11 @@ if (fn == null) fn = nil;
             } else {
             
             _buf['$<<'](" id=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes3.$to_s());
+            _buf['$<<'](_slim_codeattributes3);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<']("></a>[".$freeze());
-        _buf['$<<'](self.target.$to_s());
+        _buf['$<<'](self.target);
         _buf['$<<']("]".$freeze());}
         else {
         _buf['$<<']("<a".$freeze());
@@ -3638,7 +3638,7 @@ if (fn == null) fn = nil;
             } else {
             
             _buf['$<<'](" href=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes4.$to_s());
+            _buf['$<<'](_slim_codeattributes4);
             _buf['$<<']("\"".$freeze());
           }};
         _temple_html_attributeremover1 = [];
@@ -3656,7 +3656,7 @@ if (fn == null) fn = nil;
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover1.$to_s());
+          _buf['$<<'](_temple_html_attributeremover1);
           _buf['$<<']("\"".$freeze());};
         _slim_codeattributes6 = self.$attr("window");
         if ($truthy(_slim_codeattributes6)) {
@@ -3665,13 +3665,13 @@ if (fn == null) fn = nil;
             } else {
             
             _buf['$<<'](" target=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes6.$to_s());
+            _buf['$<<'](_slim_codeattributes6);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<'](">".$freeze());
-        _buf['$<<'](self.text.$to_s());
+        _buf['$<<'](self.text);
         _buf['$<<']("</a>".$freeze());};
-        return (_buf = $rb_times(_buf, ""));}, TMP_82.$$s = self, TMP_82.$$arity = 0, TMP_82));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_82.$$s = self, TMP_82.$$arity = 0, TMP_82));
     }, TMP_Converter_inline_anchor_83.$$arity = -2);
     
     Opal.defn(self, '$inline_break', TMP_Converter_inline_break_85 = function $$inline_break(node, opts) {
@@ -3691,9 +3691,9 @@ if (fn == null) fn = nil;
           self.$converter().$set_local_variables(self.$binding(), opts)
         };
         _buf = [];
-        _buf['$<<'](self.text.$to_s());
+        _buf['$<<'](self.text);
         _buf['$<<']("<br>".$freeze());
-        return (_buf = $rb_times(_buf, ""));}, TMP_84.$$s = self, TMP_84.$$arity = 0, TMP_84));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_84.$$s = self, TMP_84.$$arity = 0, TMP_84));
     }, TMP_Converter_inline_break_85.$$arity = -2);
     
     Opal.defn(self, '$inline_button', TMP_Converter_inline_button_87 = function $$inline_button(node, opts) {
@@ -3714,9 +3714,9 @@ if (fn == null) fn = nil;
         };
         _buf = [];
         _buf['$<<']("<b class=\"button\">".$freeze());
-        _buf['$<<'](self.text.$to_s());
+        _buf['$<<'](self.text);
         _buf['$<<']("</b>".$freeze());
-        return (_buf = $rb_times(_buf, ""));}, TMP_86.$$s = self, TMP_86.$$arity = 0, TMP_86));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_86.$$s = self, TMP_86.$$arity = 0, TMP_86));
     }, TMP_Converter_inline_button_87.$$arity = -2);
     
     Opal.defn(self, '$inline_callout', TMP_Converter_inline_callout_89 = function $$inline_callout(node, opts) {
@@ -3747,11 +3747,11 @@ if (fn == null) fn = nil;
               } else {
               
               _buf['$<<'](" data-value=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes1.$to_s());
+              _buf['$<<'](_slim_codeattributes1);
               _buf['$<<']("\"".$freeze());
             }};
           _buf['$<<']("></i><b>".$freeze());
-          _buf['$<<'](((("" + "(") + (self.text)) + ")").$to_s());
+          _buf['$<<']("" + "(" + (self.text) + ")");
           _buf['$<<']("</b>".$freeze());
         } else if ($truthy(self.document['$attr?']("icons"))) {
           
@@ -3763,7 +3763,7 @@ if (fn == null) fn = nil;
               } else {
               
               _buf['$<<'](" src=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes2.$to_s());
+              _buf['$<<'](_slim_codeattributes2);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes3 = self.text;
@@ -3773,17 +3773,17 @@ if (fn == null) fn = nil;
               } else {
               
               _buf['$<<'](" alt=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes3.$to_s());
+              _buf['$<<'](_slim_codeattributes3);
               _buf['$<<']("\"".$freeze());
             }};
           _buf['$<<'](">".$freeze());
           } else {
           
           _buf['$<<']("<b>".$freeze());
-          _buf['$<<'](((("" + "(") + (self.text)) + ")").$to_s());
+          _buf['$<<']("" + "(" + (self.text) + ")");
           _buf['$<<']("</b>".$freeze());
         };
-        return (_buf = $rb_times(_buf, ""));}, TMP_88.$$s = self, TMP_88.$$arity = 0, TMP_88));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_88.$$s = self, TMP_88.$$arity = 0, TMP_88));
     }, TMP_Converter_inline_callout_89.$$arity = -2);
     
     Opal.defn(self, '$inline_footnote', TMP_Converter_inline_footnote_91 = function $$inline_footnote(node, opts) {
@@ -3807,9 +3807,9 @@ if (fn == null) fn = nil;
         if (self.type['$==']("xref")) {
           
           _buf['$<<']("<span class=\"footnoteref\">[<a class=\"footnote\" href=\"#_footnote_".$freeze());
-          _buf['$<<'](self.$attr("index").$to_s());
+          _buf['$<<'](self.$attr("index"));
           _buf['$<<']("\" title=\"View footnote.\">".$freeze());
-          _buf['$<<'](self.$attr("index").$to_s());
+          _buf['$<<'](self.$attr("index"));
           _buf['$<<']("</a>]</span>".$freeze());
           } else {
           
@@ -3825,18 +3825,18 @@ if (fn == null) fn = nil;
               } else {
               
               _buf['$<<'](" id=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes1.$to_s());
+              _buf['$<<'](_slim_codeattributes1);
               _buf['$<<']("\"".$freeze());
             }};
           _buf['$<<'](">[<a id=\"_footnoteref_".$freeze());
-          _buf['$<<'](self.$attr("index").$to_s());
+          _buf['$<<'](self.$attr("index"));
           _buf['$<<']("\" class=\"footnote\" href=\"#_footnote_".$freeze());
-          _buf['$<<'](self.$attr("index").$to_s());
+          _buf['$<<'](self.$attr("index"));
           _buf['$<<']("\" title=\"View footnote.\">".$freeze());
-          _buf['$<<'](self.$attr("index").$to_s());
+          _buf['$<<'](self.$attr("index"));
           _buf['$<<']("</a>]</span>".$freeze());
         };
-        return (_buf = $rb_times(_buf, ""));}, TMP_90.$$s = self, TMP_90.$$arity = 0, TMP_90));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_90.$$s = self, TMP_90.$$arity = 0, TMP_90));
     }, TMP_Converter_inline_footnote_91.$$arity = -2);
     
     Opal.defn(self, '$inline_image', TMP_Converter_inline_image_93 = function $$inline_image(node, opts) {
@@ -3874,7 +3874,7 @@ if (fn == null) fn = nil;
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover1.$to_s());
+          _buf['$<<'](_temple_html_attributeremover1);
           _buf['$<<']("\"".$freeze());};
         _slim_codeattributes2 = (function() {if ($truthy(self['$attr?']("float"))) {
           return "" + "float: " + (self.$attr("float"))
@@ -3887,7 +3887,7 @@ if (fn == null) fn = nil;
             } else {
             
             _buf['$<<'](" style=\"".$freeze());
-            _buf['$<<'](_slim_codeattributes2.$to_s());
+            _buf['$<<'](_slim_codeattributes2);
             _buf['$<<']("\"".$freeze());
           }};
         _buf['$<<'](">".$freeze());
@@ -3910,7 +3910,7 @@ if (fn == null) fn = nil;
                 } else {
                 
                 _buf['$<<'](" href=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes3.$to_s());
+                _buf['$<<'](_slim_codeattributes3);
                 _buf['$<<']("\"".$freeze());
               }};
             _slim_codeattributes4 = self.$attr("window");
@@ -3920,7 +3920,7 @@ if (fn == null) fn = nil;
                 } else {
                 
                 _buf['$<<'](" target=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes4.$to_s());
+                _buf['$<<'](_slim_codeattributes4);
                 _buf['$<<']("\"".$freeze());
               }};
             _buf['$<<']("><i".$freeze());
@@ -3939,7 +3939,7 @@ if (fn == null) fn = nil;
             if ($truthy(_temple_html_attributeremover2['$empty?']()['$!']())) {
               
               _buf['$<<'](" class=\"".$freeze());
-              _buf['$<<'](_temple_html_attributeremover2.$to_s());
+              _buf['$<<'](_temple_html_attributeremover2);
               _buf['$<<']("\"".$freeze());};
             _slim_codeattributes6 = self.$attr("title");
             if ($truthy(_slim_codeattributes6)) {
@@ -3948,7 +3948,7 @@ if (fn == null) fn = nil;
                 } else {
                 
                 _buf['$<<'](" title=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes6.$to_s());
+                _buf['$<<'](_slim_codeattributes6);
                 _buf['$<<']("\"".$freeze());
               }};
             _buf['$<<']("></i></a>".$freeze());
@@ -3970,7 +3970,7 @@ if (fn == null) fn = nil;
             if ($truthy(_temple_html_attributeremover3['$empty?']()['$!']())) {
               
               _buf['$<<'](" class=\"".$freeze());
-              _buf['$<<'](_temple_html_attributeremover3.$to_s());
+              _buf['$<<'](_temple_html_attributeremover3);
               _buf['$<<']("\"".$freeze());};
             _slim_codeattributes8 = self.$attr("title");
             if ($truthy(_slim_codeattributes8)) {
@@ -3979,7 +3979,7 @@ if (fn == null) fn = nil;
                 } else {
                 
                 _buf['$<<'](" title=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes8.$to_s());
+                _buf['$<<'](_slim_codeattributes8);
                 _buf['$<<']("\"".$freeze());
               }};
             _buf['$<<']("></i>".$freeze());
@@ -3995,7 +3995,7 @@ if (fn == null) fn = nil;
                 } else {
                 
                 _buf['$<<'](" href=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes9.$to_s());
+                _buf['$<<'](_slim_codeattributes9);
                 _buf['$<<']("\"".$freeze());
               }};
             _slim_codeattributes10 = self.$attr("window");
@@ -4005,16 +4005,16 @@ if (fn == null) fn = nil;
                 } else {
                 
                 _buf['$<<'](" target=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes10.$to_s());
+                _buf['$<<'](_slim_codeattributes10);
                 _buf['$<<']("\"".$freeze());
               }};
             _buf['$<<'](">[".$freeze());
-            _buf['$<<'](self.$attr("alt").$to_s());
+            _buf['$<<'](self.$attr("alt"));
             _buf['$<<']("]</a>".$freeze());
             } else {
             
             _buf['$<<']("[".$freeze());
-            _buf['$<<'](self.$attr("alt").$to_s());
+            _buf['$<<'](self.$attr("alt"));
             _buf['$<<']("]".$freeze());
           }
           } else {
@@ -4036,7 +4036,7 @@ if (fn == null) fn = nil;
                 } else {
                 
                 _buf['$<<'](" href=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes11.$to_s());
+                _buf['$<<'](_slim_codeattributes11);
                 _buf['$<<']("\"".$freeze());
               }};
             _slim_codeattributes12 = self.$attr("window");
@@ -4046,7 +4046,7 @@ if (fn == null) fn = nil;
                 } else {
                 
                 _buf['$<<'](" target=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes12.$to_s());
+                _buf['$<<'](_slim_codeattributes12);
                 _buf['$<<']("\"".$freeze());
               }};
             _buf['$<<']("><img".$freeze());
@@ -4057,7 +4057,7 @@ if (fn == null) fn = nil;
                 } else {
                 
                 _buf['$<<'](" src=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes13.$to_s());
+                _buf['$<<'](_slim_codeattributes13);
                 _buf['$<<']("\"".$freeze());
               }};
             _slim_codeattributes14 = self.$attr("alt");
@@ -4067,7 +4067,7 @@ if (fn == null) fn = nil;
                 } else {
                 
                 _buf['$<<'](" alt=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes14.$to_s());
+                _buf['$<<'](_slim_codeattributes14);
                 _buf['$<<']("\"".$freeze());
               }};
             _slim_codeattributes15 = self.$attr("width");
@@ -4077,7 +4077,7 @@ if (fn == null) fn = nil;
                 } else {
                 
                 _buf['$<<'](" width=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes15.$to_s());
+                _buf['$<<'](_slim_codeattributes15);
                 _buf['$<<']("\"".$freeze());
               }};
             _slim_codeattributes16 = self.$attr("height");
@@ -4087,7 +4087,7 @@ if (fn == null) fn = nil;
                 } else {
                 
                 _buf['$<<'](" height=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes16.$to_s());
+                _buf['$<<'](_slim_codeattributes16);
                 _buf['$<<']("\"".$freeze());
               }};
             _slim_codeattributes17 = self.$attr("title");
@@ -4097,7 +4097,7 @@ if (fn == null) fn = nil;
                 } else {
                 
                 _buf['$<<'](" title=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes17.$to_s());
+                _buf['$<<'](_slim_codeattributes17);
                 _buf['$<<']("\"".$freeze());
               }};
             _buf['$<<']("></a>".$freeze());
@@ -4111,7 +4111,7 @@ if (fn == null) fn = nil;
                 } else {
                 
                 _buf['$<<'](" src=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes18.$to_s());
+                _buf['$<<'](_slim_codeattributes18);
                 _buf['$<<']("\"".$freeze());
               }};
             _slim_codeattributes19 = self.$attr("alt");
@@ -4121,7 +4121,7 @@ if (fn == null) fn = nil;
                 } else {
                 
                 _buf['$<<'](" alt=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes19.$to_s());
+                _buf['$<<'](_slim_codeattributes19);
                 _buf['$<<']("\"".$freeze());
               }};
             _slim_codeattributes20 = self.$attr("width");
@@ -4131,7 +4131,7 @@ if (fn == null) fn = nil;
                 } else {
                 
                 _buf['$<<'](" width=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes20.$to_s());
+                _buf['$<<'](_slim_codeattributes20);
                 _buf['$<<']("\"".$freeze());
               }};
             _slim_codeattributes21 = self.$attr("height");
@@ -4141,7 +4141,7 @@ if (fn == null) fn = nil;
                 } else {
                 
                 _buf['$<<'](" height=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes21.$to_s());
+                _buf['$<<'](_slim_codeattributes21);
                 _buf['$<<']("\"".$freeze());
               }};
             _slim_codeattributes22 = self.$attr("title");
@@ -4151,14 +4151,14 @@ if (fn == null) fn = nil;
                 } else {
                 
                 _buf['$<<'](" title=\"".$freeze());
-                _buf['$<<'](_slim_codeattributes22.$to_s());
+                _buf['$<<'](_slim_codeattributes22);
                 _buf['$<<']("\"".$freeze());
               }};
             _buf['$<<'](">".$freeze());
           };
         };
         _buf['$<<']("</span>".$freeze());
-        return (_buf = $rb_times(_buf, ""));}, TMP_92.$$s = self, TMP_92.$$arity = 0, TMP_92));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_92.$$s = self, TMP_92.$$arity = 0, TMP_92));
     }, TMP_Converter_inline_image_93.$$arity = -2);
     
     Opal.defn(self, '$inline_indexterm', TMP_Converter_inline_indexterm_95 = function $$inline_indexterm(node, opts) {
@@ -4180,8 +4180,8 @@ if (fn == null) fn = nil;
         };
         _buf = [];
         if (self.type['$==']("visible")) {
-          _buf['$<<'](self.text.$to_s())};
-        return (_buf = $rb_times(_buf, ""));}, TMP_94.$$s = self, TMP_94.$$arity = 0, TMP_94));
+          _buf['$<<'](self.text)};
+        return (_buf = _buf.$join("".$freeze()));}, TMP_94.$$s = self, TMP_94.$$arity = 0, TMP_94));
     }, TMP_Converter_inline_indexterm_95.$$arity = -2);
     
     Opal.defn(self, '$inline_kbd', TMP_Converter_inline_kbd_98 = function $$inline_kbd(node, opts) {
@@ -4203,7 +4203,7 @@ if (fn == null) fn = nil;
         if ((keys = self.$attr("keys")).$size()['$=='](1)) {
           
           _buf['$<<']("<kbd>".$freeze());
-          _buf['$<<'](keys.$first().$to_s());
+          _buf['$<<'](keys.$first());
           _buf['$<<']("</kbd>".$freeze());
           } else {
           
@@ -4216,11 +4216,11 @@ if (key == null) key = nil;if (idx == null) idx = nil;
               _buf['$<<']("+".$freeze())
             };
             _buf['$<<']("<kbd>".$freeze());
-            _buf['$<<'](key.$to_s());
+            _buf['$<<'](key);
             return _buf['$<<']("</kbd>".$freeze());}, TMP_97.$$s = self, TMP_97.$$arity = 2, TMP_97));
           _buf['$<<']("</span>".$freeze());
         };
-        return (_buf = $rb_times(_buf, ""));}, TMP_96.$$s = self, TMP_96.$$arity = 0, TMP_96));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_96.$$s = self, TMP_96.$$arity = 0, TMP_96));
     }, TMP_Converter_inline_kbd_98.$$arity = -2);
     
     Opal.defn(self, '$inline_menu', TMP_Converter_inline_menu_101 = function $$inline_menu(node, opts) {
@@ -4244,28 +4244,28 @@ if (key == null) key = nil;if (idx == null) idx = nil;
         if ($truthy((submenus = self.$attr("submenus"))['$empty?']()['$!']())) {
           
           _buf['$<<']("<span class=\"menuseq\"><span class=\"menu\">".$freeze());
-          _buf['$<<'](menu.$to_s());
+          _buf['$<<'](menu);
           _buf['$<<']("</span>&#160;&#9656;&#32;".$freeze());
           _buf['$<<']($send(submenus, 'map', [], (TMP_100 = function(submenu){var self = TMP_100.$$s || this;
 if (submenu == null) submenu = nil;
-          return "" + "<span class=\"submenu\">" + (submenu) + "</span>&#160;&#9656;&#32;"}, TMP_100.$$s = self, TMP_100.$$arity = 1, TMP_100)).$join().$to_s());
+          return "" + "<span class=\"submenu\">" + (submenu) + "</span>&#160;&#9656;&#32;"}, TMP_100.$$s = self, TMP_100.$$arity = 1, TMP_100)).$join());
           _buf['$<<']("<span class=\"menuitem\">".$freeze());
-          _buf['$<<'](menuitem.$to_s());
+          _buf['$<<'](menuitem);
           _buf['$<<']("</span></span>".$freeze());
         } else if ($truthy(menuitem['$nil?']()['$!']())) {
           
           _buf['$<<']("<span class=\"menuseq\"><span class=\"menu\">".$freeze());
-          _buf['$<<'](menu.$to_s());
+          _buf['$<<'](menu);
           _buf['$<<']("</span>&#160;&#9656;&#32;<span class=\"menuitem\">".$freeze());
-          _buf['$<<'](menuitem.$to_s());
+          _buf['$<<'](menuitem);
           _buf['$<<']("</span></span>".$freeze());
           } else {
           
           _buf['$<<']("<span class=\"menu\">".$freeze());
-          _buf['$<<'](menu.$to_s());
+          _buf['$<<'](menu);
           _buf['$<<']("</span>".$freeze());
         };
-        return (_buf = $rb_times(_buf, ""));}, TMP_99.$$s = self, TMP_99.$$arity = 0, TMP_99));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_99.$$s = self, TMP_99.$$arity = 0, TMP_99));
     }, TMP_Converter_inline_menu_101.$$arity = -2);
     
     Opal.defn(self, '$inline_quoted', TMP_Converter_inline_quoted_103 = function $$inline_quoted(node, opts) {
@@ -4298,7 +4298,7 @@ if (submenu == null) submenu = nil;
               } else {
               
               _buf['$<<'](" id=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes1.$to_s());
+              _buf['$<<'](_slim_codeattributes1);
               _buf['$<<']("\"".$freeze());
             }};
           _buf['$<<']("></a>".$freeze());
@@ -4321,10 +4321,10 @@ if (submenu == null) submenu = nil;
         if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover1.$to_s());
+          _buf['$<<'](_temple_html_attributeremover1);
           _buf['$<<']("\"".$freeze());};
         _buf['$<<'](">".$freeze());
-        _buf['$<<'](self.text.$to_s());
+        _buf['$<<'](self.text);
         _buf['$<<']("</em>".$freeze());}
         else if ("strong"['$===']($case)) {
         _buf['$<<']("<strong".$freeze());
@@ -4343,10 +4343,10 @@ if (submenu == null) submenu = nil;
         if ($truthy(_temple_html_attributeremover2['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover2.$to_s());
+          _buf['$<<'](_temple_html_attributeremover2);
           _buf['$<<']("\"".$freeze());};
         _buf['$<<'](">".$freeze());
-        _buf['$<<'](self.text.$to_s());
+        _buf['$<<'](self.text);
         _buf['$<<']("</strong>".$freeze());}
         else if ("monospaced"['$===']($case)) {
         _buf['$<<']("<code".$freeze());
@@ -4365,10 +4365,10 @@ if (submenu == null) submenu = nil;
         if ($truthy(_temple_html_attributeremover3['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover3.$to_s());
+          _buf['$<<'](_temple_html_attributeremover3);
           _buf['$<<']("\"".$freeze());};
         _buf['$<<'](">".$freeze());
-        _buf['$<<'](self.text.$to_s());
+        _buf['$<<'](self.text);
         _buf['$<<']("</code>".$freeze());}
         else if ("superscript"['$===']($case)) {
         _buf['$<<']("<sup".$freeze());
@@ -4387,10 +4387,10 @@ if (submenu == null) submenu = nil;
         if ($truthy(_temple_html_attributeremover4['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover4.$to_s());
+          _buf['$<<'](_temple_html_attributeremover4);
           _buf['$<<']("\"".$freeze());};
         _buf['$<<'](">".$freeze());
-        _buf['$<<'](self.text.$to_s());
+        _buf['$<<'](self.text);
         _buf['$<<']("</sup>".$freeze());}
         else if ("subscript"['$===']($case)) {
         _buf['$<<']("<sub".$freeze());
@@ -4409,32 +4409,32 @@ if (submenu == null) submenu = nil;
         if ($truthy(_temple_html_attributeremover5['$empty?']()['$!']())) {
           
           _buf['$<<'](" class=\"".$freeze());
-          _buf['$<<'](_temple_html_attributeremover5.$to_s());
+          _buf['$<<'](_temple_html_attributeremover5);
           _buf['$<<']("\"".$freeze());};
         _buf['$<<'](">".$freeze());
-        _buf['$<<'](self.text.$to_s());
+        _buf['$<<'](self.text);
         _buf['$<<']("</sub>".$freeze());}
         else if ("double"['$===']($case)) {_buf['$<<']((function() {if ($truthy(self['$role?']())) {
           return "" + "<span class=\"" + (self.$role()) + "\">&#8220;" + (self.text) + "&#8221;</span>"
           } else {
           return "" + "&#8220;" + (self.text) + "&#8221;"
-        }; return nil; })().$to_s())}
+        }; return nil; })())}
         else if ("single"['$===']($case)) {_buf['$<<']((function() {if ($truthy(self['$role?']())) {
           return "" + "<span class=\"" + (self.$role()) + "\">&#8216;" + (self.text) + "&#8217;</span>"
           } else {
           return "" + "&#8216;" + (self.text) + "&#8217;"
-        }; return nil; })().$to_s())}
+        }; return nil; })())}
         else if ("asciimath"['$===']($case) || "latexmath"['$===']($case)) {
         $b = Opal.const_get_qualified(Opal.const_get_relative($nesting, 'Asciidoctor'), 'INLINE_MATH_DELIMITERS')['$[]'](self.type), $a = Opal.to_ary($b), (open = ($a[0] == null ? nil : $a[0])), (close = ($a[1] == null ? nil : $a[1])), $b;
-        _buf['$<<'](open.$to_s());
-        _buf['$<<'](self.text.$to_s());
-        _buf['$<<'](close.$to_s());}
+        _buf['$<<'](open);
+        _buf['$<<'](self.text);
+        _buf['$<<'](close);}
         else {_buf['$<<']((function() {if ($truthy(self['$role?']())) {
           return "" + "<span class=\"" + (self.$role()) + "\">" + (self.text) + "</span>"
           } else {
           return self.text
-        }; return nil; })().$to_s())};
-        return (_buf = $rb_times(_buf, ""));}, TMP_102.$$s = self, TMP_102.$$arity = 0, TMP_102));
+        }; return nil; })())};
+        return (_buf = _buf.$join("".$freeze()));}, TMP_102.$$s = self, TMP_102.$$arity = 0, TMP_102));
     }, TMP_Converter_inline_quoted_103.$$arity = -2);
     
     Opal.defn(self, '$section', TMP_Converter_section_110 = function $$section(node, opts) {
@@ -4500,7 +4500,7 @@ if (image == null) image = nil;
               } else {
               
               _buf['$<<'](" id=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes1.$to_s());
+              _buf['$<<'](_slim_codeattributes1);
               _buf['$<<']("\"".$freeze());
             }};
           _temple_html_attributeremover1 = [];
@@ -4518,7 +4518,7 @@ if (image == null) image = nil;
           if ($truthy(_temple_html_attributeremover1['$empty?']()['$!']())) {
             
             _buf['$<<'](" class=\"".$freeze());
-            _buf['$<<'](_temple_html_attributeremover1.$to_s());
+            _buf['$<<'](_temple_html_attributeremover1);
             _buf['$<<']("\"".$freeze());};
           _slim_codeattributes3 = self.$attr("transition");
           if ($truthy(_slim_codeattributes3)) {
@@ -4527,7 +4527,7 @@ if (image == null) image = nil;
               } else {
               
               _buf['$<<'](" data-transition=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes3.$to_s());
+              _buf['$<<'](_slim_codeattributes3);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes4 = self.$attr("transition-speed");
@@ -4537,7 +4537,7 @@ if (image == null) image = nil;
               } else {
               
               _buf['$<<'](" data-transition-speed=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes4.$to_s());
+              _buf['$<<'](_slim_codeattributes4);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes5 = data_background_color;
@@ -4547,7 +4547,7 @@ if (image == null) image = nil;
               } else {
               
               _buf['$<<'](" data-background-color=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes5.$to_s());
+              _buf['$<<'](_slim_codeattributes5);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes6 = data_background_image;
@@ -4557,7 +4557,7 @@ if (image == null) image = nil;
               } else {
               
               _buf['$<<'](" data-background-image=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes6.$to_s());
+              _buf['$<<'](_slim_codeattributes6);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes7 = ($truthy($a = data_background_size) ? $a : self.$attr("background-size"));
@@ -4567,7 +4567,7 @@ if (image == null) image = nil;
               } else {
               
               _buf['$<<'](" data-background-size=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes7.$to_s());
+              _buf['$<<'](_slim_codeattributes7);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes8 = ($truthy($a = data_background_repeat) ? $a : self.$attr("background-repeat"));
@@ -4577,7 +4577,7 @@ if (image == null) image = nil;
               } else {
               
               _buf['$<<'](" data-background-repeat=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes8.$to_s());
+              _buf['$<<'](_slim_codeattributes8);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes9 = ($truthy($a = data_background_transition) ? $a : self.$attr("background-transition"));
@@ -4587,7 +4587,7 @@ if (image == null) image = nil;
               } else {
               
               _buf['$<<'](" data-background-transition=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes9.$to_s());
+              _buf['$<<'](_slim_codeattributes9);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes10 = self.$attr("background-iframe");
@@ -4597,7 +4597,7 @@ if (image == null) image = nil;
               } else {
               
               _buf['$<<'](" data-background-iframe=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes10.$to_s());
+              _buf['$<<'](_slim_codeattributes10);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes11 = self.$attr("background-video");
@@ -4607,7 +4607,7 @@ if (image == null) image = nil;
               } else {
               
               _buf['$<<'](" data-background-video=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes11.$to_s());
+              _buf['$<<'](_slim_codeattributes11);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes12 = ($truthy($a = self['$attr?']("background-video-loop")) ? $a : self['$option?']("loop"));
@@ -4617,7 +4617,7 @@ if (image == null) image = nil;
               } else {
               
               _buf['$<<'](" data-background-video-loop=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes12.$to_s());
+              _buf['$<<'](_slim_codeattributes12);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes13 = ($truthy($a = self['$attr?']("background-video-muted")) ? $a : self['$option?']("muted"));
@@ -4627,7 +4627,7 @@ if (image == null) image = nil;
               } else {
               
               _buf['$<<'](" data-background-video-muted=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes13.$to_s());
+              _buf['$<<'](_slim_codeattributes13);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes14 = self.$attr("state");
@@ -4637,7 +4637,7 @@ if (image == null) image = nil;
               } else {
               
               _buf['$<<'](" data-state=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes14.$to_s());
+              _buf['$<<'](_slim_codeattributes14);
               _buf['$<<']("\"".$freeze());
             }};
           _buf['$<<'](">".$freeze());
@@ -4645,28 +4645,28 @@ if (image == null) image = nil;
             } else {
             
             _buf['$<<']("<h2>".$freeze());
-            _buf['$<<'](title.$to_s());
+            _buf['$<<'](title);
             _buf['$<<']("</h2>".$freeze());
           };
           $send($rb_minus(self.$blocks(), vertical_slides), 'each', [], (TMP_108 = function(block){var self = TMP_108.$$s || this;
 if (block == null) block = nil;
-          return _buf['$<<'](block.$convert().$to_s())}, TMP_108.$$s = self, TMP_108.$$arity = 1, TMP_108));
+          return _buf['$<<'](block.$convert())}, TMP_108.$$s = self, TMP_108.$$arity = 1, TMP_108));
           _buf['$<<']("</section>".$freeze());
           $send(vertical_slides, 'each', [], (TMP_109 = function(subsection){var self = TMP_109.$$s || this;
 if (subsection == null) subsection = nil;
-          return _buf['$<<'](subsection.$convert().$to_s())}, TMP_109.$$s = self, TMP_109.$$arity = 1, TMP_109));
+          return _buf['$<<'](subsection.$convert())}, TMP_109.$$s = self, TMP_109.$$arity = 1, TMP_109));
           _buf['$<<']("</section>".$freeze());
         } else if ($truthy($rb_ge(self.level, 3))) {
           
           _slim_htag_filter1 = self.level.$to_s();
           _buf['$<<']("<h".$freeze());
-          _buf['$<<'](_slim_htag_filter1.$to_s());
+          _buf['$<<'](_slim_htag_filter1);
           _buf['$<<'](">".$freeze());
-          _buf['$<<'](title.$to_s());
+          _buf['$<<'](title);
           _buf['$<<']("</h".$freeze());
-          _buf['$<<'](_slim_htag_filter1.$to_s());
+          _buf['$<<'](_slim_htag_filter1);
           _buf['$<<'](">".$freeze());
-          _buf['$<<'](self.$content().$chomp().$to_s());
+          _buf['$<<'](self.$content().$chomp());
           } else {
           
           _buf['$<<']("<section".$freeze());
@@ -4681,7 +4681,7 @@ if (subsection == null) subsection = nil;
               } else {
               
               _buf['$<<'](" id=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes15.$to_s());
+              _buf['$<<'](_slim_codeattributes15);
               _buf['$<<']("\"".$freeze());
             }};
           _temple_html_attributeremover2 = [];
@@ -4699,7 +4699,7 @@ if (subsection == null) subsection = nil;
           if ($truthy(_temple_html_attributeremover2['$empty?']()['$!']())) {
             
             _buf['$<<'](" class=\"".$freeze());
-            _buf['$<<'](_temple_html_attributeremover2.$to_s());
+            _buf['$<<'](_temple_html_attributeremover2);
             _buf['$<<']("\"".$freeze());};
           _slim_codeattributes17 = self.$attr("transition");
           if ($truthy(_slim_codeattributes17)) {
@@ -4708,7 +4708,7 @@ if (subsection == null) subsection = nil;
               } else {
               
               _buf['$<<'](" data-transition=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes17.$to_s());
+              _buf['$<<'](_slim_codeattributes17);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes18 = self.$attr("transition-speed");
@@ -4718,7 +4718,7 @@ if (subsection == null) subsection = nil;
               } else {
               
               _buf['$<<'](" data-transition-speed=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes18.$to_s());
+              _buf['$<<'](_slim_codeattributes18);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes19 = data_background_color;
@@ -4728,7 +4728,7 @@ if (subsection == null) subsection = nil;
               } else {
               
               _buf['$<<'](" data-background-color=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes19.$to_s());
+              _buf['$<<'](_slim_codeattributes19);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes20 = data_background_image;
@@ -4738,7 +4738,7 @@ if (subsection == null) subsection = nil;
               } else {
               
               _buf['$<<'](" data-background-image=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes20.$to_s());
+              _buf['$<<'](_slim_codeattributes20);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes21 = ($truthy($a = data_background_size) ? $a : self.$attr("background-size"));
@@ -4748,7 +4748,7 @@ if (subsection == null) subsection = nil;
               } else {
               
               _buf['$<<'](" data-background-size=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes21.$to_s());
+              _buf['$<<'](_slim_codeattributes21);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes22 = ($truthy($a = data_background_repeat) ? $a : self.$attr("background-repeat"));
@@ -4758,7 +4758,7 @@ if (subsection == null) subsection = nil;
               } else {
               
               _buf['$<<'](" data-background-repeat=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes22.$to_s());
+              _buf['$<<'](_slim_codeattributes22);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes23 = ($truthy($a = data_background_transition) ? $a : self.$attr("background-transition"));
@@ -4768,7 +4768,7 @@ if (subsection == null) subsection = nil;
               } else {
               
               _buf['$<<'](" data-background-transition=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes23.$to_s());
+              _buf['$<<'](_slim_codeattributes23);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes24 = self.$attr("background-iframe");
@@ -4778,7 +4778,7 @@ if (subsection == null) subsection = nil;
               } else {
               
               _buf['$<<'](" data-background-iframe=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes24.$to_s());
+              _buf['$<<'](_slim_codeattributes24);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes25 = self.$attr("background-video");
@@ -4788,7 +4788,7 @@ if (subsection == null) subsection = nil;
               } else {
               
               _buf['$<<'](" data-background-video=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes25.$to_s());
+              _buf['$<<'](_slim_codeattributes25);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes26 = ($truthy($a = self['$attr?']("background-video-loop")) ? $a : self['$option?']("loop"));
@@ -4798,7 +4798,7 @@ if (subsection == null) subsection = nil;
               } else {
               
               _buf['$<<'](" data-background-video-loop=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes26.$to_s());
+              _buf['$<<'](_slim_codeattributes26);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes27 = ($truthy($a = self['$attr?']("background-video-muted")) ? $a : self['$option?']("muted"));
@@ -4808,7 +4808,7 @@ if (subsection == null) subsection = nil;
               } else {
               
               _buf['$<<'](" data-background-video-muted=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes27.$to_s());
+              _buf['$<<'](_slim_codeattributes27);
               _buf['$<<']("\"".$freeze());
             }};
           _slim_codeattributes28 = self.$attr("state");
@@ -4818,7 +4818,7 @@ if (subsection == null) subsection = nil;
               } else {
               
               _buf['$<<'](" data-state=\"".$freeze());
-              _buf['$<<'](_slim_codeattributes28.$to_s());
+              _buf['$<<'](_slim_codeattributes28);
               _buf['$<<']("\"".$freeze());
             }};
           _buf['$<<'](">".$freeze());
@@ -4826,13 +4826,13 @@ if (subsection == null) subsection = nil;
             } else {
             
             _buf['$<<']("<h2>".$freeze());
-            _buf['$<<'](title.$to_s());
+            _buf['$<<'](title);
             _buf['$<<']("</h2>".$freeze());
           };
-          _buf['$<<'](self.$content().$chomp().$to_s());
+          _buf['$<<'](self.$content().$chomp());
           _buf['$<<']("</section>".$freeze());
         };
-        return (_buf = $rb_times(_buf, ""));}, TMP_104.$$s = self, TMP_104.$$arity = 0, TMP_104));
+        return (_buf = _buf.$join("".$freeze()));}, TMP_104.$$s = self, TMP_104.$$arity = 0, TMP_104));
     }, TMP_Converter_section_110.$$arity = -2);
     return (Opal.defn(self, '$set_local_variables', TMP_Converter_set_local_variables_112 = function $$set_local_variables(binding, vars) {
       var TMP_111, self = this;

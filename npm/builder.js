@@ -59,7 +59,6 @@ Builder.prototype.replaceUnsupportedFeatures = function (callback) {
   let data = fs.readFileSync(path, 'utf8');
   log.debug('Replace String#<< with Array#<<');
   data = data.replace(/([^ ]*) = ''/g, '$1 = \[\]');
-  data = data.replace(/_buf$/g, '_buf * \'\'');
   data = data.replace(/^(\s*)(_[a-z1-9_\[\]]*)$/gm, '$1$2 = $2 * \'\'');
   fs.writeFileSync(path, data, 'utf8');
   callback();

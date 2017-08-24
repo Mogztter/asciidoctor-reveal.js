@@ -13,3 +13,6 @@ build/
 # ruby stuff
 /.bundle/
 /Gemfile.lock
+
+# the compiled slim template
+/lib/asciidoctor-revealjs/converter.rb

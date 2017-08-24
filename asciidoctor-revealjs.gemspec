@@ -25,8 +25,10 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.add_runtime_dependency 'asciidoctor', '~> 1.5.6'
-  s.add_runtime_dependency 'slim', '~> 3.0.6'
   s.add_runtime_dependency 'thread_safe', '~> 0.3.5'
 
   s.add_development_dependency 'rake', '~> 10.4.2'
+  s.add_development_dependency 'asciidoctor-templates-compiler', '~> 0.1.2'
+  s.add_development_dependency 'slim', '~> 3.0.6'
+  s.add_development_dependency 'slim-htag', '~> 0.1.0'
 end

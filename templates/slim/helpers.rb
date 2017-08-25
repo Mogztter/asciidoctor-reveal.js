@@ -2,7 +2,6 @@ unless RUBY_ENGINE == 'opal'
   # This helper file borrows from the Bespoke converter
   # https://github.com/asciidoctor/asciidoctor-bespoke
   require 'asciidoctor'
-  require 'json'
 
   # Needed only in compile-time.
   require 'slim-htag' if defined? Slim

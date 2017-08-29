@@ -44,6 +44,9 @@ module Slim::Helpers
   # @yield The block of Slim/HTML code within the tag (optional).
   # @return [String] a rendered HTML element.
   #
+  VOID_ELEMENTS = %w(area base br col command embed hr img input keygen link
+                     meta param source track wbr)
+
   def html_tag(name, attributes = {}, content = nil)
     attrs = attributes.inject([]) do |attrs, (k, v)|
       next attrs if !v || v.nil_or_empty?

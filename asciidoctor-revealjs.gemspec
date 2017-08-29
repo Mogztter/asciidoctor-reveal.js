@@ -17,18 +17,22 @@ Gem::Specification.new do |s|
   rescue
     Dir['**/*']
   end
-  s.files = files.grep %r/^(?:(?:lib|templates)\/.+|Gemfile|Rakefile|(?:CHANGELOG|LICENSE|README)\.adoc|#{s.name}\.gemspec)$/
+  s.files = files.grep %r/^(?:(?:examples|lib|templates)\/.+|Gemfile|Rakefile|(?:CHANGELOG|LICENSE|README)\.adoc|#{s.name}\.gemspec)$/
 
 
   s.executables = ['asciidoctor-revealjs']
   s.extra_rdoc_files = Dir['README.adoc', 'LICENSE.adoc', 'HACKING.adoc']
   s.require_paths = ['lib']
 
-  s.add_runtime_dependency 'asciidoctor', '~> 1.5.6'
+
+  s.add_runtime_dependency 'asciidoctor', '= 1.5.4'
   s.add_runtime_dependency 'thread_safe', '~> 0.3.5'
 
-  s.add_development_dependency 'rake', '~> 10.4.2'
-  s.add_development_dependency 'asciidoctor-templates-compiler', '~> 0.1.2'
   s.add_development_dependency 'slim', '~> 3.0.6'
   s.add_development_dependency 'slim-htag', '~> 0.1.0'
+  s.add_development_dependency 'rake', '~> 10.4.2'
+  s.add_development_dependency 'asciidoctor-templates-compiler', '~> 0.1.2'
+  s.add_development_dependency 'asciidoctor-doctest', '= 2.0.0.beta.4'
+  s.add_development_dependency 'pry', '~> 0.10.4'
+  s.add_development_dependency 'colorize'
 end

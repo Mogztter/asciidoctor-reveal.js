@@ -16,8 +16,9 @@ env:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 script:
 - bundle exec rake build
+- bundle exec rake doctest
+- bundle exec rake examples:convert
 - npm install
 - npm run build
-
 notifications:
   email: false

@@ -33,8 +33,6 @@ module Slim::Helpers
 
   ##
   # This function is from the asciidictor-html5s project
-  # Copyright 2014-2017 Jakub Jirutka <jakub@jirutka.cz> and the Asciidoctor Project.
-  # Licensed under the MIT License.
   # https://github.com/jirutka/asciidoctor-html5s/blob/a71db48a1dd5196b668b3a3d93693c5d877c5bf3/data/templates/helpers.rb#L84-L108
   #
   # Creates an HTML tag with the given name and optionally attributes. Can take

@@ -58,7 +58,15 @@ DocTest::RakeTasks.new do |t|
   t.output_examples :html, path: 'test/output/slim'
   t.input_examples :asciidoc, path: [ *DocTest.examples_path, 'examples' ]
   t.converter = DocTest::HTML::Converter
-  t.converter_opts = { template_dirs: 'templates/slim' }
+  t.converter_opts = { backend_name: 'revealjs' }
+end
+
+task 'prepare-converter' do
+  # Run as an external process to ensure that it will not affect tests
+  # environment with extra loaded modules (especially slim).
+  `bundle exec rake build:converter:fast`
+
+  require_relative 'lib/asciidoctor-revealjs'
 end
 
 namespace :examples do
@@ -81,5 +89,7 @@ namespace :examples do
   end
 end
 
+task 'doctest:test' => 'prepare-converter'
+task 'doctest:generate' => 'prepare-converter'
 # When no task specified, run test.
 task :default => :doctest

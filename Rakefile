@@ -11,15 +11,20 @@ CONVERTER_FILE = 'lib/asciidoctor-revealjs/converter.rb'
 TEMPLATES_DIR = 'templates/slim'
 
 namespace :build do
+  require 'asciidoctor-templates-compiler'
+  require 'slim-htag'
+
+  generator = if :mode == :opal
+    Temple::Generators::ArrayBuffer.new(freeze_static: false)
+  else
+    Temple::Generators::StringBuffer
+  end
 
   file CONVERTER_FILE, [:mode] => FileList["#{TEMPLATES_DIR}/*"] do |t, args|
-    #require 'asciidoctor-templates-compiler'
-    require_relative 'lib/asciidoctor-templates-compiler'
-    require 'slim-htag'
 
     File.open(CONVERTER_FILE, 'w') do |file|
       $stderr.puts "Generating #{file.path}."
-      Asciidoctor::TemplatesCompiler::RevealjsSlim.compile_converter(
+      Asciidoctor::TemplatesCompiler::Slim.compile_converter(
           templates_dir: TEMPLATES_DIR,
           class_name: 'Asciidoctor::Revealjs::Converter',
           register_for: ['revealjs'],
@@ -27,6 +32,9 @@ namespace :build do
             basebackend: 'html',
             outfilesuffix: '.html',
             filetype: 'html',
+          },
+          engine_opts: {
+            generator: generator,
           },
           pretty: (args[:mode] == :pretty),
           output: file)

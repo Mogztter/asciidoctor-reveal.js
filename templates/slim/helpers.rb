@@ -32,9 +32,18 @@ module Slim::Helpers
   end
 
   ##
-  # This function is from the asciidictor-html5s project
-  # https://github.com/jirutka/asciidoctor-html5s/blob/a71db48a1dd5196b668b3a3d93693c5d877c5bf3/data/templates/helpers.rb#L84-L108
-  #
+  # These constants and functions are from the asciidictor-html5s project
+  # https://github.com/jirutka/asciidoctor-html5s/blob/a71db48a1dd5196b668b3a3d93693c5d877c5bf3/data/templates/helpers.rb
+
+  # Defaults
+  DEFAULT_TOCLEVELS = 2
+  DEFAULT_SECTNUMLEVELS = 3
+
+
+  VOID_ELEMENTS = %w(area base br col command embed hr img input keygen link
+                     meta param source track wbr)
+
+  ##
   # Creates an HTML tag with the given name and optionally attributes. Can take
   # a block that will run between the opening and closing tags.
   #
@@ -44,8 +53,6 @@ module Slim::Helpers
   # @yield The block of Slim/HTML code within the tag (optional).
   # @return [String] a rendered HTML element.
   #
-  VOID_ELEMENTS = %w(area base br col command embed hr img input keygen link
-                     meta param source track wbr)
 
   def html_tag(name, attributes = {}, content = nil)
     attrs = attributes.inject([]) do |attrs, (k, v)|
@@ -61,6 +68,34 @@ module Slim::Helpers
     else
       content ||= yield if block_given?
       %(<#{name}#{attrs_str}>#{content}</#{name}>)
+    end
+  end
+
+
+  ##
+  # Returns corrected section level.
+  #
+  # @param sec [Asciidoctor::Section] the section node (default: self).
+  # @return [Integer]
+  #
+  def section_level(sec = self)
+    @_section_level ||= (sec.level == 0 && sec.special) ? 1 : sec.level
+  end
+
+
+  ##
+  # Returns the captioned section's title, optionally numbered.
+  #
+  # @param sec [Asciidoctor::Section] the section node (default: self).
+  # @return [String]
+  #
+  def section_title(sec = self)
+    sectnumlevels = document.attr(:sectnumlevels, DEFAULT_SECTNUMLEVELS).to_i
+
+    if sec.numbered && !sec.caption && sec.level <= sectnumlevels
+      [sec.sectnum, sec.captioned_title].join(' ')
+    else
+      sec.captioned_title
     end
   end
 

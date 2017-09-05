@@ -133,14 +133,12 @@ Here we are converting a file named `presentation.adoc` into a reveal.js present
 ----
 // Load asciidoctor.js and asciidoctor-reveal.js
 var asciidoctor = require('asciidoctor.js')();
-var Asciidoctor = asciidoctor.Asciidoctor();
-
 require('asciidoctor-reveal.js');
 
 // Convert the document 'presentation.adoc' using the reveal.js converter
-var attributes = 'revealjsdir=node_modules/reveal.js@';
+var attributes = {'revealjsdir': 'node_modules/reveal.js@'};
 var options = {safe: 'safe', backend: 'revealjs', attributes: attributes};
-Asciidoctor.convertFile('presentation.adoc', options); // <1>
+asciidoctor.convertFile('presentation.adoc', options); // <1>
 ----
 <1> Creates a file named `presentation.html` (in the directory where command is run)
 
@@ -162,7 +160,7 @@ Asciidoctor.convertFile('presentation.adoc', options); // <1>
 
 To render the slides, run:
 
-    node asciidoctor-reveal.js
+    node asciidoctor-revealjs.js
 
 You can open the `presentation.html` file in your browser and enjoy!
 

@@ -33,7 +33,7 @@ namespace :build do
             outfilesuffix: '.html',
             filetype: 'html',
           },
-	  delegate_backend: 'html5',
+          delegate_backend: 'html5',
           engine_opts: {
             generator: generator,
           },

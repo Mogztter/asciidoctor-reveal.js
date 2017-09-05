@@ -2,9 +2,6 @@ unless RUBY_ENGINE == 'opal'
   # This helper file borrows from the Bespoke converter
   # https://github.com/asciidoctor/asciidoctor-bespoke
   require 'asciidoctor'
-
-  # Needed only in compile-time.
-  require 'slim-htag' if defined? Slim
 end
 
 # This module gets mixed in to every node (the context of the template) at the

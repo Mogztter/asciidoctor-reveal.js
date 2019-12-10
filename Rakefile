@@ -76,6 +76,7 @@ def build_converter(mode = :pretty)
         basebackend: 'html',
         outfilesuffix: '.html',
         filetype: 'html',
+        supports_templates: true
       },
       delegate_backend: 'html5',
       engine_opts: {
@@ -107,6 +108,7 @@ namespace :examples do
   # converted slides will be put in examples/ directory
   task :convert do
     require 'slim-htag'
+    require_relative 'lib/asciidoctor-revealjs'
     Dir.glob('examples/*.adoc') do |_file|
       print "Converting file #{_file}... "
       out = Asciidoctor.convert_file _file,

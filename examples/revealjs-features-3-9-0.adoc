@@ -1,0 +1,14 @@
+// .revealjs-features-3-9-0
+// This example tests some of reveal.js 3.9.0 features
+// :include: //body/script
+// :header_footer:
+= Reveal.JS
+:revealjs_totaltime: 1800
+
+== First slide
+
+Some content
+
+== Second slide
+
+Done

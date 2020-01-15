@@ -1,13 +1,4 @@
-<!-- .customcss -->
-<div class="slides">
-  <section class="title" data-state="title">
-    <h1>Custom CSS</h1>
-    <p class="author"><small>Author</small></p>
-  </section>
-  <section id="_slide_1">
-    <h2>Slide 1</h2>
-  </section>
-</div>
+<!-- .revealjs-features -->
 <script src="reveal.js/lib/js/head.min.js"></script><script src="reveal.js/js/reveal.js"></script><script>
   Array.prototype.slice.call(document.querySelectorAll('.slides section')).forEach(function(slide) {
     if (slide.getAttribute('data-background-color')) return;
@@ -39,7 +30,7 @@
     // Control which views the slide number displays on
     showSlideNumber: 'all',
     // Push each slide change to the browser history
-    history: false,
+    history: true,
     // Enable keyboard shortcuts for navigation
     keyboard: true,
     // Enable the slide overview mode
@@ -58,7 +49,7 @@
     fragments: true,
     // Flags whether to include the current fragment in the URL,
     // so that reloading brings you to the same fragment position
-    fragmentInURL: false,
+    fragmentInURL: true,
     // Flags if the presentation is running in an embedded mode,
     // i.e. contained within a limited portion of the screen
     embedded: false,
@@ -88,7 +79,7 @@
     // present.  If this is set to a nonzero value, the pacing
     // timer will work out the time available for each slide,
     // instead of using the defaultTiming value
-    totalTime: 0,
+    totalTime: 1800,
     // Enable slide navigation via mouse wheel
     mouseWheel: false,
     // Hides the address bar on mobile devices

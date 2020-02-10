@@ -1,0 +1,21 @@
+= Alignments
+:revealjs_center: false
+:revealjs_display: flex
+
+[.is-vcentered]
+== Vertical alignment
+
+Here's a list of writers:
+
+* Edgar Allen Poe
+* Sheri S. Tepper
+* Bill Bryson
+
+[.is-vcentered-slide]
+== Vertical alignment (slide)
+
+Here's a list of writers:
+
+* Edgar Allen Poe
+* Sheri S. Tepper
+* Bill Bryson

@@ -120,3 +120,28 @@ b.conum *{color:inherit!important}
   flex: none;
   width: 20%;
 }
+
+/* Vertical alignment */
+.is-vcentered {
+  height: 100%;
+  flex-direction: column;
+}
+
+.is-vcentered .slide-content {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.is-vcentered-slide {
+  height: 100%;
+}
+
+.is-vcentered-slide .slide-content {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

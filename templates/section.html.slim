@@ -57,8 +57,9 @@
 
       - unless hide_title
         h2=section_title
-      - (blocks - vertical_slides).each do |block|
-        =block.convert
+      div.slide-content
+        - (blocks - vertical_slides).each do |block|
+          =block.convert
     - vertical_slides.each do |subsection|
       =subsection.convert
 
@@ -88,4 +89,5 @@
 
       - unless hide_title
         h2=section_title
-      =content.chomp
+      div.slide-content
+        =content.chomp

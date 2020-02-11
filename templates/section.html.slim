@@ -58,7 +58,8 @@
       - (blocks - vertical_slides).each do |block|
         =block.convert
     - else
-      =content.chomp
+      div.slide-content
+        =content.chomp
 
 / RENDERING
 / render parent section of vertical slides set

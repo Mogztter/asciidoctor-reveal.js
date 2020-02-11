@@ -55,8 +55,9 @@
     - unless hide_title
       h2=section_title
     - if parent_section_with_vertical_slides
-      - (blocks - vertical_slides).each do |block|
-        =block.convert
+      div.slide-content
+        - (blocks - vertical_slides).each do |block|
+          =block.convert
     - else
       div.slide-content
         =content.chomp

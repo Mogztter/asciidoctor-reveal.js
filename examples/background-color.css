@@ -2,11 +2,11 @@ section.red.background {
   background-color: red;
 }
 
-section.green {
+section.green > .slide-container {
   background-color: green;
 }
 
-section.blue.canvas {
+section.blue.canvas{
   background-color: blue;
 }
 

@@ -52,15 +52,16 @@
     data-background-video-muted=((attr? 'background-video-muted') || (option? 'muted'))
     data-background-opacity=(attr "background-opacity")
     data-state=(attr 'state'))
-    - unless hide_title
-      h2=section_title
-    - if parent_section_with_vertical_slides
-      div.slide-content
-        - (blocks - vertical_slides).each do |block|
-          =block.convert
-    - else
-      div.slide-content
-        =content.chomp
+      div.slide-container
+        - unless hide_title
+          h2=section_title
+        - if parent_section_with_vertical_slides
+          div.slide-content
+            - (blocks - vertical_slides).each do |block|
+              =block.convert
+        - else
+          div.slide-content
+            =content.chomp
 
 / RENDERING
 / render parent section of vertical slides set

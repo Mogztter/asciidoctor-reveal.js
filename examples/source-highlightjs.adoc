@@ -26,10 +26,108 @@ fn main() {
 }
 ----
 
+[.grow]
 == Stretch the Source
 
-[source, rust, role="stretch"]
+[source, rust]
 ----
+fn main() {
+    println!("Hello stretched World!");
+}
+----
+
+== Stretch the Source
+
+[source, rust]
+----
+fn main() {
+    println!("Hello stretched World!");
+}
+fn main() {
+    println!("Hello stretched World!");
+}
+fn main() {
+    println!("Hello stretched World!");
+}
+fn main() {
+    println!("Hello stretched World!");
+}
+fn main() {
+    println!("Hello stretched World!");
+}
+fn main() {
+    println!("Hello stretched World!");
+}
+fn main() {
+    println!("Hello stretched World!");
+}
+fn main() {
+    println!("Hello stretched World!");
+}
+fn main() {
+    println!("Hello stretched World!");
+}
+fn main() {
+    println!("Hello stretched World!");
+}
+fn main() {
+    println!("Hello stretched World!");
+}
+fn main() {
+    println!("Hello stretched World!");
+}
+fn main() {
+    println!("Hello stretched World!");
+}
+fn main() {
+    println!("Hello stretched World!");
+}
+----
+
+[.grow]
+== Stretch the Source
+
+[source, rust]
+----
+fn main() {
+    println!("Hello stretched World!");
+}
+fn main() {
+    println!("Hello stretched World!");
+}
+fn main() {
+    println!("Hello stretched World!");
+}
+fn main() {
+    println!("Hello stretched World!");
+}
+fn main() {
+    println!("Hello stretched World!");
+}
+fn main() {
+    println!("Hello stretched World!");
+}
+fn main() {
+    println!("Hello stretched World!");
+}
+fn main() {
+    println!("Hello stretched World!");
+}
+fn main() {
+    println!("Hello stretched World!");
+}
+fn main() {
+    println!("Hello stretched World!");
+}
+fn main() {
+    println!("Hello stretched World!");
+}
+fn main() {
+    println!("Hello stretched World!");
+}
+fn main() {
+    println!("Hello stretched World!");
+}
 fn main() {
     println!("Hello stretched World!");
 }

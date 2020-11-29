@@ -1,0 +1,15 @@
+= Presentation
+Author Name
+:revealjs_theme: simple
+:revealjs_transition: none
+:revealjs_hash: true
+
+== Introduction
+
+This is some text with footnote:[An example footnote.]
+
+== Statements
+
+A statement.footnote:[Clarification about this statement.]
+
+A bold statement!footnote:disclaimer[Opinions are my own.]

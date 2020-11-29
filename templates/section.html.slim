@@ -67,6 +67,13 @@
       - unless (_content = content.chomp).empty?
         div.slide-content
           =_content
+          - if document.footnotes? && !(parent.attr? 'nofootnotes')
+            div(id="footnotes")
+              hr
+              - document.footnotes.each do |footnote|
+                div(class="footnote" id="_footnotedef_#{footnote.index}")
+                  a(href="#_footnoteref_#{footnote.index}")
+                    = "#{footnote.index}. #{footnote.text}"
 
 / RENDERING
 / render parent section of vertical slides set

@@ -10,6 +10,9 @@ This table tracks this compatibility.
 |===
 |Asciidoctor reveal.js version |reveal.js version
 
+|5.x
+|4.x
+
 |4.x
 |3.9 - 3.8
 

@@ -253,6 +253,8 @@ html lang=(attr :lang, 'en' unless attr? :nolang)
     / https://github.com/hakimel/reveal.js/issues/2584
     include stretch_nested_elements.js.slim
 
+    = revealjs_plugins(document, self, revealjsdir)
+
     - if syntax_hl && (syntax_hl.docinfo? :footer)
       =syntax_hl.docinfo :footer, self, cdn_base_url: cdn_base, linkcss: linkcss, self_closing_tag_slash: '/'
 
